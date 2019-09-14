@@ -17,7 +17,7 @@ namespace Primaton_G6.Clases
 
         private int Ingresos { get; set; }
 
-        public string GetUsuario(int id)
+        public string GetUsuario(string Nombre)
         {
             Usuario usuario = new Usuario();
 
