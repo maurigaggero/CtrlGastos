@@ -44,5 +44,21 @@ namespace Primaton_G6
             graficos.Show();
             this.Hide();
         }
+
+        private void lblCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+            
+        }
+
+        private void lblCerrar_MouseEnter(object sender, EventArgs e)
+        {
+            lblCerrar.ForeColor = Color.Black;
+        }
+
+        private void lblCerrar_MouseLeave(object sender, EventArgs e)
+        {
+            lblCerrar.ForeColor = Color.White;
+        }
     }
 }

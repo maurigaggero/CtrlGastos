@@ -12,35 +12,96 @@ namespace Primaton_G6
 {
     public partial class ControlDeGastos : Form
     {
+        DataTable tabla;
+
         int c = 0;
+
+
         public ControlDeGastos()
         {
             InitializeComponent();
         }
 
+        private void ControlDeGastos_Load(object sender, EventArgs e)
+        {
+
+//--------------------CREO LA TABLA-----------------------------
+            tabla = new DataTable();
+
+            tabla.Columns.Add("Tipo de gasto");
+            tabla.Columns.Add("Cantidad");
+            tabla.Columns.Add("Detalle");
+            tabla.Columns.Add("Monto");
+
+        }
+
+
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (cbTipoGasto.Text == "Tipo de gasto" || txtcantidad.Text == "" || txtDetalle.Text == "" || txtDetalle.Text == "")
+//------------------------Valido que el usuario rellene todos los campos------------------------
+            if (cbTipoGasto.Text == "Tipo de gasto")
             {
-                MessageBox.Show("Debes rellenar todos los casilleros");
+                MessageBox.Show("Debes Seleccionar una opcion");
+                return;
             }
-            else
+
+            if (txtDetalle.Text == "Cantidad")
             {
-                //Incremento de celda
-                int n = DataView.Rows.Add();
+                MessageBox.Show("Debes ingresar una cantidad valida");
+                return;
+            }
 
-                //Relleno de informacion de la tabla
-                DataView.Rows[n].Cells[0].Value = cbTipoGasto.Text;
-                DataView.Rows[n].Cells[2].Value = txtcantidad.Text;
-                DataView.Rows[n].Cells[1].Value = txtDetalle.Text;
-                DataView.Rows[n].Cells[3].Value = txtmonto.Text;
+            if (txtCantidad.Text == "Detalle")
+            {
+                MessageBox.Show("Debes ingresar un detalle valido");
+                return;
+            }
 
-                //Limpiar los textbox
+            if (txtmonto.Text == "Monto")
+            {
+                MessageBox.Show("Debes ingresar un monto valido");
+                return;
+            }
+
+            //------------------------Creo las variables para de depositar los txt y comboBox--------------------
+
+            String tipo = "";
+            String cantidad = "";
+            String detalle = "";
+            String monto = "";
+
+            //----------------------------------------Relleno las variables-------------------------------------
+
+            tipo = cbTipoGasto.Text;
+            cantidad = txtCantidad.Text;
+            detalle = txtDetalle.Text;
+            monto = txtmonto.Text;
+
+
+            //----------------------------------------Limpiar los textbox----------------------------------------
                 cbTipoGasto.Text = "Tipo de gasto";
-                txtcantidad.Text = "";
-                txtDetalle.Text = "";
-                txtmonto.Text = "";
-            }
+                txtCantidad.Text = "Cantidad";
+                txtDetalle.Text = "Detalle";
+                txtmonto.Text = "Monto";
+
+            //------------------------Creo las filas de la tabla--------------------
+
+            DataRow fila = tabla.NewRow();
+            fila[0] = tipo;
+            fila[1] = cantidad;
+            fila[2] = detalle;
+            fila[3] = monto;
+
+            tabla.Rows.Add(fila);
+            grilla.DataSource = tabla;
+
+            //------------------------Cambio el tamaño de las columnas--------------------
+
+            grilla.Columns[0].Width = 150;
+            grilla.Columns[1].Width = 70;
+            grilla.Columns[2].Width = 250;
+            grilla.Columns[3].Width = 70;
         }
 
         private void DataView_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -54,7 +115,7 @@ namespace Primaton_G6
             //le digo al boton que si c es distinto a -1 borre todo el rengon con removeAt y el indice
             if(c != -1)
             {
-                DataView.Rows.RemoveAt(c);
+                grilla.Rows.RemoveAt(c);
 
             }
         }
@@ -65,5 +126,40 @@ namespace Primaton_G6
             principal.Show();
             this.Dispose();
         }
+        //---------------------------cambia de color cuando el mouse pasa por la X de cerrar---------------------
+        private void lblCerrar_MouseEnter(object sender, EventArgs e)
+        {
+            lblCerrar.ForeColor = Color.Black;
+        }
+
+        private void lblCerrar_MouseLeave(object sender, EventArgs e)
+        {
+            lblCerrar.ForeColor = Color.White;
+        }
+
+        private void lblCerrar_MouseClick(object sender, MouseEventArgs e)
+        {
+            Application.Exit();
+            
+        }
+
+
+//------------------------------------deja en blanco los textbox cuando hay que escribir---------------------
+        private void txtCantidad_Enter(object sender, EventArgs e)
+        {
+            txtCantidad.Text = "";
+        }
+
+        private void txtDetalle_Enter(object sender, EventArgs e)
+        {
+            txtDetalle.Text = "";
+        }
+
+        private void txtmonto_Enter(object sender, EventArgs e)
+        {
+            txtmonto.Text = "";
+        }
+
+    
     }
 }
