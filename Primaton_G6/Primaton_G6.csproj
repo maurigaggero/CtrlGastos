@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Gastos.cs" />
+    <Compile Include="Clases\Listas.cs" />
+    <Compile Include="Clases\Usuario.cs" />
     <Compile Include="Formularios\ControlDeGastos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,8 +130,6 @@
     <Content Include="Imagenes\persona.jpg" />
     <Content Include="Imagenes\wallet.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Clases\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
