@@ -108,5 +108,20 @@ namespace Primaton_G6
             vp.Show();
             this.Hide();
         }
+
+        private void label1_MouseEnter(object sender, EventArgs e)
+        {
+            label1.ForeColor = Color.Black;
+        }
+
+        private void label1_MouseLeave(object sender, EventArgs e)
+        {
+            label1.ForeColor = Color.White;
+        }
+
+        private void label1_MouseClick(object sender, MouseEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
