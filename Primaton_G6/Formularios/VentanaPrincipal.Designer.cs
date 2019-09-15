@@ -64,7 +64,6 @@
             this.btnListaSuper.TabIndex = 1;
             this.btnListaSuper.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnListaSuper.UseVisualStyleBackColor = true;
-            this.btnListaSuper.Click += new System.EventHandler(this.btnListaSuper_Click);
             // 
             // btnCuentas
             // 
@@ -75,7 +74,6 @@
             this.btnCuentas.Size = new System.Drawing.Size(213, 180);
             this.btnCuentas.TabIndex = 2;
             this.btnCuentas.UseVisualStyleBackColor = true;
-            this.btnCuentas.Click += new System.EventHandler(this.btnCuentas_Click);
             // 
             // btnGraficos
             // 
@@ -86,7 +84,6 @@
             this.btnGraficos.Size = new System.Drawing.Size(213, 180);
             this.btnGraficos.TabIndex = 3;
             this.btnGraficos.UseVisualStyleBackColor = true;
-            this.btnGraficos.Click += new System.EventHandler(this.btnGraficos_Click);
             // 
             // label1
             // 

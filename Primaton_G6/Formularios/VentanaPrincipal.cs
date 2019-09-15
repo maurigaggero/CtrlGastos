@@ -23,26 +23,5 @@ namespace Primaton_G6
             control.Show();
             this.Hide();
         }
-
-        private void btnListaSuper_Click(object sender, EventArgs e)
-        {
-            ListaDeSuper lista = new ListaDeSuper();
-            lista.Show();
-            this.Hide();
-        }
-
-        private void btnCuentas_Click(object sender, EventArgs e)
-        {
-            CuentasAPagar cuentas = new CuentasAPagar();
-            cuentas.Show();
-            this.Hide();
-        }
-
-        private void btnGraficos_Click(object sender, EventArgs e)
-        {
-            Graficos graficos = new Graficos();
-            graficos.Show();
-            this.Hide();
-        }
     }
 }

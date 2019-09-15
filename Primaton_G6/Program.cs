@@ -16,7 +16,7 @@ namespace Primaton_G6
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PantallaInicio());
+            Application.Run(new Login());
         }
     }
 }
