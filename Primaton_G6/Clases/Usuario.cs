@@ -14,5 +14,7 @@ namespace Primaton_G6.Clases
         public string Nombre { get; set; }
 
         public int Ingresos { get; set; }
+
+        public int Img { get; set; }
     }
 }
