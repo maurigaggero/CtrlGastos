@@ -55,14 +55,11 @@ namespace Primaton_G6
             if(c != -1)
             {
                 DataView.Rows.RemoveAt(c);
-
             }
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            VentanaPrincipal principal = new VentanaPrincipal();
-            principal.Show();
             this.Dispose();
         }
     }
