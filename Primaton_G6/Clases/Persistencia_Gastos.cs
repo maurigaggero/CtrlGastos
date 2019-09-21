@@ -9,6 +9,12 @@ namespace Primaton_G6.Clases
     class Persistencia_Gastos
     {
 
+        public (string nombre, int ingresos, int img) ArmaTabla(string nombre, int ingresos, int img)
+        {
+            return (nombre, ingresos, img);
+        }
+
+
         //HEREDADO PERSISTENCIA PROFE ALGORRY
 
 

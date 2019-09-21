@@ -17,6 +17,8 @@ namespace Primaton_G6.Formularios
 
         Clases.Persistencia_Usuarios listu = new Clases.Persistencia_Usuarios();
 
+        Clases.Persistencia_Gastos pgasto = new Clases.Persistencia_Gastos();
+
         public Login()
         {
             InitializeComponent();
@@ -26,10 +28,22 @@ namespace Primaton_G6.Formularios
             ComboTabla();
 
             lblMensaje.Text = "";
+
+            lblFoto.Visible = false;
+
+            btnIngreso.Visible = false;
+
+            btnEliminar.Visible = false;
         }
 
-        private void ComboUsuarios_SelectedIndexChanged(object sender, EventArgs e)
+        private void BtnSelecc_Click(object sender, EventArgs e)
         {
+            lblFoto.Visible = true;
+
+            btnIngreso.Visible = true;
+
+            btnEliminar.Visible = true;
+
             lblFoto.ImageIndex = Convert.ToInt32(listu.DevuelveFoto(comboUsuarios.Text));
 
             lblMensaje.Text = "Hola " + comboUsuarios.Text + ", " + "\r\n";
@@ -44,23 +58,32 @@ namespace Primaton_G6.Formularios
             comboUsuarios.DisplayMember = "Nombre";
             comboUsuarios.ValueMember = "Nombre";
         }
+
         private void BtnIngreso_Click(object sender, EventArgs e)
         {
             ControlDeGastos pdi = new ControlDeGastos();
             pdi.ShowDialog();
+
+            if (comboUsuarios.Text != "")
+            {
+                string nombre = comboUsuarios.Text;
+                int ingresos = Convert.ToInt32(listu.DevuelveIngresos(comboUsuarios.Text));
+                int img = Convert.ToInt32(listu.DevuelveFoto(comboUsuarios.Text));
+
+                pgasto.ArmaTabla(nombre, ingresos, img);
+            }
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
             listu.EliminaUsuario(comboUsuarios.Text);
+            //listu.EliminaUsuario(comboUsuarios.SelectedIndex);
         }
 
         private void BtnAlta_Click(object sender, EventArgs e)
         {
             SignUp sdi = new SignUp();
             sdi.ShowDialog();
-
-            ComboTabla();
         }
     }
 }

@@ -94,59 +94,46 @@ namespace Primaton_G6.Clases
             }
         }
 
-        public void EliminaUsuario(string name)
+        public void EliminaUsuario(string nombre)
         {
-            // recorre la tabla, si el argumento es igual a un valor en la columna nombre lo borra
-            for (int i = TablaUsuarios.Rows.Count - 1; i >= 0; i--)
+            if(nombre != "")
             {
-                DataRow fila = TablaUsuarios.Rows[i];
-                if (fila["Nombre"].ToString() == name)
-                    fila.Delete();
-            }
-            TablaUsuarios.WriteXml(NombreArchivo);
-
-        }
-
-        public string DevuelveIngresos(string nombre)
-        {
-            try
-            {
+                // recorre la tabla, si el argumento es igual a un valor en la columna nombre lo borra
                 for (int i = TablaUsuarios.Rows.Count - 1; i >= 0; i--)
                 {
                     DataRow fila = TablaUsuarios.Rows[i];
                     if (fila["Nombre"].ToString() == nombre)
-                    {
-                        return fila["Ingresos"].ToString();
-                    }
+                        fila.Delete();
                 }
-                return "0";
+                TablaUsuarios.WriteXml(NombreArchivo);
             }
-            catch (System.Data.RowNotInTableException)
+        }
+
+
+        public string DevuelveIngresos(string nombre)
+        {
+            for (int i = TablaUsuarios.Rows.Count - 1; i >= 0; i--)
             {
-                MessageBox.Show("Usuario eliminado");
-                return null;
+                DataRow fila = TablaUsuarios.Rows[i];
+                if (fila["Nombre"].ToString() == nombre)
+                {
+                    return fila["Ingresos"].ToString();
+                }
             }
-            
+            return "0";
         }
 
         public string DevuelveFoto(string nombre)
         {
-            try
+            for (int i = TablaUsuarios.Rows.Count - 1; i >= 0; i--)
             {
-                for (int i = TablaUsuarios.Rows.Count - 1; i >= 0; i--)
+                DataRow fila = TablaUsuarios.Rows[i];
+                if (fila["Nombre"].ToString() == nombre)
                 {
-                    DataRow fila = TablaUsuarios.Rows[i];
-                    if (fila["Nombre"].ToString() == nombre)
-                    {
-                        return fila["Img"].ToString();
-                    }
+                    return fila["Img"].ToString();
                 }
-                return "0";
             }
-            catch (System.Data.RowNotInTableException)
-            {
-                return null;
-            }
+            return "0";
         }
 
         public void ModificaIngreso(string name)
@@ -155,11 +142,38 @@ namespace Primaton_G6.Clases
         }
         #endregion
     }
-
-    //public void EliminaUsuario(int id)
-    //{
-    //    TablaUsuarios.Rows.RemoveAt(id);
-
-    //    TablaUsuarios.WriteXml(NombreArchivo);
-    //}
 }
+
+//public void EliminaUsuario(int pos)
+//{
+//    // recorre la tabla, si el argumento es igual a un valor en la columna nombre lo borra
+//    for (int i = TablaUsuarios.Rows.Count - 1; i >= 0; i--)
+//    {
+//        DataRow fila = TablaUsuarios.Rows[i];
+//        if (i == pos)
+//            fila.Delete();
+//    }
+//    TablaUsuarios.WriteXml(NombreArchivo);
+
+//}
+
+
+//public string DevuelveFoto(string nombre) //asi tiraba; cuando no estaba el boton seleccionar user
+//{
+//    try
+//    {
+//        for (int i = TablaUsuarios.Rows.Count - 1; i >= 0; i--)
+//        {
+//            DataRow fila = TablaUsuarios.Rows[i];
+//            if (fila["Nombre"].ToString() == nombre)
+//            {
+//                return fila["Img"].ToString();
+//            }
+//        }
+//        return "0";
+//    }
+//    catch (System.Data.RowNotInTableException)
+//    {
+//        return "0";
+//    }
+//}

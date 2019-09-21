@@ -12,7 +12,6 @@ namespace Primaton_G6.Formularios
 {
     public partial class SignUp : Form
     {
-
         Clases.Usuario usuario = new Clases.Usuario();
 
         Clases.Persistencia_Usuarios listu = new Clases.Persistencia_Usuarios();
@@ -46,9 +45,7 @@ namespace Primaton_G6.Formularios
             {
                 listu.AltaUsuarios(txtNombre.Text, Convert.ToInt32(txtIngresos.Text), img);
             }
-
             LimpiarCampos();
-
         }
 
         private void BtnBack_Click(object sender, EventArgs e)
@@ -129,16 +126,3 @@ namespace Primaton_G6.Formularios
         }
     }
 }
-
-//public void Imagenes()
-//{
-//    listaImg.View = View.SmallIcon;
-//    listaImg.SmallImageList = imageList;
-
-//    for (int j = 0; j < this.imageList.Images.Count; j++)
-//    {
-//        ListViewItem item = new ListViewItem();
-//        item.ImageIndex = j;
-//        this.listaImg.Items.Add(item);
-//    }
-//}

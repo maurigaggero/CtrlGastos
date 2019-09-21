@@ -39,6 +39,7 @@
             this.btnAlta = new System.Windows.Forms.Button();
             this.imageList = new System.Windows.Forms.ImageList(this.components);
             this.lblFoto = new System.Windows.Forms.Label();
+            this.btnSelecc = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // comboUsuarios
@@ -46,21 +47,20 @@
             this.comboUsuarios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboUsuarios.FormattingEnabled = true;
-            this.comboUsuarios.Location = new System.Drawing.Point(337, 49);
+            this.comboUsuarios.Location = new System.Drawing.Point(297, 54);
             this.comboUsuarios.Name = "comboUsuarios";
             this.comboUsuarios.Size = new System.Drawing.Size(291, 39);
             this.comboUsuarios.TabIndex = 1;
-            this.comboUsuarios.SelectedIndexChanged += new System.EventHandler(this.ComboUsuarios_SelectedIndexChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(106, 58);
+            this.label3.Location = new System.Drawing.Point(35, 60);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(210, 25);
+            this.label3.Size = new System.Drawing.Size(256, 29);
             this.label3.TabIndex = 4;
             this.label3.Text = "Seleccione su usuario:";
             // 
@@ -82,7 +82,7 @@
             // 
             this.btnIngreso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngreso.Location = new System.Drawing.Point(448, 122);
+            this.btnIngreso.Location = new System.Drawing.Point(519, 269);
             this.btnIngreso.Name = "btnIngreso";
             this.btnIngreso.Size = new System.Drawing.Size(105, 34);
             this.btnIngreso.TabIndex = 8;
@@ -96,7 +96,7 @@
             this.lblMensaje.BackColor = System.Drawing.Color.Transparent;
             this.lblMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensaje.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblMensaje.Location = new System.Drawing.Point(211, 245);
+            this.lblMensaje.Location = new System.Drawing.Point(249, 207);
             this.lblMensaje.Name = "lblMensaje";
             this.lblMensaje.Size = new System.Drawing.Size(0, 24);
             this.lblMensaje.TabIndex = 9;
@@ -105,7 +105,7 @@
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(182, 122);
+            this.btnEliminar.Location = new System.Drawing.Point(253, 269);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(205, 34);
             this.btnEliminar.TabIndex = 10;
@@ -148,10 +148,22 @@
             this.lblFoto.BackColor = System.Drawing.Color.Transparent;
             this.lblFoto.ImageIndex = 0;
             this.lblFoto.ImageList = this.imageList;
-            this.lblFoto.Location = new System.Drawing.Point(47, 223);
+            this.lblFoto.Location = new System.Drawing.Point(73, 196);
             this.lblFoto.Name = "lblFoto";
             this.lblFoto.Size = new System.Drawing.Size(129, 107);
             this.lblFoto.TabIndex = 13;
+            // 
+            // btnSelecc
+            // 
+            this.btnSelecc.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSelecc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelecc.Location = new System.Drawing.Point(607, 50);
+            this.btnSelecc.Name = "btnSelecc";
+            this.btnSelecc.Size = new System.Drawing.Size(141, 53);
+            this.btnSelecc.TabIndex = 14;
+            this.btnSelecc.Text = "Seleccionar usuario";
+            this.btnSelecc.UseVisualStyleBackColor = false;
+            this.btnSelecc.Click += new System.EventHandler(this.BtnSelecc_Click);
             // 
             // Login
             // 
@@ -162,7 +174,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(761, 528);
+            this.ClientSize = new System.Drawing.Size(793, 498);
+            this.Controls.Add(this.btnSelecc);
             this.Controls.Add(this.lblFoto);
             this.Controls.Add(this.btnAlta);
             this.Controls.Add(this.btnEliminar);
@@ -193,6 +206,7 @@
         private System.Windows.Forms.Button btnAlta;
         private System.Windows.Forms.ImageList imageList;
         private System.Windows.Forms.Label lblFoto;
+        private System.Windows.Forms.Button btnSelecc;
     }
 }
 
