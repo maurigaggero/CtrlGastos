@@ -38,7 +38,14 @@ namespace Primaton_G6.Formularios
 
         private void BtnRegistrarme_Click(object sender, EventArgs e)
         {
-            listu.AltaUsuarios(txtNombre.Text, Convert.ToInt32(txtIngresos.Text), img);
+            if(txtNombre.Text == "" || txtIngresos.Text == "")
+            {
+                MessageBox.Show("Campo obligatorio vacío");
+            }
+            else
+            {
+                listu.AltaUsuarios(txtNombre.Text, Convert.ToInt32(txtIngresos.Text), img);
+            }
 
             LimpiarCampos();
 
