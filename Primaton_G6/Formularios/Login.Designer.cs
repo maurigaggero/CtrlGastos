@@ -30,27 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            this.comboUsuarios = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnIngreso = new System.Windows.Forms.Button();
+            this.btnAddgasto = new System.Windows.Forms.Button();
             this.lblMensaje = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnAlta = new System.Windows.Forms.Button();
             this.imageList = new System.Windows.Forms.ImageList(this.components);
             this.lblFoto = new System.Windows.Forms.Label();
-            this.btnSelecc = new System.Windows.Forms.Button();
+            this.btnIngresar = new System.Windows.Forms.Button();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // comboUsuarios
-            // 
-            this.comboUsuarios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboUsuarios.FormattingEnabled = true;
-            this.comboUsuarios.Location = new System.Drawing.Point(297, 54);
-            this.comboUsuarios.Name = "comboUsuarios";
-            this.comboUsuarios.Size = new System.Drawing.Size(291, 39);
-            this.comboUsuarios.TabIndex = 1;
             // 
             // label3
             // 
@@ -58,11 +48,11 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(35, 60);
+            this.label3.Location = new System.Drawing.Point(75, 62);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(256, 29);
+            this.label3.Size = new System.Drawing.Size(203, 26);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Seleccione su usuario:";
+            this.label3.Text = "Nombre de usuario:";
             // 
             // label4
             // 
@@ -72,23 +62,23 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.MediumSpringGreen;
-            this.label4.Location = new System.Drawing.Point(178, 418);
+            this.label4.Location = new System.Drawing.Point(229, 503);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(196, 20);
             this.label4.TabIndex = 7;
             this.label4.Text = "¿No estás registrado?";
             // 
-            // btnIngreso
+            // btnAddgasto
             // 
-            this.btnIngreso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngreso.Location = new System.Drawing.Point(519, 269);
-            this.btnIngreso.Name = "btnIngreso";
-            this.btnIngreso.Size = new System.Drawing.Size(105, 34);
-            this.btnIngreso.TabIndex = 8;
-            this.btnIngreso.Text = "Ingresar";
-            this.btnIngreso.UseVisualStyleBackColor = false;
-            this.btnIngreso.Click += new System.EventHandler(this.BtnIngreso_Click);
+            this.btnAddgasto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnAddgasto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddgasto.Location = new System.Drawing.Point(506, 352);
+            this.btnAddgasto.Name = "btnAddgasto";
+            this.btnAddgasto.Size = new System.Drawing.Size(148, 34);
+            this.btnAddgasto.TabIndex = 8;
+            this.btnAddgasto.Text = "Agregar gasto";
+            this.btnAddgasto.UseVisualStyleBackColor = false;
+            this.btnAddgasto.Click += new System.EventHandler(this.BtnAddgasto_Click);
             // 
             // lblMensaje
             // 
@@ -96,7 +86,7 @@
             this.lblMensaje.BackColor = System.Drawing.Color.Transparent;
             this.lblMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensaje.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblMensaje.Location = new System.Drawing.Point(249, 207);
+            this.lblMensaje.Location = new System.Drawing.Point(259, 290);
             this.lblMensaje.Name = "lblMensaje";
             this.lblMensaje.Size = new System.Drawing.Size(0, 24);
             this.lblMensaje.TabIndex = 9;
@@ -105,9 +95,9 @@
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(253, 269);
+            this.btnEliminar.Location = new System.Drawing.Point(263, 352);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(205, 34);
+            this.btnEliminar.Size = new System.Drawing.Size(189, 34);
             this.btnEliminar.TabIndex = 10;
             this.btnEliminar.Text = "Eliminar mi cuenta";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -118,7 +108,7 @@
             this.btnAlta.BackColor = System.Drawing.SystemColors.Control;
             this.btnAlta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlta.Location = new System.Drawing.Point(409, 411);
+            this.btnAlta.Location = new System.Drawing.Point(460, 496);
             this.btnAlta.Name = "btnAlta";
             this.btnAlta.Size = new System.Drawing.Size(118, 34);
             this.btnAlta.TabIndex = 11;
@@ -148,22 +138,30 @@
             this.lblFoto.BackColor = System.Drawing.Color.Transparent;
             this.lblFoto.ImageIndex = 0;
             this.lblFoto.ImageList = this.imageList;
-            this.lblFoto.Location = new System.Drawing.Point(73, 196);
+            this.lblFoto.Location = new System.Drawing.Point(83, 279);
             this.lblFoto.Name = "lblFoto";
             this.lblFoto.Size = new System.Drawing.Size(129, 107);
             this.lblFoto.TabIndex = 13;
             // 
-            // btnSelecc
+            // btnIngresar
             // 
-            this.btnSelecc.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSelecc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSelecc.Location = new System.Drawing.Point(607, 50);
-            this.btnSelecc.Name = "btnSelecc";
-            this.btnSelecc.Size = new System.Drawing.Size(141, 53);
-            this.btnSelecc.TabIndex = 14;
-            this.btnSelecc.Text = "Seleccionar usuario";
-            this.btnSelecc.UseVisualStyleBackColor = false;
-            this.btnSelecc.Click += new System.EventHandler(this.BtnSelecc_Click);
+            this.btnIngresar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngresar.Location = new System.Drawing.Point(560, 57);
+            this.btnIngresar.Name = "btnIngresar";
+            this.btnIngresar.Size = new System.Drawing.Size(131, 41);
+            this.btnIngresar.TabIndex = 14;
+            this.btnIngresar.Text = "Ingresar";
+            this.btnIngresar.UseVisualStyleBackColor = false;
+            this.btnIngresar.Click += new System.EventHandler(this.BtnIngresar_Click);
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(299, 60);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(231, 30);
+            this.txtNombre.TabIndex = 15;
             // 
             // Login
             // 
@@ -174,16 +172,16 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(793, 498);
-            this.Controls.Add(this.btnSelecc);
+            this.ClientSize = new System.Drawing.Size(793, 583);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.lblFoto);
             this.Controls.Add(this.btnAlta);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.lblMensaje);
-            this.Controls.Add(this.btnIngreso);
+            this.Controls.Add(this.btnAddgasto);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboUsuarios);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -197,16 +195,16 @@
         }
 
         #endregion
-        private System.Windows.Forms.ComboBox comboUsuarios;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnIngreso;
+        private System.Windows.Forms.Button btnAddgasto;
         private System.Windows.Forms.Label lblMensaje;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnAlta;
         private System.Windows.Forms.ImageList imageList;
         private System.Windows.Forms.Label lblFoto;
-        private System.Windows.Forms.Button btnSelecc;
+        private System.Windows.Forms.Button btnIngresar;
+        private System.Windows.Forms.TextBox txtNombre;
     }
 }
 

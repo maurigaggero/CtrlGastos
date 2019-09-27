@@ -13,8 +13,6 @@ namespace Primaton_G6.Formularios
 {
     public partial class Login : Form
     {
-        Clases.Usuario usuario = new Clases.Usuario();
-
         Clases.Persistencia_Usuarios listu = new Clases.Persistencia_Usuarios();
 
         Clases.Persistencia_Gastos pgasto = new Clases.Persistencia_Gastos();
@@ -25,58 +23,66 @@ namespace Primaton_G6.Formularios
 
             listu.ConfigInicial();
 
-            ComboTabla();
+            listu.LeeUsuarios();
 
             lblMensaje.Text = "";
 
             lblFoto.Visible = false;
 
-            btnIngreso.Visible = false;
+            btnAddgasto.Visible = false;
 
             btnEliminar.Visible = false;
         }
 
-        private void BtnSelecc_Click(object sender, EventArgs e)
+        private void BtnIngresar_Click(object sender, EventArgs e)
         {
-            lblFoto.Visible = true;
-
-            btnIngreso.Visible = true;
-
-            btnEliminar.Visible = true;
-
-            lblFoto.ImageIndex = Convert.ToInt32(listu.DevuelveFoto(comboUsuarios.Text));
-
-            lblMensaje.Text = "Hola " + comboUsuarios.Text + ", " + "\r\n";
-            lblMensaje.Text += "Tus ingresos mensuales registrados son: $" + listu.DevuelveIngresos(comboUsuarios.Text);
-        }
-
-        public void ComboTabla()
-        {
-            listu.LeeUsuarios();
-
-            comboUsuarios.DataSource = listu.TablaUsuarios;
-            comboUsuarios.DisplayMember = "Nombre";
-            comboUsuarios.ValueMember = "Nombre";
-        }
-
-        private void BtnIngreso_Click(object sender, EventArgs e)
-        {
-            ControlDeGastos pdi = new ControlDeGastos();
-            pdi.ShowDialog();
-
-            if (comboUsuarios.Text != "")
+            string existe = listu.DevuelveNombre(txtNombre.Text);
+            if (txtNombre.Text == existe)
             {
-                string nombre = comboUsuarios.Text;
-                int ingresos = Convert.ToInt32(listu.DevuelveIngresos(comboUsuarios.Text));
-                int img = Convert.ToInt32(listu.DevuelveFoto(comboUsuarios.Text));
+                lblFoto.Visible = true;
 
-                pgasto.ArmaTabla(nombre, ingresos, img);
+                btnAddgasto.Visible = true;
+
+                btnEliminar.Visible = true;
+
+                lblFoto.ImageIndex = Convert.ToInt32(listu.DevuelveFoto(txtNombre.Text));
+
+                lblMensaje.Text = "Hola " + txtNombre.Text + ", " + "\r\n";
+                lblMensaje.Text += "Tus ingresos mensuales registrados son: $" + listu.DevuelveIngresos(txtNombre.Text);
+
+                MandaNombre(txtNombre.Text);
             }
+        }
+
+        private void BtnAddgasto_Click(object sender, EventArgs e)
+        {
+            ControlDeGastos tdi = new ControlDeGastos();
+            tdi.ShowDialog();
+        }
+
+
+        public void MandaNombre(string nombre)
+        {
+            Clases.Gastos g1 = new Clases.Gastos();
+
+            g1.Usuario = nombre;
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-            listu.EliminaUsuario(comboUsuarios.Text);
+            listu.EliminaUsuario(txtNombre.Text);
+
+            lblFoto.Visible = false;
+
+            btnAddgasto.Visible = false;
+
+            btnEliminar.Visible = false;
+
+            lblFoto.ImageIndex = 0;
+
+            lblMensaje.Text = "";
+
+            //borra por indice
             //listu.EliminaUsuario(comboUsuarios.SelectedIndex);
         }
 
@@ -87,3 +93,12 @@ namespace Primaton_G6.Formularios
         }
     }
 }
+
+//public void ComboTabla()
+//{
+//    listu.LeeUsuarios();
+
+//    comboUsuarios.DataSource = listu.TablaUsuarios;
+//    comboUsuarios.DisplayMember = "Nombre";
+//    comboUsuarios.ValueMember = "Nombre";
+//}

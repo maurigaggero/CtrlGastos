@@ -12,55 +12,64 @@ namespace Primaton_G6
 {
     public partial class ControlDeGastos : Form
     {
-        int c = 0;
+        Clases.Persistencia_Gastos g = new Clases.Persistencia_Gastos();
+
+        Clases.Persistencia_Usuarios listu = new Clases.Persistencia_Usuarios();
+
+        int fila = 0;
+
         public ControlDeGastos()
         {
             InitializeComponent();
+
+            //elimina la posibilidad de ingresar datos en el datagridview
+            tablaGastos.AllowUserToAddRows = false;
+            // elimina el encabezado de las filas
+            tablaGastos.RowHeadersVisible = false;
+           
+            g.ConfigInicial();
+
+            tablaGastos.DataSource = g.TablaGastos;
+
+            g.LeeGastos();
+
+            //int ingresos = Convert.ToInt32(listu.DevuelveIngresos(comboUsuarios.Text));
+            //int img = Convert.ToInt32(listu.DevuelveFoto(comboUsuarios.Text));
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+        private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            if (cbTipoGasto.Text == "Tipo de gasto" || txtcantidad.Text == "" || txtDetalle.Text == "" || txtDetalle.Text == "")
-            {
-                MessageBox.Show("Debes rellenar todos los casilleros");
-            }
-            else
-            {
-                //Incremento de celda
-                int n = DataView.Rows.Add();
+            Clases.Gastos g1 = new Clases.Gastos();
 
-                //Relleno de informacion de la tabla
-                DataView.Rows[n].Cells[0].Value = cbTipoGasto.Text;
-                DataView.Rows[n].Cells[2].Value = txtcantidad.Text;
-                DataView.Rows[n].Cells[1].Value = txtDetalle.Text;
-                DataView.Rows[n].Cells[3].Value = txtmonto.Text;
+            string usuario = g1.Usuario;
 
-                //Limpiar los textbox
-                cbTipoGasto.Text = "Tipo de gasto";
-                txtcantidad.Text = "";
-                txtDetalle.Text = "";
-                txtmonto.Text = "";
-            }
+            g.NuevoGasto(usuario ,txtRubro.Text, txtFecha.Value, txtDescripcion.Text, Convert.ToDouble(txtImporte.Text));
         }
 
         private void DataView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //le digo a la variable c  en que celda estoy parado
-            c = e.RowIndex;
+            //le digo a la variable fila en que celda estoy parado
+            fila = e.RowIndex;
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)
         {
-            //le digo al boton que si c es distinto a -1 borre todo el rengon con removeAt y el indice
-            if(c != -1)
+            //le digo al boton que si fila es distinto a -1 borre todo el rengon con removeAt y el indice
+            if(fila != -1)
             {
-                DataView.Rows.RemoveAt(c);
+                g.TablaGastos.Rows.RemoveAt(fila);
+
+                string NombreArchivo = @"gastos.xml";
+
+                Clases.Persistencia_Gastos t = new Clases.Persistencia_Gastos();
+                
+                t.TablaGastos.WriteXml(NombreArchivo);
             }
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            this.Close();
         }
     }
 }
