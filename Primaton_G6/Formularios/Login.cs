@@ -11,11 +11,12 @@ using System.IO;
 
 namespace Primaton_G6.Formularios
 {
+
     public partial class Login : Form
     {
         Clases.Persistencia_Usuarios listu = new Clases.Persistencia_Usuarios();
 
-        Clases.Persistencia_Gastos pgasto = new Clases.Persistencia_Gastos();
+        Clases.Gastos g = new Clases.Gastos();
 
         public Login()
         {
@@ -36,9 +37,13 @@ namespace Primaton_G6.Formularios
 
         private void BtnIngresar_Click(object sender, EventArgs e)
         {
+            //listu.LeeUsuarios();
+
             string existe = listu.DevuelveNombre(txtNombre.Text);
             if (txtNombre.Text == existe)
             {
+                g.Usuario = txtNombre.Text;
+
                 lblFoto.Visible = true;
 
                 btnAddgasto.Visible = true;
@@ -49,27 +54,31 @@ namespace Primaton_G6.Formularios
 
                 lblMensaje.Text = "Hola " + txtNombre.Text + ", " + "\r\n";
                 lblMensaje.Text += "Tus ingresos mensuales registrados son: $" + listu.DevuelveIngresos(txtNombre.Text);
+            }
+            else
+            {
+                MessageBox.Show("El usuario no existe");
 
-                MandaNombre(txtNombre.Text);
+                lblMensaje.Text = "";
+
+                lblFoto.Visible = false;
+
+                btnAddgasto.Visible = false;
+
+                btnEliminar.Visible = false;
             }
         }
 
         private void BtnAddgasto_Click(object sender, EventArgs e)
         {
-            ControlDeGastos tdi = new ControlDeGastos();
+            ControlDeGastos tdi = new ControlDeGastos(g.Usuario);
             tdi.ShowDialog();
-        }
-
-
-        public void MandaNombre(string nombre)
-        {
-            Clases.Gastos g1 = new Clases.Gastos();
-
-            g1.Usuario = nombre;
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
+            listu.LeeUsuarios();
+
             listu.EliminaUsuario(txtNombre.Text);
 
             lblFoto.Visible = false;

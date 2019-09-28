@@ -9,7 +9,7 @@ using System.IO;
 
 namespace Primaton_G6.Clases
 {
-    class Persistencia_Gastos
+    public class Persistencia_Gastos
     {
         #region PROPIEDADES PRIVADAS
         /// <summary>
@@ -44,7 +44,6 @@ namespace Primaton_G6.Clases
             TablaGastos.Columns.Add("Importe");
         }
 
-        
 
         public void NuevoGasto(string usuario, string rubro, DateTime fecha, string descripcion, double importe)
         {
@@ -58,11 +57,10 @@ namespace Primaton_G6.Clases
 
             // agrega el gasto
             {
-
                 TablaGastos.Rows.Add();
-                TablaGastos.Rows[TablaGastos.Rows.Count - 1]["Usuario"] = g.Usuario;
+
                 TablaGastos.Rows[TablaGastos.Rows.Count - 1]["Id"] = g.Id;
-                
+                TablaGastos.Rows[TablaGastos.Rows.Count - 1]["Usuario"] = g.Usuario;
                 TablaGastos.Rows[TablaGastos.Rows.Count - 1]["Fecha"] = g.Fecha;
                 TablaGastos.Rows[TablaGastos.Rows.Count - 1]["Rubro"] = g.Rubro;
                 //TablaGastos.Rows[TablaGastos.Rows.Count - 1]["Prioridad"] = ;
@@ -73,6 +71,17 @@ namespace Primaton_G6.Clases
 
                 MessageBox.Show("Gasto cargado con éxito!");
             }
+        }
+
+        public double SumaIngresos(string nombre)
+        {
+            double suma = 0;
+            foreach (DataRow fila in TablaGastos.Rows)
+            {                    
+                if (fila["Usuario"].ToString() == nombre)
+                    suma += Convert.ToDouble(fila["Importe"]);
+            }
+            return suma;
         }
 
         /// <summary>
@@ -88,7 +97,6 @@ namespace Primaton_G6.Clases
                 TablaGastos.ReadXml(NombreArchivo);
             }
         }
-
         #endregion
     }
 }

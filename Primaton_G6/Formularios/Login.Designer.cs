@@ -62,7 +62,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.MediumSpringGreen;
-            this.label4.Location = new System.Drawing.Point(229, 503);
+            this.label4.Location = new System.Drawing.Point(225, 451);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(196, 20);
             this.label4.TabIndex = 7;
@@ -72,10 +72,10 @@
             // 
             this.btnAddgasto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnAddgasto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddgasto.Location = new System.Drawing.Point(506, 352);
+            this.btnAddgasto.Location = new System.Drawing.Point(509, 293);
             this.btnAddgasto.Name = "btnAddgasto";
             this.btnAddgasto.Size = new System.Drawing.Size(148, 34);
-            this.btnAddgasto.TabIndex = 8;
+            this.btnAddgasto.TabIndex = 2;
             this.btnAddgasto.Text = "Agregar gasto";
             this.btnAddgasto.UseVisualStyleBackColor = false;
             this.btnAddgasto.Click += new System.EventHandler(this.BtnAddgasto_Click);
@@ -86,7 +86,7 @@
             this.lblMensaje.BackColor = System.Drawing.Color.Transparent;
             this.lblMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensaje.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblMensaje.Location = new System.Drawing.Point(259, 290);
+            this.lblMensaje.Location = new System.Drawing.Point(262, 231);
             this.lblMensaje.Name = "lblMensaje";
             this.lblMensaje.Size = new System.Drawing.Size(0, 24);
             this.lblMensaje.TabIndex = 9;
@@ -95,10 +95,10 @@
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(263, 352);
+            this.btnEliminar.Location = new System.Drawing.Point(266, 293);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(189, 34);
-            this.btnEliminar.TabIndex = 10;
+            this.btnEliminar.TabIndex = 3;
             this.btnEliminar.Text = "Eliminar mi cuenta";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
@@ -108,10 +108,10 @@
             this.btnAlta.BackColor = System.Drawing.SystemColors.Control;
             this.btnAlta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlta.Location = new System.Drawing.Point(460, 496);
+            this.btnAlta.Location = new System.Drawing.Point(456, 444);
             this.btnAlta.Name = "btnAlta";
             this.btnAlta.Size = new System.Drawing.Size(118, 34);
-            this.btnAlta.TabIndex = 11;
+            this.btnAlta.TabIndex = 4;
             this.btnAlta.Text = "Registrate";
             this.btnAlta.UseVisualStyleBackColor = false;
             this.btnAlta.Click += new System.EventHandler(this.BtnAlta_Click);
@@ -138,7 +138,7 @@
             this.lblFoto.BackColor = System.Drawing.Color.Transparent;
             this.lblFoto.ImageIndex = 0;
             this.lblFoto.ImageList = this.imageList;
-            this.lblFoto.Location = new System.Drawing.Point(83, 279);
+            this.lblFoto.Location = new System.Drawing.Point(86, 220);
             this.lblFoto.Name = "lblFoto";
             this.lblFoto.Size = new System.Drawing.Size(129, 107);
             this.lblFoto.TabIndex = 13;
@@ -150,7 +150,7 @@
             this.btnIngresar.Location = new System.Drawing.Point(560, 57);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(131, 41);
-            this.btnIngresar.TabIndex = 14;
+            this.btnIngresar.TabIndex = 1;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = false;
             this.btnIngresar.Click += new System.EventHandler(this.BtnIngresar_Click);
@@ -161,7 +161,7 @@
             this.txtNombre.Location = new System.Drawing.Point(299, 60);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(231, 30);
-            this.txtNombre.TabIndex = 15;
+            this.txtNombre.TabIndex = 0;
             // 
             // Login
             // 
@@ -172,7 +172,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(793, 583);
+            this.ClientSize = new System.Drawing.Size(820, 534);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.lblFoto);

@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Primaton_G6.Clases
 {
-    class Gastos
+    public class Gastos
     {
         public string Id { get; set; }
         public string Usuario { get; set; }

@@ -43,6 +43,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.tablaGastos = new System.Windows.Forms.DataGridView();
             this.txtImporte = new System.Windows.Forms.TextBox();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lblIngresos = new System.Windows.Forms.Label();
+            this.lblGastado = new System.Windows.Forms.Label();
+            this.lblDisponible = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tablaGastos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,7 +93,7 @@
             // 
             this.btnVolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(1058, 633);
+            this.btnVolver.Location = new System.Drawing.Point(1022, 647);
             this.btnVolver.Margin = new System.Windows.Forms.Padding(4);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(115, 35);
@@ -114,7 +121,8 @@
             "Transporte",
             "Viajes",
             "Salidad/Esparcimiento",
-            "Tarjeta de crédito"});
+            "Tarjeta de crédito",
+            "Otro"});
             this.txtRubro.Location = new System.Drawing.Point(77, 79);
             this.txtRubro.Margin = new System.Windows.Forms.Padding(4);
             this.txtRubro.Name = "txtRubro";
@@ -204,7 +212,7 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlLightLight;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.tablaGastos.DefaultCellStyle = dataGridViewCellStyle1;
-            this.tablaGastos.Location = new System.Drawing.Point(128, 237);
+            this.tablaGastos.Location = new System.Drawing.Point(128, 222);
             this.tablaGastos.Name = "tablaGastos";
             this.tablaGastos.ReadOnly = true;
             this.tablaGastos.RowHeadersWidth = 51;
@@ -224,13 +232,97 @@
             this.txtImporte.Size = new System.Drawing.Size(132, 28);
             this.txtImporte.TabIndex = 4;
             // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(241, 170);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(0, 17);
+            this.lblNombre.TabIndex = 17;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label5.Location = new System.Drawing.Point(145, 613);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(78, 20);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Ingresos:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6.Location = new System.Drawing.Point(145, 650);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(177, 20);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "Lo que llevas gastado:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label7.Location = new System.Drawing.Point(145, 684);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(183, 20);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Disponible para gastar:";
+            // 
+            // lblIngresos
+            // 
+            this.lblIngresos.AutoSize = true;
+            this.lblIngresos.BackColor = System.Drawing.Color.Transparent;
+            this.lblIngresos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIngresos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblIngresos.Location = new System.Drawing.Point(244, 613);
+            this.lblIngresos.Name = "lblIngresos";
+            this.lblIngresos.Size = new System.Drawing.Size(0, 24);
+            this.lblIngresos.TabIndex = 21;
+            // 
+            // lblGastado
+            // 
+            this.lblGastado.AutoSize = true;
+            this.lblGastado.BackColor = System.Drawing.Color.Transparent;
+            this.lblGastado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGastado.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblGastado.Location = new System.Drawing.Point(348, 650);
+            this.lblGastado.Name = "lblGastado";
+            this.lblGastado.Size = new System.Drawing.Size(0, 24);
+            this.lblGastado.TabIndex = 22;
+            // 
+            // lblDisponible
+            // 
+            this.lblDisponible.AutoSize = true;
+            this.lblDisponible.BackColor = System.Drawing.Color.Transparent;
+            this.lblDisponible.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDisponible.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblDisponible.Location = new System.Drawing.Point(348, 684);
+            this.lblDisponible.Name = "lblDisponible";
+            this.lblDisponible.Size = new System.Drawing.Size(0, 24);
+            this.lblDisponible.TabIndex = 23;
+            // 
             // ControlDeGastos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1262, 750);
+            this.ClientSize = new System.Drawing.Size(1262, 771);
+            this.Controls.Add(this.lblDisponible);
+            this.Controls.Add(this.lblGastado);
+            this.Controls.Add(this.lblIngresos);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.txtImporte);
             this.Controls.Add(this.tablaGastos);
             this.Controls.Add(this.label4);
@@ -268,5 +360,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView tablaGastos;
         private System.Windows.Forms.TextBox txtImporte;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblIngresos;
+        private System.Windows.Forms.Label lblGastado;
+        private System.Windows.Forms.Label lblDisponible;
     }
 }

@@ -23,6 +23,7 @@ namespace Primaton_G6.Clases
         /// Tabla en memoria con la lista de personas
         /// </summary>
         public DataTable TablaUsuarios = new DataTable("TablaUsuarios");
+
         #endregion
 
         #region METODOS
@@ -44,7 +45,6 @@ namespace Primaton_G6.Clases
         /// Rellena las columnas del último registro agregado con los valores del textbox correspondiente
         /// </summary>
         /// 
-
         public void LeeUsuarios()
         {
             // busca si el archivo ya existe para precargar sus datos
@@ -100,11 +100,14 @@ namespace Primaton_G6.Clases
                 {
                     DataRow fila = TablaUsuarios.Rows[i];
                     if (fila["Nombre"].ToString() == nombre)
+                    {
                         fila.Delete();
+                    }
+                    //TablaUsuarios.WriteXml(NombreArchivo);
                 }
-                TablaUsuarios.WriteXml(NombreArchivo);
             }
         }
+
 
         public string DevuelveNombre(string nombre)
         {
@@ -130,9 +133,8 @@ namespace Primaton_G6.Clases
                     return fila["Ingresos"].ToString();
                 }
             }
-            return "0";
+            return nombre;
         }
-
 
         public string DevuelveFoto(string nombre)
         {
@@ -165,6 +167,24 @@ namespace Primaton_G6.Clases
 //            fila.Delete();
 //    }
 //    TablaUsuarios.WriteXml(NombreArchivo);
+
+//}
+
+//public void EliminaUsuario(string nombre)
+//{
+//    try
+//    {
+//        foreach (DataRow fila in TablaUsuarios.Rows)
+//        {
+//            if (fila["Nombre"].ToString() == nombre)
+//                fila.Delete();
+//            TablaUsuarios.WriteXml(NombreArchivo);
+//        }
+//    }
+//    catch(Exception)
+//    {
+
+//    }
 
 //}
 

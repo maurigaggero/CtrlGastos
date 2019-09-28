@@ -19,8 +19,8 @@ namespace Primaton_G6
 
         private void btnGastos_Click(object sender, EventArgs e)
         {
-            ControlDeGastos control = new ControlDeGastos();
-            control.Show();
+            //ControlDeGastos control = new ControlDeGastos();
+            //control.Show();
             this.Hide();
         }
     }
