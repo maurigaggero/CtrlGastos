@@ -221,6 +221,7 @@
             this.tablaGastos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tablaGastos.Size = new System.Drawing.Size(978, 355);
             this.tablaGastos.TabIndex = 16;
+            this.tablaGastos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.TablaGastos_CellFormatting);
             // 
             // txtImporte
             // 

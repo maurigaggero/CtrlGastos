@@ -19,6 +19,8 @@ namespace Primaton_G6
 
         Clases.Gastos ug = new Clases.Gastos();
 
+        public string prioridad = "";
+
         public ControlDeGastos(string nombre)
         {
             InitializeComponent();
@@ -54,7 +56,7 @@ namespace Primaton_G6
             lblGastado.Text = "";
             lblGastado.Text = Convert.ToString(g.SumaIngresos(ug.Usuario));
 
-            if((Convert.ToDouble(lblIngresos.Text) - Convert.ToDouble(lblGastado.Text)) <= 1000)
+            if ((Convert.ToDouble(lblIngresos.Text) - Convert.ToDouble(lblGastado.Text)) <= 1000)
             {
                 lblDisponible.ForeColor = Color.Red;
                 lblDisponible.Text = "SUPERASTE EL LÍMITE DE GASTOS";
@@ -65,12 +67,42 @@ namespace Primaton_G6
                 lblDisponible.Text = "";
                 lblDisponible.Text = Convert.ToString(Convert.ToDouble(lblIngresos.Text) - Convert.ToDouble(lblGastado.Text));
             }
-            
+
+        }
+
+        private void TablaGastos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            foreach (DataGridViewRow row in tablaGastos.Rows)
+            {
+                if (this.tablaGastos.Rows[e.RowIndex].Cells["Prioridad"].Value.ToString() == "A")
+                {
+                    tablaGastos.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.LightYellow;
+                    tablaGastos.Rows[e.RowIndex].DefaultCellStyle.ForeColor = Color.Orange;
+                    e.CellStyle.SelectionForeColor = Color.Yellow;
+                    e.CellStyle.SelectionBackColor = Color.Orange;
+                }
+            }
         }
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            g.NuevoGasto(ug.Usuario, txtRubro.Text, txtFecha.Value, txtDescripcion.Text, Convert.ToDouble(txtImporte.Text));
+            if (chk_prioritario.Checked)
+            {
+                prioridad = "A";
+            }
+            else
+            {
+                prioridad = "";
+            }
+
+            if (txtRubro.Text == "" || txtDescripcion.Text == "" || txtImporte.Text == "")
+            {
+                MessageBox.Show("Hay campos vacíos, por favor revise");
+            }
+            else
+            {
+                g.NuevoGasto(ug.Usuario, txtRubro.Text, prioridad, txtFecha.Value, txtDescripcion.Text, Convert.ToDouble(txtImporte.Text));
+            }
 
             txtRubro.Text = "";
             txtFecha.Text = "";
@@ -83,13 +115,16 @@ namespace Primaton_G6
         private void btnBorrar_Click(object sender, EventArgs e)
         {
             {
-                tablaGastos.Rows.RemoveAt(tablaGastos.CurrentRow.Index);
+                if (tablaGastos.CurrentRow != null)
+                {
+                    tablaGastos.Rows.RemoveAt(tablaGastos.CurrentRow.Index);
 
-                string NombreArchivo = @"gastos.xml";
+                    string NombreArchivo = @"gastos.xml";
 
-                g.TablaGastos.WriteXml(NombreArchivo);
+                    g.TablaGastos.WriteXml(NombreArchivo);
 
-                MuestraInfo();
+                    MuestraInfo();
+                }
             }
         }
 
@@ -97,5 +132,7 @@ namespace Primaton_G6
         {
             this.Close();
         }
+
+       
     }
 }

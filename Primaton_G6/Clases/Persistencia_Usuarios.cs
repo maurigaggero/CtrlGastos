@@ -98,7 +98,7 @@ namespace Primaton_G6.Clases
 
                     TablaUsuarios.WriteXml(NombreArchivo);
 
-                    MessageBox.Show("Usuario creado con éxito! Vuelva a cargar el programa para actualizar");
+                    MessageBox.Show("Usuario creado con éxito!");
                 }
             }
         }

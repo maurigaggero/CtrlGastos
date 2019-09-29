@@ -46,7 +46,7 @@ namespace Primaton_G6.Clases
             TablaGastos.Columns.Add("Importe");
         }
 
-        public void NuevoGasto(string usuario, string rubro, DateTime fecha, string descripcion, double importe)
+        public void NuevoGasto(string usuario, string rubro, string prioridad, DateTime fecha, string descripcion, double importe)
         {
             int contador = DevuelveId(usuario) + 1;
 
@@ -54,7 +54,7 @@ namespace Primaton_G6.Clases
 
             g.Usuario = usuario;
             g.Fecha = fecha;
-            //g.Prioridad;
+            g.Prioridad = prioridad;
             g.Rubro = rubro;
             g.Descripcion = descripcion;
             g.Importe = importe;
@@ -67,7 +67,7 @@ namespace Primaton_G6.Clases
                 TablaGastos.Rows[TablaGastos.Rows.Count - 1]["Usuario"] = g.Usuario;
                 TablaGastos.Rows[TablaGastos.Rows.Count - 1]["Fecha"] = g.Fecha;
                 TablaGastos.Rows[TablaGastos.Rows.Count - 1]["Rubro"] = g.Rubro;
-                //TablaGastos.Rows[TablaGastos.Rows.Count - 1]["Prioridad"] = ;
+                TablaGastos.Rows[TablaGastos.Rows.Count - 1]["Prioridad"] = g.Prioridad;
                 TablaGastos.Rows[TablaGastos.Rows.Count - 1]["Descripcion"] = g.Descripcion;
                 TablaGastos.Rows[TablaGastos.Rows.Count - 1]["Importe"] = g.Importe;
 
@@ -98,6 +98,7 @@ namespace Primaton_G6.Clases
             }
             return 0;
         }
+
 
         //public void EliminaGastosUsuario(string nombre)
         //{
