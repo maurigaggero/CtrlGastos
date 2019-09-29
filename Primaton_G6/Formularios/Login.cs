@@ -37,23 +37,33 @@ namespace Primaton_G6.Formularios
 
         private void BtnIngresar_Click(object sender, EventArgs e)
         {
-            //listu.LeeUsuarios();
+            listu.LeeUsuarios();
+
+            string contraseña = listu.DevuelvePass(txtNombre.Text);
 
             string existe = listu.DevuelveNombre(txtNombre.Text);
             if (txtNombre.Text == existe)
             {
-                g.Usuario = txtNombre.Text;
+                if (contraseña == txtPass.Text)
+                {
+                    g.Usuario = txtNombre.Text;
 
-                lblFoto.Visible = true;
+                    lblFoto.Visible = true;
 
-                btnAddgasto.Visible = true;
+                    btnAddgasto.Visible = true;
 
-                btnEliminar.Visible = true;
+                    btnEliminar.Visible = true;
 
-                lblFoto.ImageIndex = Convert.ToInt32(listu.DevuelveFoto(txtNombre.Text));
+                    lblFoto.ImageIndex = Convert.ToInt32(listu.DevuelveFoto(txtNombre.Text));
 
-                lblMensaje.Text = "Hola " + txtNombre.Text + ", " + "\r\n";
-                lblMensaje.Text += "Tus ingresos mensuales registrados son: $" + listu.DevuelveIngresos(txtNombre.Text);
+                    lblMensaje.Text = "Hola " + txtNombre.Text + ", " + "\r\n";
+                    lblMensaje.Text += "Tus ingresos mensuales registrados son: $" + listu.DevuelveIngresos(txtNombre.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Contraseña incorrecta.");
+                }
+                
             }
             else
             {
@@ -77,19 +87,31 @@ namespace Primaton_G6.Formularios
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-            listu.LeeUsuarios();
+            DialogResult pregunta;
+            pregunta = MessageBox.Show("¿Seguro desea eliminar su usuario?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            
+            if(pregunta==DialogResult.Yes)
+            {
+                listu.LeeUsuarios();
 
-            listu.EliminaUsuario(txtNombre.Text);
+                listu.EliminaUsuario(txtNombre.Text);
 
-            lblFoto.Visible = false;
+                lblFoto.Visible = false;
 
-            btnAddgasto.Visible = false;
+                btnAddgasto.Visible = false;
 
-            btnEliminar.Visible = false;
+                btnEliminar.Visible = false;
 
-            lblFoto.ImageIndex = 0;
+                lblFoto.ImageIndex = 0;
 
-            lblMensaje.Text = "";
+                lblMensaje.Text = "";
+
+                MessageBox.Show("Usuario eliminado!", "Aviso");
+            }
+            else
+            {
+                
+            }
 
             //borra por indice
             //listu.EliminaUsuario(comboUsuarios.SelectedIndex);

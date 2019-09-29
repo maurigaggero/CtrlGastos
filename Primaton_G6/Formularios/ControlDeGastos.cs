@@ -19,8 +19,6 @@ namespace Primaton_G6
 
         Clases.Gastos ug = new Clases.Gastos();
 
-        int fila = 0;
-
         public ControlDeGastos(string nombre)
         {
             InitializeComponent();
@@ -42,44 +40,56 @@ namespace Primaton_G6
 
             ug.Usuario = nombre;
 
+            g.TablaGastos.DefaultView.RowFilter = $"Usuario LIKE '{ug.Usuario}%'";
+
             lblIngresos.Text = Convert.ToString(listu.DevuelveIngresos(ug.Usuario));
 
+            MuestraInfo();
+
+            //int img = Convert.ToInt32(listu.DevuelveFoto(comboUsuarios.Text));
+        }
+
+        public void MuestraInfo()
+        {
             lblGastado.Text = "";
             lblGastado.Text = Convert.ToString(g.SumaIngresos(ug.Usuario));
 
-            lblDisponible.Text = "";
-            lblDisponible.Text = Convert.ToString(Convert.ToDouble(lblIngresos.Text) - Convert.ToDouble(lblGastado.Text));
-
-            //int img = Convert.ToInt32(listu.DevuelveFoto(comboUsuarios.Text));
+            if((Convert.ToDouble(lblIngresos.Text) - Convert.ToDouble(lblGastado.Text)) <= 1000)
+            {
+                lblDisponible.ForeColor = Color.Red;
+                lblDisponible.Text = "SUPERASTE EL LÍMITE DE GASTOS";
+            }
+            else
+            {
+                lblDisponible.ForeColor = Color.White;
+                lblDisponible.Text = "";
+                lblDisponible.Text = Convert.ToString(Convert.ToDouble(lblIngresos.Text) - Convert.ToDouble(lblGastado.Text));
+            }
+            
         }
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
             g.NuevoGasto(ug.Usuario, txtRubro.Text, txtFecha.Value, txtDescripcion.Text, Convert.ToDouble(txtImporte.Text));
 
-            lblGastado.Text = "";
-            lblGastado.Text = Convert.ToString(g.SumaIngresos(lblNombre.Text));
+            txtRubro.Text = "";
+            txtFecha.Text = "";
+            txtDescripcion.Text = "";
+            txtImporte.Text = "";
 
-            lblDisponible.Text = "";
-            lblDisponible.Text = Convert.ToString(Convert.ToDouble(lblIngresos.Text) - Convert.ToDouble(lblGastado.Text));
-        }
-
-        private void DataView_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //le digo a la variable fila en que celda estoy parado
-            fila = e.RowIndex;
+            MuestraInfo();
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)
         {
-            //si fila es distinto a -1 borre todo el rengon con removeAt y el indice
-            if(fila != -1)
             {
-                g.TablaGastos.Rows.RemoveAt(fila);
+                tablaGastos.Rows.RemoveAt(tablaGastos.CurrentRow.Index);
 
                 string NombreArchivo = @"gastos.xml";
 
                 g.TablaGastos.WriteXml(NombreArchivo);
+
+                MuestraInfo();
             }
         }
 

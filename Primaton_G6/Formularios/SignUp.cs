@@ -34,17 +34,18 @@ namespace Primaton_G6.Formularios
             txtNombre.Text = "";
             txtIngresos.Text = "";
             txtDNI.Text = "";
+            txtPass.Text = "";
         }
 
         private void BtnRegistrarme_Click(object sender, EventArgs e)
         {
-            if(txtNombre.Text == "" || txtIngresos.Text == "" || txtDNI.Text == "")
+            if(txtNombre.Text == "" || txtIngresos.Text == "" || txtDNI.Text == "" || txtPass.Text == "")
             {
                 MessageBox.Show("Campo obligatorio vacío");
             }
             else
             {
-                listu.AltaUsuarios(txtNombre.Text, Convert.ToInt32(txtIngresos.Text), img, txtDNI.Text);
+                listu.AltaUsuarios(txtDNI.Text, txtNombre.Text, txtPass.Text, Convert.ToInt32(txtIngresos.Text), img);
             }
             LimpiarCampos();
         }

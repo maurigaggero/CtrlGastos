@@ -40,6 +40,8 @@
             this.lblFoto = new System.Windows.Forms.Label();
             this.btnIngresar = new System.Windows.Forms.Button();
             this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label3
@@ -72,10 +74,10 @@
             // 
             this.btnAddgasto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnAddgasto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddgasto.Location = new System.Drawing.Point(509, 293);
+            this.btnAddgasto.Location = new System.Drawing.Point(514, 311);
             this.btnAddgasto.Name = "btnAddgasto";
             this.btnAddgasto.Size = new System.Drawing.Size(148, 34);
-            this.btnAddgasto.TabIndex = 2;
+            this.btnAddgasto.TabIndex = 3;
             this.btnAddgasto.Text = "Agregar gasto";
             this.btnAddgasto.UseVisualStyleBackColor = false;
             this.btnAddgasto.Click += new System.EventHandler(this.BtnAddgasto_Click);
@@ -86,7 +88,7 @@
             this.lblMensaje.BackColor = System.Drawing.Color.Transparent;
             this.lblMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensaje.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblMensaje.Location = new System.Drawing.Point(262, 231);
+            this.lblMensaje.Location = new System.Drawing.Point(267, 249);
             this.lblMensaje.Name = "lblMensaje";
             this.lblMensaje.Size = new System.Drawing.Size(0, 24);
             this.lblMensaje.TabIndex = 9;
@@ -95,10 +97,10 @@
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(266, 293);
+            this.btnEliminar.Location = new System.Drawing.Point(271, 311);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(189, 34);
-            this.btnEliminar.TabIndex = 3;
+            this.btnEliminar.TabIndex = 4;
             this.btnEliminar.Text = "Eliminar mi cuenta";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
@@ -111,7 +113,7 @@
             this.btnAlta.Location = new System.Drawing.Point(456, 444);
             this.btnAlta.Name = "btnAlta";
             this.btnAlta.Size = new System.Drawing.Size(118, 34);
-            this.btnAlta.TabIndex = 4;
+            this.btnAlta.TabIndex = 5;
             this.btnAlta.Text = "Registrate";
             this.btnAlta.UseVisualStyleBackColor = false;
             this.btnAlta.Click += new System.EventHandler(this.BtnAlta_Click);
@@ -138,7 +140,7 @@
             this.lblFoto.BackColor = System.Drawing.Color.Transparent;
             this.lblFoto.ImageIndex = 0;
             this.lblFoto.ImageList = this.imageList;
-            this.lblFoto.Location = new System.Drawing.Point(86, 220);
+            this.lblFoto.Location = new System.Drawing.Point(91, 238);
             this.lblFoto.Name = "lblFoto";
             this.lblFoto.Size = new System.Drawing.Size(129, 107);
             this.lblFoto.TabIndex = 13;
@@ -147,10 +149,10 @@
             // 
             this.btnIngresar.BackColor = System.Drawing.SystemColors.Control;
             this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngresar.Location = new System.Drawing.Point(560, 57);
+            this.btnIngresar.Location = new System.Drawing.Point(601, 85);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(131, 41);
-            this.btnIngresar.TabIndex = 1;
+            this.btnIngresar.TabIndex = 2;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = false;
             this.btnIngresar.Click += new System.EventHandler(this.BtnIngresar_Click);
@@ -163,6 +165,27 @@
             this.txtNombre.Size = new System.Drawing.Size(231, 30);
             this.txtNombre.TabIndex = 0;
             // 
+            // txtPass
+            // 
+            this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass.Location = new System.Drawing.Point(299, 121);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
+            this.txtPass.Size = new System.Drawing.Size(231, 30);
+            this.txtPass.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(148, 125);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(130, 26);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Contraseña:";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -173,6 +196,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(820, 534);
+            this.Controls.Add(this.txtPass);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.lblFoto);
@@ -205,6 +230,8 @@
         private System.Windows.Forms.Label lblFoto;
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtPass;
+        private System.Windows.Forms.Label label1;
     }
 }
 

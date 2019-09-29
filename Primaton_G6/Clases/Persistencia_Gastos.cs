@@ -23,6 +23,8 @@ namespace Primaton_G6.Clases
         /// Tabla en memoria con la lista de personas
         /// </summary>
         public DataTable TablaGastos = new DataTable("TablaGastos");
+
+        Clases.Persistencia_Usuarios user = new Clases.Persistencia_Usuarios();
         #endregion
 
         #region METODOS
@@ -44,10 +46,12 @@ namespace Primaton_G6.Clases
             TablaGastos.Columns.Add("Importe");
         }
 
-
         public void NuevoGasto(string usuario, string rubro, DateTime fecha, string descripcion, double importe)
         {
-            g.Id = "0000";
+            int contador = DevuelveId(usuario) + 1;
+
+            g.Id = Convert.ToString(contador);
+
             g.Usuario = usuario;
             g.Fecha = fecha;
             //g.Prioridad;
@@ -77,12 +81,37 @@ namespace Primaton_G6.Clases
         {
             double suma = 0;
             foreach (DataRow fila in TablaGastos.Rows)
-            {                    
+            {
                 if (fila["Usuario"].ToString() == nombre)
                     suma += Convert.ToDouble(fila["Importe"]);
             }
             return suma;
         }
+
+        public int DevuelveId(string nombre)
+        {
+            for (int i = TablaGastos.Rows.Count - 1; i >= 0; i--)
+            {
+                DataRow fila = TablaGastos.Rows[i];
+                if (fila["Usuario"].ToString() == nombre)
+                return Convert.ToInt32(fila["Id"]);
+            }
+            return 0;
+        }
+
+        //public void EliminaGastosUsuario(string nombre)
+        //{
+        //    TablaGastos.ReadXmlSchema(NombreArchivo);
+        //    for (int i = TablaGastos.Rows.Count - 1; i >= 0; i--)
+        //    {
+        //        DataRow fila = TablaGastos.Rows[i];
+        //        if (fila["Usuario"].ToString() == nombre)
+        //        {
+        //            fila.Delete();
+        //        }
+        //        TablaGastos.WriteXml(NombreArchivo);
+        //    }
+        //}
 
         /// <summary>
         /// Rellena las columnas del último registro agregado con los valores del textbox correspondiente

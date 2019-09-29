@@ -37,6 +37,7 @@ namespace Primaton_G6.Clases
         {
             TablaUsuarios.Columns.Add("Id");
             TablaUsuarios.Columns.Add("Nombre");
+            TablaUsuarios.Columns.Add("Password");
             TablaUsuarios.Columns.Add("Ingresos");
             TablaUsuarios.Columns.Add("Img");
         }
@@ -54,14 +55,15 @@ namespace Primaton_G6.Clases
             }
         }
 
-        public void AltaUsuarios(string nombre, int ingresos, int img, string dni)
+        public void AltaUsuarios(string dni, string nombre, string pass, int ingresos, int img)
         {
             {
+                u.Id = dni;
                 u.Nombre = nombre;
+                u.Password = pass;
                 u.Ingresos = ingresos;
                 u.Img = img;
-                u.Id = dni;
-
+                
                 int contador = 0;
 
                 //recorre la tabla, si existe un usuario igual suma el contador
@@ -74,6 +76,15 @@ namespace Primaton_G6.Clases
                         contador++;
                     }
                 }
+                for (int i = TablaUsuarios.Rows.Count - 1; i >= 0; i--)
+                {
+                    DataRow fila = TablaUsuarios.Rows[i];
+                    if (fila["Id"].ToString() == dni)
+                    {
+                        MessageBox.Show("Ya existe un usuario con este DNI.", "Hubo un problema", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        contador++;
+                    }
+                }
                 //sino agrega el usuario
                 if (contador == 0)
                 {
@@ -81,6 +92,7 @@ namespace Primaton_G6.Clases
 
                     TablaUsuarios.Rows[TablaUsuarios.Rows.Count - 1]["Id"] = u.Id;
                     TablaUsuarios.Rows[TablaUsuarios.Rows.Count - 1]["Nombre"] = u.Nombre;
+                    TablaUsuarios.Rows[TablaUsuarios.Rows.Count - 1]["Password"] = u.Password;
                     TablaUsuarios.Rows[TablaUsuarios.Rows.Count - 1]["Ingresos"] = u.Ingresos;
                     TablaUsuarios.Rows[TablaUsuarios.Rows.Count - 1]["Img"] = u.Img;
 
@@ -103,7 +115,7 @@ namespace Primaton_G6.Clases
                     {
                         fila.Delete();
                     }
-                    //TablaUsuarios.WriteXml(NombreArchivo);
+                    TablaUsuarios.WriteXml(NombreArchivo);
                 }
             }
         }
@@ -111,13 +123,27 @@ namespace Primaton_G6.Clases
 
         public string DevuelveNombre(string nombre)
         {
-            // recorre la tabla, si el argumento es igual a un valor en la columna nombre lo borra
+            // recorre la tabla, 
             for (int i = TablaUsuarios.Rows.Count - 1; i >= 0; i--)
             {
                 DataRow fila = TablaUsuarios.Rows[i];
                 if (fila["Nombre"].ToString() == nombre)
                 {
                     return fila["Nombre"].ToString();
+                }
+            }
+            return "0";
+        }
+
+        public string DevuelvePass(string nombre)
+        {
+            // recorre la tabla, 
+            for (int i = TablaUsuarios.Rows.Count - 1; i >= 0; i--)
+            {
+                DataRow fila = TablaUsuarios.Rows[i];
+                if (fila["Nombre"].ToString() == nombre)
+                {
+                    return fila["Password"].ToString();
                 }
             }
             return "0";
