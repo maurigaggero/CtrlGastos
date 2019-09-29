@@ -81,6 +81,13 @@ namespace Primaton_G6
                     e.CellStyle.SelectionForeColor = Color.Yellow;
                     e.CellStyle.SelectionBackColor = Color.Orange;
                 }
+                else
+                {
+                    tablaGastos.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.White;
+                    tablaGastos.Rows[e.RowIndex].DefaultCellStyle.ForeColor = Color.DarkBlue;
+                    e.CellStyle.SelectionForeColor = Color.White;
+                    e.CellStyle.SelectionBackColor = Color.Blue;
+                }
             }
         }
 
@@ -132,7 +139,5 @@ namespace Primaton_G6
         {
             this.Close();
         }
-
-       
     }
 }
