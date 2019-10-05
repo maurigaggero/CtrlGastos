@@ -96,7 +96,7 @@ namespace Primaton_G6.Clases
                     TablaUsuarios.Rows[TablaUsuarios.Rows.Count - 1]["Ingresos"] = u.Ingresos;
                     TablaUsuarios.Rows[TablaUsuarios.Rows.Count - 1]["Img"] = u.Img;
 
-                    TablaUsuarios.WriteXml(NombreArchivo);
+                    TablaUsuarios.WriteXml(NombreArchivo, XmlWriteMode.WriteSchema);
 
                     MessageBox.Show("Usuario creado con éxito!");
                 }
@@ -115,7 +115,7 @@ namespace Primaton_G6.Clases
                     {
                         fila.Delete();
                     }
-                    TablaUsuarios.WriteXml(NombreArchivo);
+                    TablaUsuarios.WriteXml(NombreArchivo, XmlWriteMode.WriteSchema);
                 }
             }
         }
@@ -182,55 +182,3 @@ namespace Primaton_G6.Clases
         #endregion
     }
 }
-
-//public void EliminaUsuario(int pos)
-//{
-//    // recorre la tabla, si el argumento es igual a un valor en la columna nombre lo borra
-//    for (int i = TablaUsuarios.Rows.Count - 1; i >= 0; i--)
-//    {
-//        DataRow fila = TablaUsuarios.Rows[i];
-//        if (i == pos)
-//            fila.Delete();
-//    }
-//    TablaUsuarios.WriteXml(NombreArchivo);
-
-//}
-
-//public void EliminaUsuario(string nombre)
-//{
-//    try
-//    {
-//        foreach (DataRow fila in TablaUsuarios.Rows)
-//        {
-//            if (fila["Nombre"].ToString() == nombre)
-//                fila.Delete();
-//            TablaUsuarios.WriteXml(NombreArchivo);
-//        }
-//    }
-//    catch(Exception)
-//    {
-
-//    }
-
-//}
-
-
-//public string DevuelveFoto(string nombre) //asi tiraba; cuando no estaba el boton seleccionar user
-//{
-//    try
-//    {
-//        for (int i = TablaUsuarios.Rows.Count - 1; i >= 0; i--)
-//        {
-//            DataRow fila = TablaUsuarios.Rows[i];
-//            if (fila["Nombre"].ToString() == nombre)
-//            {
-//                return fila["Img"].ToString();
-//            }
-//        }
-//        return "0";
-//    }
-//    catch (System.Data.RowNotInTableException)
-//    {
-//        return "0";
-//    }
-//}

@@ -97,10 +97,10 @@
             this.btnRegistrarme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrarme.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarme.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrarme.Location = new System.Drawing.Point(12, 570);
-            this.btnRegistrarme.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRegistrarme.Location = new System.Drawing.Point(16, 702);
+            this.btnRegistrarme.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegistrarme.Name = "btnRegistrarme";
-            this.btnRegistrarme.Size = new System.Drawing.Size(112, 50);
+            this.btnRegistrarme.Size = new System.Drawing.Size(149, 62);
             this.btnRegistrarme.TabIndex = 4;
             this.btnRegistrarme.Text = "Registrarme";
             this.btnRegistrarme.UseVisualStyleBackColor = true;
@@ -114,11 +114,11 @@
             // 
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.Silver;
-            this.txtNombre.Location = new System.Drawing.Point(41, 18);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombre.Location = new System.Drawing.Point(55, 22);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombre.MaxLength = 40;
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(373, 24);
+            this.txtNombre.Size = new System.Drawing.Size(496, 29);
             this.txtNombre.TabIndex = 10;
             this.txtNombre.Text = "Nombre de usuario";
             this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -138,10 +138,10 @@
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Location = new System.Drawing.Point(326, 570);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBack.Location = new System.Drawing.Point(435, 702);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(112, 50);
+            this.btnBack.Size = new System.Drawing.Size(149, 62);
             this.btnBack.TabIndex = 5;
             this.btnBack.Text = "Volver atrás";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -155,10 +155,9 @@
             // 
             this.lblFoto2.ImageIndex = 0;
             this.lblFoto2.ImageList = this.imageList;
-            this.lblFoto2.Location = new System.Drawing.Point(163, 432);
-            this.lblFoto2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFoto2.Location = new System.Drawing.Point(217, 532);
             this.lblFoto2.Name = "lblFoto2";
-            this.lblFoto2.Size = new System.Drawing.Size(153, 113);
+            this.lblFoto2.Size = new System.Drawing.Size(204, 139);
             this.lblFoto2.TabIndex = 15;
             // 
             // panel1
@@ -175,20 +174,20 @@
             this.panel1.Controls.Add(this.imgCaballo);
             this.panel1.Controls.Add(this.imgPanda);
             this.panel1.Controls.Add(this.imgCiervo);
-            this.panel1.Location = new System.Drawing.Point(12, 169);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(16, 208);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(431, 254);
+            this.panel1.Size = new System.Drawing.Size(575, 313);
             this.panel1.TabIndex = 16;
             // 
             // imgArdilla
             // 
             this.imgArdilla.Cursor = System.Windows.Forms.Cursors.Hand;
             this.imgArdilla.Image = ((System.Drawing.Image)(resources.GetObject("imgArdilla.Image")));
-            this.imgArdilla.Location = new System.Drawing.Point(333, 174);
-            this.imgArdilla.Margin = new System.Windows.Forms.Padding(2);
+            this.imgArdilla.Location = new System.Drawing.Point(444, 214);
+            this.imgArdilla.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.imgArdilla.Name = "imgArdilla";
-            this.imgArdilla.Size = new System.Drawing.Size(83, 73);
+            this.imgArdilla.Size = new System.Drawing.Size(111, 90);
             this.imgArdilla.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgArdilla.TabIndex = 26;
             this.imgArdilla.TabStop = false;
@@ -198,10 +197,10 @@
             // 
             this.imgBlanco.Cursor = System.Windows.Forms.Cursors.Hand;
             this.imgBlanco.Image = ((System.Drawing.Image)(resources.GetObject("imgBlanco.Image")));
-            this.imgBlanco.Location = new System.Drawing.Point(10, 12);
-            this.imgBlanco.Margin = new System.Windows.Forms.Padding(2);
+            this.imgBlanco.Location = new System.Drawing.Point(13, 15);
+            this.imgBlanco.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.imgBlanco.Name = "imgBlanco";
-            this.imgBlanco.Size = new System.Drawing.Size(78, 78);
+            this.imgBlanco.Size = new System.Drawing.Size(104, 96);
             this.imgBlanco.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgBlanco.TabIndex = 15;
             this.imgBlanco.TabStop = false;
@@ -211,10 +210,10 @@
             // 
             this.imgLeon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.imgLeon.Image = ((System.Drawing.Image)(resources.GetObject("imgLeon.Image")));
-            this.imgLeon.Location = new System.Drawing.Point(225, 174);
-            this.imgLeon.Margin = new System.Windows.Forms.Padding(2);
+            this.imgLeon.Location = new System.Drawing.Point(300, 214);
+            this.imgLeon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.imgLeon.Name = "imgLeon";
-            this.imgLeon.Size = new System.Drawing.Size(83, 73);
+            this.imgLeon.Size = new System.Drawing.Size(111, 90);
             this.imgLeon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgLeon.TabIndex = 25;
             this.imgLeon.TabStop = false;
@@ -224,10 +223,10 @@
             // 
             this.imgChanchito.Cursor = System.Windows.Forms.Cursors.Hand;
             this.imgChanchito.Image = ((System.Drawing.Image)(resources.GetObject("imgChanchito.Image")));
-            this.imgChanchito.Location = new System.Drawing.Point(115, 12);
-            this.imgChanchito.Margin = new System.Windows.Forms.Padding(2);
+            this.imgChanchito.Location = new System.Drawing.Point(153, 15);
+            this.imgChanchito.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.imgChanchito.Name = "imgChanchito";
-            this.imgChanchito.Size = new System.Drawing.Size(79, 78);
+            this.imgChanchito.Size = new System.Drawing.Size(105, 96);
             this.imgChanchito.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgChanchito.TabIndex = 16;
             this.imgChanchito.TabStop = false;
@@ -237,10 +236,10 @@
             // 
             this.imgGato.Cursor = System.Windows.Forms.Cursors.Hand;
             this.imgGato.Image = ((System.Drawing.Image)(resources.GetObject("imgGato.Image")));
-            this.imgGato.Location = new System.Drawing.Point(118, 174);
-            this.imgGato.Margin = new System.Windows.Forms.Padding(2);
+            this.imgGato.Location = new System.Drawing.Point(157, 214);
+            this.imgGato.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.imgGato.Name = "imgGato";
-            this.imgGato.Size = new System.Drawing.Size(82, 73);
+            this.imgGato.Size = new System.Drawing.Size(109, 90);
             this.imgGato.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgGato.TabIndex = 24;
             this.imgGato.TabStop = false;
@@ -250,10 +249,10 @@
             // 
             this.imgPez.Cursor = System.Windows.Forms.Cursors.Hand;
             this.imgPez.Image = ((System.Drawing.Image)(resources.GetObject("imgPez.Image")));
-            this.imgPez.Location = new System.Drawing.Point(221, 12);
-            this.imgPez.Margin = new System.Windows.Forms.Padding(2);
+            this.imgPez.Location = new System.Drawing.Point(295, 15);
+            this.imgPez.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.imgPez.Name = "imgPez";
-            this.imgPez.Size = new System.Drawing.Size(83, 78);
+            this.imgPez.Size = new System.Drawing.Size(111, 96);
             this.imgPez.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgPez.TabIndex = 17;
             this.imgPez.TabStop = false;
@@ -263,10 +262,10 @@
             // 
             this.imgPerro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.imgPerro.Image = ((System.Drawing.Image)(resources.GetObject("imgPerro.Image")));
-            this.imgPerro.Location = new System.Drawing.Point(10, 174);
-            this.imgPerro.Margin = new System.Windows.Forms.Padding(2);
+            this.imgPerro.Location = new System.Drawing.Point(13, 214);
+            this.imgPerro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.imgPerro.Name = "imgPerro";
-            this.imgPerro.Size = new System.Drawing.Size(83, 73);
+            this.imgPerro.Size = new System.Drawing.Size(111, 90);
             this.imgPerro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgPerro.TabIndex = 23;
             this.imgPerro.TabStop = false;
@@ -276,10 +275,10 @@
             // 
             this.imgJirafa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.imgJirafa.Image = ((System.Drawing.Image)(resources.GetObject("imgJirafa.Image")));
-            this.imgJirafa.Location = new System.Drawing.Point(331, 13);
-            this.imgJirafa.Margin = new System.Windows.Forms.Padding(2);
+            this.imgJirafa.Location = new System.Drawing.Point(441, 16);
+            this.imgJirafa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.imgJirafa.Name = "imgJirafa";
-            this.imgJirafa.Size = new System.Drawing.Size(83, 78);
+            this.imgJirafa.Size = new System.Drawing.Size(111, 96);
             this.imgJirafa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgJirafa.TabIndex = 18;
             this.imgJirafa.TabStop = false;
@@ -289,10 +288,10 @@
             // 
             this.imgAguila.Cursor = System.Windows.Forms.Cursors.Hand;
             this.imgAguila.Image = ((System.Drawing.Image)(resources.GetObject("imgAguila.Image")));
-            this.imgAguila.Location = new System.Drawing.Point(333, 95);
-            this.imgAguila.Margin = new System.Windows.Forms.Padding(2);
+            this.imgAguila.Location = new System.Drawing.Point(444, 117);
+            this.imgAguila.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.imgAguila.Name = "imgAguila";
-            this.imgAguila.Size = new System.Drawing.Size(83, 74);
+            this.imgAguila.Size = new System.Drawing.Size(111, 91);
             this.imgAguila.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgAguila.TabIndex = 22;
             this.imgAguila.TabStop = false;
@@ -302,10 +301,10 @@
             // 
             this.imgCaballo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.imgCaballo.Image = ((System.Drawing.Image)(resources.GetObject("imgCaballo.Image")));
-            this.imgCaballo.Location = new System.Drawing.Point(10, 95);
-            this.imgCaballo.Margin = new System.Windows.Forms.Padding(2);
+            this.imgCaballo.Location = new System.Drawing.Point(13, 117);
+            this.imgCaballo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.imgCaballo.Name = "imgCaballo";
-            this.imgCaballo.Size = new System.Drawing.Size(78, 74);
+            this.imgCaballo.Size = new System.Drawing.Size(104, 91);
             this.imgCaballo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgCaballo.TabIndex = 19;
             this.imgCaballo.TabStop = false;
@@ -315,10 +314,10 @@
             // 
             this.imgPanda.Cursor = System.Windows.Forms.Cursors.Hand;
             this.imgPanda.Image = ((System.Drawing.Image)(resources.GetObject("imgPanda.Image")));
-            this.imgPanda.Location = new System.Drawing.Point(223, 95);
-            this.imgPanda.Margin = new System.Windows.Forms.Padding(2);
+            this.imgPanda.Location = new System.Drawing.Point(297, 117);
+            this.imgPanda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.imgPanda.Name = "imgPanda";
-            this.imgPanda.Size = new System.Drawing.Size(83, 74);
+            this.imgPanda.Size = new System.Drawing.Size(111, 91);
             this.imgPanda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgPanda.TabIndex = 21;
             this.imgPanda.TabStop = false;
@@ -328,10 +327,10 @@
             // 
             this.imgCiervo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.imgCiervo.Image = ((System.Drawing.Image)(resources.GetObject("imgCiervo.Image")));
-            this.imgCiervo.Location = new System.Drawing.Point(115, 95);
-            this.imgCiervo.Margin = new System.Windows.Forms.Padding(2);
+            this.imgCiervo.Location = new System.Drawing.Point(153, 117);
+            this.imgCiervo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.imgCiervo.Name = "imgCiervo";
-            this.imgCiervo.Size = new System.Drawing.Size(81, 74);
+            this.imgCiervo.Size = new System.Drawing.Size(108, 91);
             this.imgCiervo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgCiervo.TabIndex = 20;
             this.imgCiervo.TabStop = false;
@@ -342,10 +341,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(14, 152);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(19, 187);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(228, 18);
+            this.label4.Size = new System.Drawing.Size(284, 24);
             this.label4.TabIndex = 17;
             this.label4.Text = "Seleccione una foto de perfil:";
             // 
@@ -354,10 +352,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(145, 545);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(193, 671);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(192, 18);
+            this.label3.Size = new System.Drawing.Size(235, 24);
             this.label3.TabIndex = 18;
             this.label3.Text = "Asi sera su foto de perfil";
             // 
@@ -365,11 +362,11 @@
             // 
             this.txtDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDNI.ForeColor = System.Drawing.Color.Silver;
-            this.txtDNI.Location = new System.Drawing.Point(41, 78);
-            this.txtDNI.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDNI.Location = new System.Drawing.Point(55, 96);
+            this.txtDNI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDNI.MaxLength = 8;
             this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(373, 24);
+            this.txtDNI.Size = new System.Drawing.Size(496, 29);
             this.txtDNI.TabIndex = 12;
             this.txtDNI.Text = "Numero de documento";
             this.txtDNI.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -382,10 +379,10 @@
             // 
             this.txtIngresos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIngresos.ForeColor = System.Drawing.Color.Silver;
-            this.txtIngresos.Location = new System.Drawing.Point(41, 108);
-            this.txtIngresos.Margin = new System.Windows.Forms.Padding(2);
+            this.txtIngresos.Location = new System.Drawing.Point(55, 133);
+            this.txtIngresos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIngresos.Name = "txtIngresos";
-            this.txtIngresos.Size = new System.Drawing.Size(373, 24);
+            this.txtIngresos.Size = new System.Drawing.Size(496, 29);
             this.txtIngresos.TabIndex = 13;
             this.txtIngresos.Text = "Ingresos mensuales en $";
             this.txtIngresos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -398,11 +395,11 @@
             // 
             this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass.ForeColor = System.Drawing.Color.Silver;
-            this.txtPass.Location = new System.Drawing.Point(41, 48);
-            this.txtPass.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPass.Location = new System.Drawing.Point(55, 59);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPass.MaxLength = 40;
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(373, 24);
+            this.txtPass.Size = new System.Drawing.Size(496, 29);
             this.txtPass.TabIndex = 11;
             this.txtPass.Text = "Password";
             this.txtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -423,23 +420,23 @@
             this.panel.Controls.Add(this.btnBack);
             this.panel.Controls.Add(this.txtNombre);
             this.panel.Controls.Add(this.btnRegistrarme);
-            this.panel.Location = new System.Drawing.Point(23, 17);
-            this.panel.Margin = new System.Windows.Forms.Padding(2);
+            this.panel.Location = new System.Drawing.Point(31, 21);
+            this.panel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(451, 626);
+            this.panel.Size = new System.Drawing.Size(601, 770);
             this.panel.TabIndex = 6;
             // 
             // SignUp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(495, 654);
+            this.ClientSize = new System.Drawing.Size(660, 805);
             this.Controls.Add(this.panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "SignUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

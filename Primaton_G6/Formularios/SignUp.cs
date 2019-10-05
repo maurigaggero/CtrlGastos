@@ -25,8 +25,6 @@ namespace Primaton_G6.Formularios
         {
             InitializeComponent();
 
-            listu.ConfigInicial();
-
             listu.LeeUsuarios();
 
             lblFoto2.ImageIndex = img;
@@ -45,11 +43,19 @@ namespace Primaton_G6.Formularios
             if (txtNombre.Text == "Nombre de usuario" || txtIngresos.Text == "Ingresos mensuales en $" ||
                 txtDNI.Text == "Numero de documento" || txtPass.Text == "Password")
             {
-                MessageBox.Show("Debes ingresar tus datos!!!");
+                MessageBox.Show("Debes ingresar tus datos!");
             }
             else
             {
-                listu.AltaUsuarios(txtDNI.Text, txtNombre.Text, txtPass.Text, Convert.ToInt32(txtIngresos.Text), img);
+                if (listu.TablaUsuarios.Columns.Count == 5)
+                {
+                    listu.AltaUsuarios(txtDNI.Text, txtNombre.Text, txtPass.Text, Convert.ToInt32(txtIngresos.Text), img);
+                }
+                else
+                {
+                    listu.ConfigInicial();
+                    listu.AltaUsuarios(txtDNI.Text, txtNombre.Text, txtPass.Text, Convert.ToInt32(txtIngresos.Text), img);
+                }
                 this.Close();
 
             }
@@ -369,6 +375,5 @@ namespace Primaton_G6.Formularios
                 btnRegistrarme.Cursor = Cursors.Hand;
             }
         }
-
     }
 }

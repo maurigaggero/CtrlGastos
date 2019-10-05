@@ -30,8 +30,6 @@ namespace Primaton_G6
             // elimina el encabezado de las filas
             tablaGastos.RowHeadersVisible = false;
 
-            listu.ConfigInicial();
-
             listu.LeeUsuarios();
 
             g.ConfigInicial();
@@ -48,7 +46,7 @@ namespace Primaton_G6
 
             MuestraInfo();
 
-            //int img = Convert.ToInt32(listu.DevuelveFoto(comboUsuarios.Text));
+            MuestraPorcentajes();
         }
 
         public void MuestraInfo()
@@ -68,6 +66,12 @@ namespace Primaton_G6
                 lblDisponible.Text = Convert.ToString(Convert.ToDouble(lblIngresos.Text) - Convert.ToDouble(lblGastado.Text));
             }
 
+        }
+
+        public void MuestraPorcentajes()
+        {
+            //label8.Text = Convert.ToString((g.ContadorPrioritarios(ug.Usuario) + "%"));
+            //label9.Text = Convert.ToString((g.ContadorNoPrioritarios(ug.Usuario) + "%"));
         }
 
         private void TablaGastos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -117,6 +121,7 @@ namespace Primaton_G6
             txtImporte.Text = "";
 
             MuestraInfo();
+            MuestraPorcentajes();
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)
@@ -128,9 +133,10 @@ namespace Primaton_G6
 
                     string NombreArchivo = @"gastos.xml";
 
-                    g.TablaGastos.WriteXml(NombreArchivo);
+                    g.TablaGastos.WriteXml(NombreArchivo, XmlWriteMode.WriteSchema);
 
                     MuestraInfo();
+                    MuestraPorcentajes();
                 }
             }
         }

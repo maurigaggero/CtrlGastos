@@ -16,15 +16,13 @@ namespace Primaton_G6.Formularios
     {
         Clases.Persistencia_Usuarios listu = new Clases.Persistencia_Usuarios();
 
+        Clases.Persistencia_Gastos pgasto = new Clases.Persistencia_Gastos();
+
         Clases.Gastos g = new Clases.Gastos();
 
         public Login()
         {
             InitializeComponent();
-
-            listu.ConfigInicial();
-
-            listu.LeeUsuarios();
 
             lblMensaje.Text = "";
 
@@ -81,8 +79,6 @@ namespace Primaton_G6.Formularios
             {
                 MessageBox.Show("El usuario no existe");
 
-                MessageBox.Show("El usuario no existe");
-
                 lblMensaje.Text = "";
 
                 lblFoto.Visible = false;
@@ -135,7 +131,11 @@ namespace Primaton_G6.Formularios
             {
                 listu.LeeUsuarios();
 
+                pgasto.LeeGastos();
+
                 listu.EliminaUsuario(txtNombre.Text);
+
+                pgasto.EliminaGastosUsuario(txtNombre.Text);
 
                 lblFoto.Visible = false;
 
@@ -349,25 +349,13 @@ namespace Primaton_G6.Formularios
             txtPass.Text = "";
         }
 
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnCompras_Click(object sender, EventArgs e)
         {
             compras compra = new compras();
             compra.Show();
-
-
         }
 
-
-
-
-
-
-        //---------------------------------------------------------------------------------------------------------
     }
 }
 

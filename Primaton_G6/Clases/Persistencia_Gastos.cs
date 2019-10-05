@@ -71,7 +71,7 @@ namespace Primaton_G6.Clases
                 TablaGastos.Rows[TablaGastos.Rows.Count - 1]["Descripcion"] = g.Descripcion;
                 TablaGastos.Rows[TablaGastos.Rows.Count - 1]["Importe"] = g.Importe;
 
-                TablaGastos.WriteXml(NombreArchivo);
+                TablaGastos.WriteXml(NombreArchivo, XmlWriteMode.WriteSchema);
 
                 MessageBox.Show("Gasto cargado con éxito!");
             }
@@ -99,20 +99,49 @@ namespace Primaton_G6.Clases
             return 0;
         }
 
+        public float ContadorPrioritarios(string nombre)
+        {
+            float cant = TablaGastos.AsEnumerable().Count(x => x.Field<string>("Prioridad") == "A" && x.Field<string>("Usuario") == nombre);
+            float usuario = TablaGastos.AsEnumerable().Count(x => x.Field<string>("Usuario") == nombre);
+            float total = cant / usuario;
+            if (usuario > 0)
+            {
+                return total * 100;
+            }
+            else
+            {
+                return 0;
+            }
+        }
 
-        //public void EliminaGastosUsuario(string nombre)
-        //{
-        //    TablaGastos.ReadXmlSchema(NombreArchivo);
-        //    for (int i = TablaGastos.Rows.Count - 1; i >= 0; i--)
-        //    {
-        //        DataRow fila = TablaGastos.Rows[i];
-        //        if (fila["Usuario"].ToString() == nombre)
-        //        {
-        //            fila.Delete();
-        //        }
-        //        TablaGastos.WriteXml(NombreArchivo);
-        //    }
-        //}
+        public float ContadorNoPrioritarios(string nombre)
+        {
+            float cant = TablaGastos.AsEnumerable().Count(x =>
+            x.Field<string>("Prioridad") == "" && x.Field<string>("Usuario") == nombre);
+            float usuario = TablaGastos.AsEnumerable().Count(x => x.Field<string>("Usuario") == nombre);
+            float total = cant / usuario;
+            if (usuario > 0)
+            {
+                return total * 100;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+        public void EliminaGastosUsuario(string nombre)
+        {
+            for (int i = TablaGastos.Rows.Count - 1; i >= 0; i--)
+            {
+                DataRow fila = TablaGastos.Rows[i];
+                if (fila["Usuario"].ToString() == nombre)
+                {
+                    fila.Delete();
+                }
+                TablaGastos.WriteXml(NombreArchivo, XmlWriteMode.WriteSchema);
+            }
+        }
 
         /// <summary>
         /// Rellena las columnas del último registro agregado con los valores del textbox correspondiente
