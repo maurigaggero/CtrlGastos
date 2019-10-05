@@ -41,11 +41,11 @@
             this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCantidad.ForeColor = System.Drawing.Color.Silver;
             this.txtCantidad.Location = new System.Drawing.Point(47, 70);
-            this.txtCantidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCantidad.Margin = new System.Windows.Forms.Padding(4);
             this.txtCantidad.Multiline = true;
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(167, 48);
-            this.txtCantidad.TabIndex = 4;
+            this.txtCantidad.TabIndex = 0;
             this.txtCantidad.Text = "Cantidad";
             this.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtCantidad.Enter += new System.EventHandler(this.txtCantidad_Enter);
@@ -55,10 +55,10 @@
             // 
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Location = new System.Drawing.Point(621, 70);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(59, 52);
-            this.btnAgregar.TabIndex = 3;
+            this.btnAgregar.TabIndex = 2;
             this.btnAgregar.Text = "+";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -71,23 +71,25 @@
             this.grilla.AllowUserToResizeRows = false;
             this.grilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grilla.Location = new System.Drawing.Point(47, 127);
-            this.grilla.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grilla.Margin = new System.Windows.Forms.Padding(4);
             this.grilla.Name = "grilla";
+            this.grilla.ReadOnly = true;
             this.grilla.RowHeadersVisible = false;
             this.grilla.RowHeadersWidth = 51;
             this.grilla.Size = new System.Drawing.Size(633, 446);
-            this.grilla.TabIndex = 5;
+            this.grilla.TabIndex = 3;
+            this.grilla.TabStop = false;
             // 
             // txtProducto
             // 
             this.txtProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProducto.ForeColor = System.Drawing.Color.Silver;
             this.txtProducto.Location = new System.Drawing.Point(233, 70);
-            this.txtProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtProducto.Margin = new System.Windows.Forms.Padding(4);
             this.txtProducto.Multiline = true;
             this.txtProducto.Name = "txtProducto";
             this.txtProducto.Size = new System.Drawing.Size(368, 48);
-            this.txtProducto.TabIndex = 6;
+            this.txtProducto.TabIndex = 1;
             this.txtProducto.Text = "Producto";
             this.txtProducto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtProducto.Enter += new System.EventHandler(this.txtProducto_Enter);
@@ -104,7 +106,7 @@
             this.Controls.Add(this.txtProducto);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "compras";

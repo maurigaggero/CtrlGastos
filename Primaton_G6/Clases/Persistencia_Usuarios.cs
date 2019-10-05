@@ -9,6 +9,15 @@ using System.Data;
 
 namespace Primaton_G6.Clases
 {
+    public class Usuario
+    {
+        public string Id { get; set; }
+        public string Nombre { get; set; }
+        public string Password { get; set; }
+        public int Ingresos { get; set; }
+        public int Img { get; set; }
+    }
+
     public class Persistencia_Usuarios
     {
         #region PROPIEDADES PRIVADAS

@@ -9,6 +9,17 @@ using System.IO;
 
 namespace Primaton_G6.Clases
 {
+    public class Gastos
+    {
+        public string Id { get; set; }
+        public string Usuario { get; set; }
+        public DateTime Fecha { get; set; }
+        public string Prioridad { get; set; }
+        public string Rubro { get; set; }
+        public string Descripcion { get; set; }
+        public double Importe { get; set; }
+    }
+
     public class Persistencia_Gastos
     {
         #region PROPIEDADES PRIVADAS
