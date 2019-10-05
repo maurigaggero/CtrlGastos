@@ -161,6 +161,8 @@ namespace Primaton_G6.Clases
 
         public void LeeGastos()
         {
+            TablaGastos.Reset();
+
             // busca si el archivo ya existe para precargar sus datos
             if (System.IO.File.Exists(NombreArchivo))
             {
