@@ -20,6 +20,8 @@ namespace Primaton_G6
         Clases.Gastos ug = new Clases.Gastos();
 
         public string prioridad = "";
+        
+        #region FUNCIONALIDAD
 
         public ControlDeGastos(string nombre)
         {
@@ -56,6 +58,7 @@ namespace Primaton_G6
             if ((Convert.ToDouble(lblIngresos.Text) - Convert.ToDouble(lblGastado.Text)) <= 1000)
             {
                 lblDisponible.ForeColor = Color.Red;
+                lblDisponible.BackColor = Color.Yellow;
                 lblDisponible.Text = "SUPERASTE EL LÍMITE DE GASTOS";
             }
             else
@@ -96,6 +99,7 @@ namespace Primaton_G6
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
+
             if (chk_prioritario.Checked)
             {
                 prioridad = "A";
@@ -122,6 +126,10 @@ namespace Primaton_G6
             MuestraInfo();
             MuestraPorcentajes();
         }
+        #endregion
+
+        
+        #region BOTONES Y VISUALES
 
         private void btnBorrar_Click(object sender, EventArgs e)
         {
@@ -170,5 +178,36 @@ namespace Primaton_G6
                 MessageBox.Show("Debe ingresar números");
             }
         }
+
+        private void btnAgregar_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnAgregar.BackgroundImage = (Primaton_G6.Properties.Resources.botonMaderaApretado);
+        }
+
+        private void btnAgregar_MouseUp(object sender, MouseEventArgs e)
+        {
+            btnAgregar.BackgroundImage = (Primaton_G6.Properties.Resources.botonMadera);
+        }
+
+        private void btnBorrar_MouseUp(object sender, MouseEventArgs e)
+        {
+            btnBorrar.BackgroundImage = (Primaton_G6.Properties.Resources.botonMadera);
+        }
+
+        private void btnBorrar_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnBorrar.BackgroundImage = (Primaton_G6.Properties.Resources.botonMaderaApretado);
+        }
+
+        private void btnVolver_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnVolver.BackgroundImage = (Primaton_G6.Properties.Resources.botonMaderaApretado);
+        }
+
+        private void btnVolver_MouseUp(object sender, MouseEventArgs e)
+        {
+            btnBorrar.BackgroundImage = (Primaton_G6.Properties.Resources.botonMadera);
+        }
+        #endregion
     }
 }

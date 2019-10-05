@@ -113,6 +113,7 @@
   <ItemGroup>
     <Content Include="Resources\Custom-Icon-Design-Flatastic-11-Cash.ico" />
     <Content Include="Resources\economia_griega.jpg" />
+    <None Include="Resources\images.jpg" />
     <Content Include="Resources\PlanMonetario.jpg" />
     <None Include="Resources\persona.jpg" />
     <None Include="Resources\icono-carrito-compras.png" />

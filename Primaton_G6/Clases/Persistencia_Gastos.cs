@@ -48,13 +48,17 @@ namespace Primaton_G6.Clases
 
         public void ConfigInicial()  // diseño de la TablaPersona
         {
-            TablaGastos.Columns.Add("Id");
-            TablaGastos.Columns.Add("Usuario");
-            TablaGastos.Columns.Add("Fecha");
-            TablaGastos.Columns.Add("Rubro");
-            TablaGastos.Columns.Add("Prioridad");
-            TablaGastos.Columns.Add("Descripcion");
-            TablaGastos.Columns.Add("Importe");
+            //agregue el if para que si este creada no tire error
+            if (TablaGastos.Columns == null)
+            {
+                TablaGastos.Columns.Add("Id");
+                TablaGastos.Columns.Add("Usuario");
+                TablaGastos.Columns.Add("Fecha");
+                TablaGastos.Columns.Add("Rubro");
+                TablaGastos.Columns.Add("Prioridad");
+                TablaGastos.Columns.Add("Descripcion");
+                TablaGastos.Columns.Add("Importe");
+            }
         }
 
         public void NuevoGasto(string usuario, string rubro, string prioridad, DateTime fecha, string descripcion, double importe)
