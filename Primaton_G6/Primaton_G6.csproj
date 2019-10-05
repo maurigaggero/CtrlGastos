@@ -111,15 +111,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Imagenes\Cuentas a pagar.png" />
-    <Content Include="Imagenes\fondo3.jpg" />
-    <Content Include="Imagenes\graficos.jpg" />
-    <Content Include="Imagenes\icono-carrito-compras.png" />
-    <Content Include="Imagenes\images.jpg" />
-    <Content Include="Imagenes\persona.jpg" />
-    <Content Include="Imagenes\wallet.ico" />
+    <Content Include="Resources\Custom-Icon-Design-Flatastic-11-Cash.ico" />
+    <Content Include="Resources\economia_griega.jpg" />
+    <Content Include="Resources\PlanMonetario.jpg" />
     <None Include="Resources\persona.jpg" />
-    <None Include="Resources\images.jpg" />
     <None Include="Resources\icono-carrito-compras.png" />
     <None Include="Resources\graficos.jpg" />
     <None Include="Resources\fondoNvo.jpg" />
