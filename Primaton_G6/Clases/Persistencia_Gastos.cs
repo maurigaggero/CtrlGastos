@@ -49,7 +49,7 @@ namespace Primaton_G6.Clases
         public void ConfigInicial()  // diseño de la TablaPersona
         {
             //agregue el if para que si este creada no tire error
-            if (TablaGastos.Columns == null)
+            if (TablaGastos.Columns.Count != 7)
             {
                 TablaGastos.Columns.Add("Id");
                 TablaGastos.Columns.Add("Usuario");
