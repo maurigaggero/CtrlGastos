@@ -45,7 +45,7 @@
             this.txtCantidad.Multiline = true;
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(167, 48);
-            this.txtCantidad.TabIndex = 0;
+            this.txtCantidad.TabIndex = 1;
             this.txtCantidad.Text = "Cantidad";
             this.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtCantidad.Enter += new System.EventHandler(this.txtCantidad_Enter);
@@ -58,7 +58,7 @@
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(59, 52);
-            this.btnAgregar.TabIndex = 2;
+            this.btnAgregar.TabIndex = 0;
             this.btnAgregar.Text = "+";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -89,7 +89,7 @@
             this.txtProducto.Multiline = true;
             this.txtProducto.Name = "txtProducto";
             this.txtProducto.Size = new System.Drawing.Size(368, 48);
-            this.txtProducto.TabIndex = 1;
+            this.txtProducto.TabIndex = 2;
             this.txtProducto.Text = "Producto";
             this.txtProducto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtProducto.Enter += new System.EventHandler(this.txtProducto_Enter);

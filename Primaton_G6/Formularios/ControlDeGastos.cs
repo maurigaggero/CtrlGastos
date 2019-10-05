@@ -144,5 +144,31 @@ namespace Primaton_G6
         {
             this.Close();
         }
+
+        private void TxtImporte_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if ((e.KeyChar) == '.')
+            {
+                e.Handled = true;
+                MessageBox.Show("Utilize la coma para céntimos");
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsPunctuation(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+                MessageBox.Show("Debe ingresar números");
+            }
+        }
     }
 }

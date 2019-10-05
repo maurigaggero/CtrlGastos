@@ -249,7 +249,7 @@ namespace Primaton_G6.Formularios
             {
                 txtNombre.ForeColor = Color.Black;
                 txtNombre.Text = "";
-                txtNombre.CharacterCasing = CharacterCasing.Lower;
+                //txtNombre.CharacterCasing = CharacterCasing.Lower;
             }
         }
 

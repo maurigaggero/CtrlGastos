@@ -220,14 +220,14 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlLightLight;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.tablaGastos.DefaultCellStyle = dataGridViewCellStyle1;
-            this.tablaGastos.Location = new System.Drawing.Point(148, 223);
+            this.tablaGastos.Location = new System.Drawing.Point(140, 224);
             this.tablaGastos.Name = "tablaGastos";
             this.tablaGastos.ReadOnly = true;
             this.tablaGastos.RowHeadersWidth = 51;
             this.tablaGastos.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
             this.tablaGastos.RowTemplate.Height = 24;
             this.tablaGastos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tablaGastos.Size = new System.Drawing.Size(957, 355);
+            this.tablaGastos.Size = new System.Drawing.Size(973, 355);
             this.tablaGastos.TabIndex = 16;
             this.tablaGastos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.TablaGastos_CellFormatting);
             // 
@@ -240,6 +240,7 @@
             this.txtImporte.Name = "txtImporte";
             this.txtImporte.Size = new System.Drawing.Size(132, 34);
             this.txtImporte.TabIndex = 4;
+            this.txtImporte.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtImporte_KeyPress);
             // 
             // lblNombre
             // 

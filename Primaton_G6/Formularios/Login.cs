@@ -244,9 +244,10 @@ namespace Primaton_G6.Formularios
 
         private void txtPass_KeyPress(object sender, KeyPressEventArgs e)
         {
+            // igual metodo que btn_ingresar pero con la tecla enter para un acceso más rápido
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
-                //listu.LeeUsuarios();
+                listu.LeeUsuarios();
 
                 string contraseña = listu.DevuelvePass(txtNombre.Text);
 
