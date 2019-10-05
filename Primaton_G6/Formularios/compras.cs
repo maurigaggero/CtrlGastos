@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Primaton_G6.Clases;
 
 namespace Primaton_G6.Formularios
 {
@@ -33,6 +34,8 @@ namespace Primaton_G6.Formularios
             grilla.Columns[0].Width = 70;
             grilla.Columns[1].Width = 402;
         }
+
+        #region BOTON AGREGAR
         private void btnAgregar_Click(object sender, EventArgs e)
         {
 
@@ -48,17 +51,9 @@ namespace Primaton_G6.Formularios
                 txtCantidad.Text = "Cantidad";
             }
         }
-       
-        #region DETALLES GRAFICOS
-        private void txtProducto_Enter(object sender, EventArgs e)
-        {
-            if (txtProducto.Text == "Producto")
-            {
-                txtProducto.Text = "";
-                txtProducto.ForeColor = Color.Black;
-            }
-        }
+        #endregion
 
+        #region TXT CANTIDAD
         private void txtCantidad_Enter(object sender, EventArgs e)
         {
             if (txtCantidad.Text == "Cantidad")
@@ -92,6 +87,27 @@ namespace Primaton_G6.Formularios
                 txtProducto.Focus();
             }
         }
+
+        private void txtCantidad_Leave(object sender, EventArgs e)
+        {
+            if (txtCantidad.Text == "")
+            {
+                txtCantidad.Text = "Cantidad";
+                txtCantidad.ForeColor = Color.Silver;
+            }
+        }
+
+        #endregion
+
+        #region TXT PRODUCTO
+        private void txtProducto_Enter(object sender, EventArgs e)
+        {
+            if (txtProducto.Text == "Producto")
+            {
+                txtProducto.Text = "";
+                txtProducto.ForeColor = Color.Black;
+            }
+        }
         private void txtProducto_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == 13)
@@ -109,8 +125,50 @@ namespace Primaton_G6.Formularios
                 }
             }
         }
+        private void txtProducto_Leave(object sender, EventArgs e)
+        {
+            if (txtProducto.Text == "")
+            {
+                txtProducto.Text = "Producto";
+                txtProducto.ForeColor = Color.Silver;
+            }
+        }
         #endregion
 
+        #region BOTON BORRAR
 
+        private void btnBorrar_MouseEnter(object sender, EventArgs e)
+        {
+            btnBorrar.ForeColor = Color.Black;
+        }
+        private void btnBorrar_MouseLeave(object sender, EventArgs e)
+        {
+            btnBorrar.ForeColor = Color.White;
+        }
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            
+
+            if (grilla.CurrentRow != null)
+                {
+                    grilla.Rows.RemoveAt(grilla.CurrentRow.Index);
+                    string NombreArchivo = @"compras.xml";
+                    c.TablaCompras.WriteXml(NombreArchivo, XmlWriteMode.WriteSchema);
+                }
+        }
+
+        private void btnBorrar_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnBorrar.BackgroundImage = (Primaton_G6.Properties.Resources.botonMaderaApretado);
+        }
+
+        private void btnBorrar_MouseUp(object sender, MouseEventArgs e)
+        {
+            btnBorrar.BackgroundImage = (Primaton_G6.Properties.Resources.botonMadera);
+        }
+
+        #endregion
+
+        
     }
 }

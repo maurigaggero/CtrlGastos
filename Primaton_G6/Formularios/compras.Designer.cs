@@ -33,6 +33,7 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.grilla = new System.Windows.Forms.DataGridView();
             this.txtProducto = new System.Windows.Forms.TextBox();
+            this.btnBorrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grilla)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,11 +49,13 @@
             this.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtCantidad.Enter += new System.EventHandler(this.txtCantidad_Enter);
             this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
+            this.txtCantidad.Leave += new System.EventHandler(this.txtCantidad_Leave);
             // 
             // btnAgregar
             // 
+            this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(473, 57);
+            this.btnAgregar.Location = new System.Drawing.Point(474, 55);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(44, 42);
             this.btnAgregar.TabIndex = 0;
@@ -80,7 +83,7 @@
             // 
             this.txtProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProducto.ForeColor = System.Drawing.Color.Silver;
-            this.txtProducto.Location = new System.Drawing.Point(182, 57);
+            this.txtProducto.Location = new System.Drawing.Point(183, 57);
             this.txtProducto.Name = "txtProducto";
             this.txtProducto.Size = new System.Drawing.Size(277, 38);
             this.txtProducto.TabIndex = 2;
@@ -88,6 +91,31 @@
             this.txtProducto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtProducto.Enter += new System.EventHandler(this.txtProducto_Enter);
             this.txtProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProducto_KeyPress);
+            this.txtProducto.Leave += new System.EventHandler(this.txtProducto_Leave);
+            // 
+            // btnBorrar
+            // 
+            this.btnBorrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnBorrar.BackgroundImage = global::Primaton_G6.Properties.Resources.botonMadera;
+            this.btnBorrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBorrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBorrar.FlatAppearance.BorderSize = 0;
+            this.btnBorrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnBorrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrar.ForeColor = System.Drawing.Color.White;
+            this.btnBorrar.Location = new System.Drawing.Point(401, 470);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(117, 45);
+            this.btnBorrar.TabIndex = 4;
+            this.btnBorrar.Text = "Borrar Elemento";
+            this.btnBorrar.UseVisualStyleBackColor = false;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
+            this.btnBorrar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBorrar_MouseDown);
+            this.btnBorrar.MouseEnter += new System.EventHandler(this.btnBorrar_MouseEnter);
+            this.btnBorrar.MouseLeave += new System.EventHandler(this.btnBorrar_MouseLeave);
+            this.btnBorrar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBorrar_MouseUp);
             // 
             // compras
             // 
@@ -95,7 +123,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(564, 511);
+            this.ClientSize = new System.Drawing.Size(564, 525);
+            this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.grilla);
@@ -120,5 +149,6 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridView grilla;
         private System.Windows.Forms.TextBox txtProducto;
+        private System.Windows.Forms.Button btnBorrar;
     }
 }
