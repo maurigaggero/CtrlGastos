@@ -100,7 +100,7 @@
             this.btnVolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.ForeColor = System.Drawing.Color.White;
-            this.btnVolver.Location = new System.Drawing.Point(983, 642);
+            this.btnVolver.Location = new System.Drawing.Point(981, 626);
             this.btnVolver.Margin = new System.Windows.Forms.Padding(4);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(154, 59);
@@ -150,7 +150,7 @@
             this.chk_prioritario.AutoSize = true;
             this.chk_prioritario.BackColor = System.Drawing.Color.Transparent;
             this.chk_prioritario.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_prioritario.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.chk_prioritario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.chk_prioritario.Location = new System.Drawing.Point(316, 88);
             this.chk_prioritario.Name = "chk_prioritario";
             this.chk_prioritario.Size = new System.Drawing.Size(140, 33);
