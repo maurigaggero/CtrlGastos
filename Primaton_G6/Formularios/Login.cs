@@ -32,7 +32,7 @@ namespace Primaton_G6.Formularios
 
             btnAddgasto.Visible = false;
 
-            btnEliminar.Visible = false;
+            lblEliminar.Visible = false;
         }
 
         private void BtnIngresar_Click(object sender, EventArgs e)
@@ -52,12 +52,24 @@ namespace Primaton_G6.Formularios
 
                     btnAddgasto.Visible = true;
 
-                    btnEliminar.Visible = true;
+                    lblEliminar.Visible = true;
 
                     lblFoto.ImageIndex = Convert.ToInt32(listu.DevuelveFoto(txtNombre.Text));
+                    lblMensaje.Visible = true;
+                    lblMensaje.Text = "Hola " + txtNombre.Text + ", " + "\r\n" + "tus ingresos mensuales registrados son: $" + listu.DevuelveIngresos(txtNombre.Text);
 
-                    lblMensaje.Text = "Hola " + txtNombre.Text + ", " + "\r\n";
-                    lblMensaje.Text += "Tus ingresos mensuales registrados son: $" + listu.DevuelveIngresos(txtNombre.Text);
+                    lblDeseo.Visible = true;
+                    //-------------limpio campos, desaparezco el boton ingresar, aparece "otro usuario"----------------------
+                    btnGrafico.Visible = true;
+                    btnCompras.Visible = true;
+                    txtNombre.Visible = false;
+                    txtPass.Visible = false;
+                    btnIngresar.Visible = false;
+                    lblUsuario.Visible = false;
+                    lblPass.Visible = false;
+                    lblNoEstas.Visible = false;
+                    lblRegistrar.Visible = false;
+                    lblCambio.Visible = true;
                 }
                 else
                 {
@@ -69,28 +81,57 @@ namespace Primaton_G6.Formularios
             {
                 MessageBox.Show("El usuario no existe");
 
+                MessageBox.Show("El usuario no existe");
+
                 lblMensaje.Text = "";
 
                 lblFoto.Visible = false;
 
                 btnAddgasto.Visible = false;
 
-                btnEliminar.Visible = false;
+                lblEliminar.Visible = false;
             }
         }
-
+        #region CUESTIONES GRAFICAS
         private void BtnAddgasto_Click(object sender, EventArgs e)
         {
             ControlDeGastos tdi = new ControlDeGastos(g.Usuario);
             tdi.ShowDialog();
         }
 
-        private void BtnEliminar_Click(object sender, EventArgs e)
+        private void lblRegistrar_MouseEnter(object sender, EventArgs e)
+        {
+            lblRegistrar.ForeColor = Color.Black;
+        }
+
+        private void lblRegistrar_MouseLeave(object sender, EventArgs e)
+        {
+            lblRegistrar.ForeColor = Color.Red;
+        }
+
+        private void lblRegistrar_MouseClick(object sender, MouseEventArgs e)
+        {
+            SignUp sdi = new SignUp();
+            sdi.ShowDialog();
+
+        }
+
+        private void lblEliminar_MouseEnter(object sender, EventArgs e)
+        {
+            lblEliminar.ForeColor = Color.Black;
+        }
+
+        private void lblEliminar_MouseLeave(object sender, EventArgs e)
+        {
+            lblEliminar.ForeColor = Color.Red;
+        }
+
+        private void lblEliminar_MouseClick(object sender, MouseEventArgs e)
         {
             DialogResult pregunta;
             pregunta = MessageBox.Show("¿Seguro desea eliminar su usuario?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            
-            if(pregunta==DialogResult.Yes)
+
+            if (pregunta == DialogResult.Yes)
             {
                 listu.LeeUsuarios();
 
@@ -100,30 +141,237 @@ namespace Primaton_G6.Formularios
 
                 btnAddgasto.Visible = false;
 
-                btnEliminar.Visible = false;
+                lblEliminar.Visible = false;
 
                 lblFoto.ImageIndex = 0;
 
                 lblMensaje.Text = "";
 
+                btnGrafico.Visible = false;
+                btnCompras.Visible = false;
+                txtNombre.Visible = true;
+                txtPass.Visible = true;
+                btnIngresar.Visible = true;
+                lblUsuario.Visible = true;
+                lblPass.Visible = true;
+                lblNoEstas.Visible = true;
+                lblRegistrar.Visible = true;
+                lblCambio.Visible = false;
+                lblFoto.Visible = false;
+                lblMensaje.Visible = false;
+                btnAddgasto.Visible = false;
+                lblDeseo.Visible = false;
+                lblEliminar.Visible = false;
+                txtNombre.Text = "";
+                txtPass.Text = "";
+
                 MessageBox.Show("Usuario eliminado!", "Aviso");
             }
-            else
-            {
-                
-            }
-
             //borra por indice
             //listu.EliminaUsuario(comboUsuarios.SelectedIndex);
         }
 
-        private void BtnAlta_Click(object sender, EventArgs e)
+        private void btnAddgasto_MouseEnter(object sender, EventArgs e)
         {
-            SignUp sdi = new SignUp();
-            sdi.ShowDialog();
+            btnAddgasto.ForeColor = Color.Black;
         }
+
+        private void btnAddgasto_MouseLeave(object sender, EventArgs e)
+        {
+            btnAddgasto.ForeColor = Color.White;
+        }
+
+        private void btnCompras_MouseEnter(object sender, EventArgs e)
+        {
+            btnCompras.ForeColor = Color.Black;
+        }
+
+        private void btnCompras_MouseLeave(object sender, EventArgs e)
+        {
+            btnCompras.ForeColor = Color.White;
+        }
+
+        private void btnGrafico_MouseEnter(object sender, EventArgs e)
+        {
+            btnGrafico.ForeColor = Color.Black;
+        }
+
+        private void btnGrafico_MouseLeave(object sender, EventArgs e)
+        {
+            btnGrafico.ForeColor = Color.White;
+        }
+
+        private void btnGrafico_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnGrafico.BackgroundImage = (Primaton_G6.Properties.Resources.botonMaderaApretado);
+            btnGrafico.ForeColor = Color.Red;
+        }
+
+        private void btnGrafico_MouseUp(object sender, MouseEventArgs e)
+        {
+            btnGrafico.BackgroundImage = (Primaton_G6.Properties.Resources.botonMadera);
+
+        }
+
+        private void btnCompras_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnCompras.BackgroundImage = (Primaton_G6.Properties.Resources.botonMaderaApretado);
+            btnCompras.ForeColor = Color.Red;
+        }
+
+        private void btnCompras_MouseUp(object sender, MouseEventArgs e)
+        {
+            btnCompras.BackgroundImage = (Primaton_G6.Properties.Resources.botonMadera);
+        }
+
+        private void btnAddgasto_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnAddgasto.BackgroundImage = (Primaton_G6.Properties.Resources.botonMaderaApretado);
+            btnAddgasto.ForeColor = Color.Red;
+        }
+
+        private void btnAddgasto_MouseUp(object sender, MouseEventArgs e)
+        {
+            btnAddgasto.BackgroundImage = (Primaton_G6.Properties.Resources.botonMadera);
+
+        }
+
+        private void btnIngresar_MouseEnter(object sender, EventArgs e)
+        {
+            btnIngresar.ForeColor = Color.Black;
+        }
+
+        private void btnIngresar_MouseLeave(object sender, EventArgs e)
+        {
+            btnIngresar.ForeColor = Color.White;
+        }
+
+        private void btnIngresar_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnIngresar.BackgroundImage = (Primaton_G6.Properties.Resources.botonMaderaApretado);
+            btnIngresar.ForeColor = Color.Red;
+        }
+
+        private void btnIngresar_MouseUp(object sender, MouseEventArgs e)
+        {
+            btnIngresar.BackgroundImage = (Primaton_G6.Properties.Resources.botonMadera);
+        }
+
+        private void lblCambio_MouseEnter(object sender, EventArgs e)
+        {
+            lblCambio.ForeColor = Color.Black;
+        }
+
+        private void lblCambio_MouseLeave(object sender, EventArgs e)
+        {
+            lblCambio.ForeColor = Color.Red;
+        }
+        #endregion
+
+        private void txtPass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                listu.LeeUsuarios();
+
+                string contraseña = listu.DevuelvePass(txtNombre.Text);
+
+                string existe = listu.DevuelveNombre(txtNombre.Text);
+                if (txtNombre.Text == existe)
+                {
+                    if (contraseña == txtPass.Text)
+                    {
+                        g.Usuario = txtNombre.Text;
+
+                        lblFoto.Visible = true;
+
+                        btnAddgasto.Visible = true;
+
+                        lblEliminar.Visible = true;
+
+                        lblFoto.ImageIndex = Convert.ToInt32(listu.DevuelveFoto(txtNombre.Text));
+                        lblMensaje.Visible = true;
+                        lblMensaje.Text = "Hola " + txtNombre.Text + ", " + "\r\n" + "tus ingresos mensuales registrados son: $" + listu.DevuelveIngresos(txtNombre.Text);
+
+                        lblDeseo.Visible = true;
+                        //-------------limpio campos, desaparezco el boton ingresar, aparece "otro usuario"----------------------
+                        btnGrafico.Visible = true;
+                        btnCompras.Visible = true;
+                        txtNombre.Visible = false;
+                        txtPass.Visible = false;
+                        btnIngresar.Visible = false;
+                        lblUsuario.Visible = false;
+                        lblPass.Visible = false;
+                        lblNoEstas.Visible = false;
+                        lblRegistrar.Visible = false;
+                        lblCambio.Visible = true;
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Contraseña incorrecta.");
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("El usuario no existe");
+
+                    lblMensaje.Text = "";
+
+                    lblFoto.Visible = false;
+
+                    btnAddgasto.Visible = false;
+
+                    lblEliminar.Visible = false;
+                }
+            }
+        }
+
+        private void lblCambio_MouseClick(object sender, MouseEventArgs e)
+        {
+            btnGrafico.Visible = false;
+            btnCompras.Visible = false;
+            txtNombre.Visible = true;
+            txtPass.Visible = true;
+            btnIngresar.Visible = true;
+            lblUsuario.Visible = true;
+            lblPass.Visible = true;
+            lblNoEstas.Visible = true;
+            lblRegistrar.Visible = true;
+            lblCambio.Visible = false;
+            lblFoto.Visible = false;
+            lblMensaje.Visible = false;
+            btnAddgasto.Visible = false;
+            lblDeseo.Visible = false;
+            lblEliminar.Visible = false;
+            txtNombre.Text = "";
+            txtPass.Text = "";
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCompras_Click(object sender, EventArgs e)
+        {
+            compras compra = new compras();
+            compra.Show();
+
+
+        }
+
+
+
+
+
+
+        //---------------------------------------------------------------------------------------------------------
     }
 }
+
+
 
 //public void ComboTabla()
 //{

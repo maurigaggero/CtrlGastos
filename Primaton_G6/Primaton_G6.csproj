@@ -46,10 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Compras.cs" />
     <Compile Include="Clases\Gastos.cs" />
+    <Compile Include="Clases\Persistencia_Compras.cs" />
     <Compile Include="Clases\Persistencia_Usuarios.cs" />
     <Compile Include="Clases\Persistencia_Gastos.cs" />
     <Compile Include="Clases\Usuario.cs" />
+    <Compile Include="Formularios\compras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\compras.Designer.cs">
+      <DependentUpon>compras.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\ControlDeGastos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +87,9 @@
     <Compile Include="Formularios\VentanaPrincipal.Designer.cs">
       <DependentUpon>VentanaPrincipal.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Formularios\compras.resx">
+      <DependentUpon>compras.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\ControlDeGastos.resx">
       <DependentUpon>ControlDeGastos.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,6 +133,18 @@
     <Content Include="Imagenes\images.jpg" />
     <Content Include="Imagenes\persona.jpg" />
     <Content Include="Imagenes\wallet.ico" />
+    <None Include="Resources\persona.jpg" />
+    <None Include="Resources\images.jpg" />
+    <None Include="Resources\icono-carrito-compras.png" />
+    <None Include="Resources\graficos.jpg" />
+    <None Include="Resources\fondoNvo.jpg" />
+    <None Include="Resources\fondo3.jpg" />
+    <None Include="Resources\Fondo.jpg" />
+    <None Include="Resources\Cuentas a pagar.png" />
+    <None Include="Resources\botonMaderaApretado.png" />
+    <None Include="Resources\botonMadera.png" />
+    <None Include="Resources\botón-de-madera-11353623.jpg" />
+    <None Include="Resources\72b6cbf828dde7026f98cc1479326dcd.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
