@@ -98,7 +98,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Primaton_G6.Properties.Resources.Fondo;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(725, 642);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.btnAgregar);
@@ -111,7 +112,7 @@
             this.MinimizeBox = false;
             this.Name = "compras";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Compras";
+            this.Text = "Lista del super";
             this.Load += new System.EventHandler(this.compras_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grilla)).EndInit();
             this.ResumeLayout(false);

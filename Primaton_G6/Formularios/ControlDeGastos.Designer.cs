@@ -365,6 +365,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1262, 758);
             this.Controls.Add(this.lblRedundante);
@@ -397,7 +398,7 @@
             this.MaximizeBox = false;
             this.Name = "ControlDeGastos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ControlDeGastos";
+            this.Text = "Gestor gastos";
             ((System.ComponentModel.ISupportInitialize)(this.tablaGastos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

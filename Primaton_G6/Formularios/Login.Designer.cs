@@ -51,7 +51,7 @@
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.ForeColor = System.Drawing.Color.Black;
+            this.lblUsuario.ForeColor = System.Drawing.Color.White;
             this.lblUsuario.Location = new System.Drawing.Point(136, 79);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(110, 29);
@@ -84,7 +84,7 @@
             this.btnAddgasto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddgasto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddgasto.ForeColor = System.Drawing.Color.White;
-            this.btnAddgasto.Location = new System.Drawing.Point(141, 228);
+            this.btnAddgasto.Location = new System.Drawing.Point(163, 216);
             this.btnAddgasto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddgasto.Name = "btnAddgasto";
             this.btnAddgasto.Size = new System.Drawing.Size(144, 86);
@@ -102,8 +102,8 @@
             this.lblMensaje.AutoSize = true;
             this.lblMensaje.BackColor = System.Drawing.Color.Transparent;
             this.lblMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMensaje.ForeColor = System.Drawing.Color.Black;
-            this.lblMensaje.Location = new System.Drawing.Point(173, 38);
+            this.lblMensaje.ForeColor = System.Drawing.Color.White;
+            this.lblMensaje.Location = new System.Drawing.Point(174, 67);
             this.lblMensaje.Name = "lblMensaje";
             this.lblMensaje.Size = new System.Drawing.Size(53, 24);
             this.lblMensaje.TabIndex = 9;
@@ -131,7 +131,7 @@
             this.lblFoto.BackColor = System.Drawing.Color.Transparent;
             this.lblFoto.ImageIndex = 0;
             this.lblFoto.ImageList = this.imageList;
-            this.lblFoto.Location = new System.Drawing.Point(11, 7);
+            this.lblFoto.Location = new System.Drawing.Point(12, 36);
             this.lblFoto.Name = "lblFoto";
             this.lblFoto.Size = new System.Drawing.Size(157, 117);
             this.lblFoto.TabIndex = 13;
@@ -186,7 +186,7 @@
             this.lblPass.AutoSize = true;
             this.lblPass.BackColor = System.Drawing.Color.Transparent;
             this.lblPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPass.ForeColor = System.Drawing.Color.Black;
+            this.lblPass.ForeColor = System.Drawing.Color.White;
             this.lblPass.Location = new System.Drawing.Point(95, 124);
             this.lblPass.Name = "lblPass";
             this.lblPass.Size = new System.Drawing.Size(153, 29);
@@ -239,7 +239,7 @@
             this.btnCompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompras.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCompras.ForeColor = System.Drawing.Color.White;
-            this.btnCompras.Location = new System.Drawing.Point(387, 233);
+            this.btnCompras.Location = new System.Drawing.Point(410, 216);
             this.btnCompras.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCompras.Name = "btnCompras";
             this.btnCompras.Size = new System.Drawing.Size(144, 86);
@@ -278,7 +278,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.BackgroundImage = global::Primaton_G6.Properties.Resources.Fondo;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(685, 364);
             this.Controls.Add(this.lblCambio);
