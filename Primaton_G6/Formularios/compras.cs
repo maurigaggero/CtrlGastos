@@ -49,6 +49,8 @@ namespace Primaton_G6.Formularios
                 c.NuevaCompra(txtCantidad.Text, txtProducto.Text);
                 txtProducto.Text = "Producto";
                 txtCantidad.Text = "Cantidad";
+                txtProducto.ForeColor = Color.Silver;
+                txtCantidad.ForeColor = Color.Silver;
             }
         }
         #endregion
@@ -122,6 +124,8 @@ namespace Primaton_G6.Formularios
                     c.NuevaCompra(txtCantidad.Text, txtProducto.Text);
                     txtProducto.Text = "Producto";
                     txtCantidad.Text = "Cantidad";
+                    txtProducto.ForeColor = Color.Silver;
+                    txtCantidad.ForeColor = Color.Silver;
                 }
             }
         }

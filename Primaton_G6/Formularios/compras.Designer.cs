@@ -75,6 +75,7 @@
             this.grilla.ReadOnly = true;
             this.grilla.RowHeadersVisible = false;
             this.grilla.RowHeadersWidth = 51;
+            this.grilla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grilla.Size = new System.Drawing.Size(475, 362);
             this.grilla.TabIndex = 3;
             this.grilla.TabStop = false;
