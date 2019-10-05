@@ -54,10 +54,9 @@
             this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.Color.Black;
-            this.lblUsuario.Location = new System.Drawing.Point(102, 64);
-            this.lblUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUsuario.Location = new System.Drawing.Point(136, 79);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(87, 24);
+            this.lblUsuario.Size = new System.Drawing.Size(110, 29);
             this.lblUsuario.TabIndex = 4;
             this.lblUsuario.Text = "Usuario:";
             // 
@@ -69,10 +68,9 @@
             this.lblNoEstas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNoEstas.ForeColor = System.Drawing.Color.Navy;
-            this.lblNoEstas.Location = new System.Drawing.Point(119, 267);
-            this.lblNoEstas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNoEstas.Location = new System.Drawing.Point(159, 329);
             this.lblNoEstas.Name = "lblNoEstas";
-            this.lblNoEstas.Size = new System.Drawing.Size(169, 17);
+            this.lblNoEstas.Size = new System.Drawing.Size(196, 20);
             this.lblNoEstas.TabIndex = 7;
             this.lblNoEstas.Text = "¿No estás registrado?";
             // 
@@ -88,10 +86,10 @@
             this.btnAddgasto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddgasto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddgasto.ForeColor = System.Drawing.Color.White;
-            this.btnAddgasto.Location = new System.Drawing.Point(28, 189);
-            this.btnAddgasto.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddgasto.Location = new System.Drawing.Point(37, 233);
+            this.btnAddgasto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddgasto.Name = "btnAddgasto";
-            this.btnAddgasto.Size = new System.Drawing.Size(108, 70);
+            this.btnAddgasto.Size = new System.Drawing.Size(144, 86);
             this.btnAddgasto.TabIndex = 3;
             this.btnAddgasto.Text = "Agregar gastos";
             this.btnAddgasto.UseVisualStyleBackColor = false;
@@ -107,10 +105,9 @@
             this.lblMensaje.BackColor = System.Drawing.Color.Transparent;
             this.lblMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensaje.ForeColor = System.Drawing.Color.Black;
-            this.lblMensaje.Location = new System.Drawing.Point(130, 31);
-            this.lblMensaje.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMensaje.Location = new System.Drawing.Point(173, 38);
             this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(43, 18);
+            this.lblMensaje.Size = new System.Drawing.Size(53, 24);
             this.lblMensaje.TabIndex = 9;
             this.lblMensaje.Text = "Hola";
             // 
@@ -136,10 +133,9 @@
             this.lblFoto.BackColor = System.Drawing.Color.Transparent;
             this.lblFoto.ImageIndex = 0;
             this.lblFoto.ImageList = this.imageList;
-            this.lblFoto.Location = new System.Drawing.Point(8, 6);
-            this.lblFoto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFoto.Location = new System.Drawing.Point(11, 7);
             this.lblFoto.Name = "lblFoto";
-            this.lblFoto.Size = new System.Drawing.Size(118, 95);
+            this.lblFoto.Size = new System.Drawing.Size(157, 117);
             this.lblFoto.TabIndex = 13;
             // 
             // btnIngresar
@@ -154,10 +150,10 @@
             this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresar.ForeColor = System.Drawing.Color.White;
-            this.btnIngresar.Location = new System.Drawing.Point(317, 133);
-            this.btnIngresar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnIngresar.Location = new System.Drawing.Point(423, 164);
+            this.btnIngresar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(98, 33);
+            this.btnIngresar.Size = new System.Drawing.Size(131, 41);
             this.btnIngresar.TabIndex = 2;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = false;
@@ -170,20 +166,20 @@
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(192, 64);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombre.Location = new System.Drawing.Point(256, 79);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(221, 26);
+            this.txtNombre.Size = new System.Drawing.Size(293, 30);
             this.txtNombre.TabIndex = 0;
             // 
             // txtPass
             // 
             this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.Location = new System.Drawing.Point(192, 101);
-            this.txtPass.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPass.Location = new System.Drawing.Point(256, 124);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(221, 26);
+            this.txtPass.Size = new System.Drawing.Size(293, 30);
             this.txtPass.TabIndex = 1;
             this.txtPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPass_KeyPress);
             // 
@@ -193,10 +189,9 @@
             this.lblPass.BackColor = System.Drawing.Color.Transparent;
             this.lblPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPass.ForeColor = System.Drawing.Color.Black;
-            this.lblPass.Location = new System.Drawing.Point(71, 101);
-            this.lblPass.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPass.Location = new System.Drawing.Point(95, 124);
             this.lblPass.Name = "lblPass";
-            this.lblPass.Size = new System.Drawing.Size(122, 24);
+            this.lblPass.Size = new System.Drawing.Size(153, 29);
             this.lblPass.TabIndex = 15;
             this.lblPass.Text = "Contraseña:";
             // 
@@ -207,9 +202,10 @@
             this.lblRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegistrar.ForeColor = System.Drawing.Color.Red;
-            this.lblRegistrar.Location = new System.Drawing.Point(293, 264);
+            this.lblRegistrar.Location = new System.Drawing.Point(391, 325);
+            this.lblRegistrar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRegistrar.Name = "lblRegistrar";
-            this.lblRegistrar.Size = new System.Drawing.Size(109, 24);
+            this.lblRegistrar.Size = new System.Drawing.Size(140, 29);
             this.lblRegistrar.TabIndex = 16;
             this.lblRegistrar.Text = "Registrate!";
             this.lblRegistrar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblRegistrar_MouseClick);
@@ -223,9 +219,10 @@
             this.lblEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEliminar.ForeColor = System.Drawing.Color.Red;
-            this.lblEliminar.Location = new System.Drawing.Point(388, 270);
+            this.lblEliminar.Location = new System.Drawing.Point(517, 332);
+            this.lblEliminar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEliminar.Name = "lblEliminar";
-            this.lblEliminar.Size = new System.Drawing.Size(116, 15);
+            this.lblEliminar.Size = new System.Drawing.Size(133, 18);
             this.lblEliminar.TabIndex = 17;
             this.lblEliminar.Text = "Eliminar cuenta?";
             this.lblEliminar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblEliminar_MouseClick);
@@ -238,9 +235,10 @@
             this.lblDeseo.BackColor = System.Drawing.Color.Transparent;
             this.lblDeseo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDeseo.ForeColor = System.Drawing.Color.Black;
-            this.lblDeseo.Location = new System.Drawing.Point(12, 159);
+            this.lblDeseo.Location = new System.Drawing.Point(16, 196);
+            this.lblDeseo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDeseo.Name = "lblDeseo";
-            this.lblDeseo.Size = new System.Drawing.Size(193, 24);
+            this.lblDeseo.Size = new System.Drawing.Size(239, 29);
             this.lblDeseo.TabIndex = 18;
             this.lblDeseo.Text = "Que deseas hacer?";
             this.lblDeseo.Visible = false;
@@ -257,10 +255,10 @@
             this.btnCompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompras.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCompras.ForeColor = System.Drawing.Color.White;
-            this.btnCompras.Location = new System.Drawing.Point(207, 189);
-            this.btnCompras.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCompras.Location = new System.Drawing.Point(276, 233);
+            this.btnCompras.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCompras.Name = "btnCompras";
-            this.btnCompras.Size = new System.Drawing.Size(108, 70);
+            this.btnCompras.Size = new System.Drawing.Size(144, 86);
             this.btnCompras.TabIndex = 19;
             this.btnCompras.Text = "Lista de compras";
             this.btnCompras.UseVisualStyleBackColor = false;
@@ -283,10 +281,10 @@
             this.btnGrafico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGrafico.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGrafico.ForeColor = System.Drawing.Color.White;
-            this.btnGrafico.Location = new System.Drawing.Point(386, 189);
-            this.btnGrafico.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGrafico.Location = new System.Drawing.Point(515, 233);
+            this.btnGrafico.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGrafico.Name = "btnGrafico";
-            this.btnGrafico.Size = new System.Drawing.Size(108, 70);
+            this.btnGrafico.Size = new System.Drawing.Size(144, 86);
             this.btnGrafico.TabIndex = 20;
             this.btnGrafico.Text = "Estadisticas de gastos";
             this.btnGrafico.UseVisualStyleBackColor = false;
@@ -303,9 +301,10 @@
             this.lblCambio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCambio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCambio.ForeColor = System.Drawing.Color.Red;
-            this.lblCambio.Location = new System.Drawing.Point(2, 257);
+            this.lblCambio.Location = new System.Drawing.Point(3, 316);
+            this.lblCambio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCambio.Name = "lblCambio";
-            this.lblCambio.Size = new System.Drawing.Size(184, 30);
+            this.lblCambio.Size = new System.Drawing.Size(215, 36);
             this.lblCambio.TabIndex = 21;
             this.lblCambio.Text = "No eres tu? \r\nQuieres combiar la cuenta?";
             this.lblCambio.Visible = false;
@@ -315,14 +314,14 @@
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::Primaton_G6.Properties.Resources.Fondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(514, 296);
+            this.ClientSize = new System.Drawing.Size(685, 364);
             this.Controls.Add(this.lblCambio);
             this.Controls.Add(this.btnGrafico);
             this.Controls.Add(this.btnCompras);
@@ -339,9 +338,11 @@
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.lblFoto);
             this.Cursor = System.Windows.Forms.Cursors.Default;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

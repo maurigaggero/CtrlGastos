@@ -82,11 +82,11 @@
             // txtDescripcion
             // 
             this.txtDescripcion.BackColor = System.Drawing.SystemColors.Window;
-            this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(735, 79);
+            this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcion.Location = new System.Drawing.Point(735, 84);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(268, 28);
+            this.txtDescripcion.Size = new System.Drawing.Size(268, 34);
             this.txtDescripcion.TabIndex = 3;
             // 
             // btnVolver
@@ -106,7 +106,7 @@
             // 
             this.txtRubro.BackColor = System.Drawing.SystemColors.Window;
             this.txtRubro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtRubro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRubro.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRubro.FormattingEnabled = true;
             this.txtRubro.Items.AddRange(new object[] {
             "Salud",
@@ -123,30 +123,30 @@
             "Salidad/Esparcimiento",
             "Tarjeta de crédito",
             "Otro"});
-            this.txtRubro.Location = new System.Drawing.Point(77, 79);
+            this.txtRubro.Location = new System.Drawing.Point(45, 83);
             this.txtRubro.Margin = new System.Windows.Forms.Padding(4);
             this.txtRubro.Name = "txtRubro";
-            this.txtRubro.Size = new System.Drawing.Size(199, 28);
+            this.txtRubro.Size = new System.Drawing.Size(244, 37);
             this.txtRubro.TabIndex = 0;
             // 
             // txtFecha
             // 
             this.txtFecha.CalendarMonthBackground = System.Drawing.Color.Transparent;
-            this.txtFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFecha.Location = new System.Drawing.Point(452, 79);
+            this.txtFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFecha.Location = new System.Drawing.Point(462, 84);
             this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(238, 27);
+            this.txtFecha.Size = new System.Drawing.Size(238, 34);
             this.txtFecha.TabIndex = 2;
             // 
             // chk_prioritario
             // 
             this.chk_prioritario.AutoSize = true;
             this.chk_prioritario.BackColor = System.Drawing.Color.Transparent;
-            this.chk_prioritario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_prioritario.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chk_prioritario.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.chk_prioritario.Location = new System.Drawing.Point(315, 83);
+            this.chk_prioritario.Location = new System.Drawing.Point(316, 88);
             this.chk_prioritario.Name = "chk_prioritario";
-            this.chk_prioritario.Size = new System.Drawing.Size(104, 24);
+            this.chk_prioritario.Size = new System.Drawing.Size(140, 33);
             this.chk_prioritario.TabIndex = 1;
             this.chk_prioritario.Text = "Prioritario";
             this.chk_prioritario.UseVisualStyleBackColor = false;
@@ -155,11 +155,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(73, 51);
+            this.label1.Location = new System.Drawing.Point(40, 51);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 24);
+            this.label1.Size = new System.Drawing.Size(85, 29);
             this.label1.TabIndex = 11;
             this.label1.Text = "Rubro:";
             // 
@@ -167,11 +167,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Location = new System.Drawing.Point(731, 51);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 24);
+            this.label2.Size = new System.Drawing.Size(147, 29);
             this.label2.TabIndex = 12;
             this.label2.Text = "Descripcion:";
             // 
@@ -179,11 +179,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(1069, 51);
+            this.label3.Location = new System.Drawing.Point(1059, 51);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 24);
+            this.label3.Size = new System.Drawing.Size(101, 29);
             this.label3.TabIndex = 13;
             this.label3.Text = "Importe:";
             // 
@@ -191,11 +191,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(448, 51);
+            this.label4.Location = new System.Drawing.Point(457, 52);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 24);
+            this.label4.Size = new System.Drawing.Size(86, 29);
             this.label4.TabIndex = 14;
             this.label4.Text = "Fecha:";
             // 
@@ -206,7 +206,7 @@
             this.tablaGastos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -219,18 +219,18 @@
             this.tablaGastos.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
             this.tablaGastos.RowTemplate.Height = 24;
             this.tablaGastos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tablaGastos.Size = new System.Drawing.Size(978, 355);
+            this.tablaGastos.Size = new System.Drawing.Size(965, 355);
             this.tablaGastos.TabIndex = 16;
             this.tablaGastos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.TablaGastos_CellFormatting);
             // 
             // txtImporte
             // 
             this.txtImporte.BackColor = System.Drawing.SystemColors.Window;
-            this.txtImporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtImporte.Location = new System.Drawing.Point(1073, 79);
+            this.txtImporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtImporte.Location = new System.Drawing.Point(1064, 84);
             this.txtImporte.Margin = new System.Windows.Forms.Padding(4);
             this.txtImporte.Name = "txtImporte";
-            this.txtImporte.Size = new System.Drawing.Size(132, 28);
+            this.txtImporte.Size = new System.Drawing.Size(132, 34);
             this.txtImporte.TabIndex = 4;
             // 
             // lblNombre
@@ -316,7 +316,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1262, 771);
+            this.ClientSize = new System.Drawing.Size(1262, 758);
             this.Controls.Add(this.lblDisponible);
             this.Controls.Add(this.lblGastado);
             this.Controls.Add(this.lblIngresos);
@@ -337,7 +337,10 @@
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.txtDescripcion);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "ControlDeGastos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ControlDeGastos";
