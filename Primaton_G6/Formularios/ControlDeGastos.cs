@@ -32,11 +32,11 @@ namespace Primaton_G6
 
             listu.LeeUsuarios();
 
+            g.LeeGastos();
+
             g.ConfigInicial();
 
             tablaGastos.DataSource = g.TablaGastos;
-
-            g.LeeGastos();
 
             ug.Usuario = nombre;
 
