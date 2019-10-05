@@ -64,6 +64,7 @@ namespace Primaton_G6.Formularios
             this.Close();
         }
 
+        #region imagenes
         private void ImgBlanco_Click(object sender, EventArgs e)
         {
             img = 0;
@@ -135,6 +136,8 @@ namespace Primaton_G6.Formularios
             img = 11;
             lblFoto2.ImageIndex = img;
         }
+        #endregion
+
 
         private void btnRegistrarme_MouseEnter(object sender, EventArgs e)
         {
