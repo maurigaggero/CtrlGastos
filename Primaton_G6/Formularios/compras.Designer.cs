@@ -40,7 +40,7 @@
             // 
             this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCantidad.ForeColor = System.Drawing.Color.Silver;
-            this.txtCantidad.Location = new System.Drawing.Point(47, 70);
+            this.txtCantidad.Location = new System.Drawing.Point(57, 70);
             this.txtCantidad.Margin = new System.Windows.Forms.Padding(4);
             this.txtCantidad.Multiline = true;
             this.txtCantidad.Name = "txtCantidad";
@@ -54,7 +54,7 @@
             // btnAgregar
             // 
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(621, 70);
+            this.btnAgregar.Location = new System.Drawing.Point(631, 70);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(59, 52);
@@ -70,7 +70,7 @@
             this.grilla.AllowUserToResizeColumns = false;
             this.grilla.AllowUserToResizeRows = false;
             this.grilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grilla.Location = new System.Drawing.Point(47, 127);
+            this.grilla.Location = new System.Drawing.Point(57, 127);
             this.grilla.Margin = new System.Windows.Forms.Padding(4);
             this.grilla.Name = "grilla";
             this.grilla.ReadOnly = true;
@@ -84,7 +84,7 @@
             // 
             this.txtProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProducto.ForeColor = System.Drawing.Color.Silver;
-            this.txtProducto.Location = new System.Drawing.Point(233, 70);
+            this.txtProducto.Location = new System.Drawing.Point(243, 70);
             this.txtProducto.Margin = new System.Windows.Forms.Padding(4);
             this.txtProducto.Multiline = true;
             this.txtProducto.Name = "txtProducto";
@@ -100,7 +100,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(725, 642);
+            this.ClientSize = new System.Drawing.Size(752, 629);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.grilla);
