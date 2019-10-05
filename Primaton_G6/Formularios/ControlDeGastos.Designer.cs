@@ -127,7 +127,7 @@
             "Mantenimiento auto",
             "Transporte",
             "Viajes",
-            "Salidad/Esparcimiento",
+            "Salidas/Esparcimiento",
             "Tarjeta de crédito",
             "Otro"});
             this.txtRubro.Location = new System.Drawing.Point(45, 83);

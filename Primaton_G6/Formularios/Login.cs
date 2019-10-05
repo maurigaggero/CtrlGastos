@@ -100,7 +100,7 @@ namespace Primaton_G6.Formularios
 
         private void lblRegistrar_MouseLeave(object sender, EventArgs e)
         {
-            lblRegistrar.ForeColor = Color.Red;
+            lblRegistrar.ForeColor = Color.Aquamarine;
         }
 
         private void lblRegistrar_MouseClick(object sender, MouseEventArgs e)
@@ -117,7 +117,7 @@ namespace Primaton_G6.Formularios
 
         private void lblEliminar_MouseLeave(object sender, EventArgs e)
         {
-            lblEliminar.ForeColor = Color.Red;
+            lblEliminar.ForeColor = Color.Aquamarine;
         }
 
         private void lblEliminar_MouseClick(object sender, MouseEventArgs e)
@@ -238,7 +238,7 @@ namespace Primaton_G6.Formularios
 
         private void lblCambio_MouseLeave(object sender, EventArgs e)
         {
-            lblCambio.ForeColor = Color.Red;
+            lblCambio.ForeColor = Color.Aquamarine;
         }
         #endregion
 
