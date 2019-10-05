@@ -57,6 +57,9 @@ namespace Primaton_G6.Clases
         /// 
         public void LeeUsuarios()
         {
+            //limpia la tabla para no repetir filas
+            TablaUsuarios.Reset();
+
             // busca si el archivo ya existe para precargar sus datos
             if (File.Exists(NombreArchivo))
             {

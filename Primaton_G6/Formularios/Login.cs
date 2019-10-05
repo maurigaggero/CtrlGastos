@@ -246,7 +246,7 @@ namespace Primaton_G6.Formularios
         {
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
-                listu.LeeUsuarios();
+                //listu.LeeUsuarios();
 
                 string contraseña = listu.DevuelvePass(txtNombre.Text);
 
