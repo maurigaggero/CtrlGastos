@@ -87,7 +87,30 @@ namespace Primaton_G6.Formularios
                 e.Handled = true;
                 MessageBox.Show("Debes ingresar números");
             }
+            if (e.KeyChar == 13)
+            {
+                txtProducto.Focus();
+            }
+        }
+        private void txtProducto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                if (txtCantidad.Text == "" || txtCantidad.Text == "Cantidad" || txtProducto.Text == "" || txtProducto.Text == "Producto")
+                {
+                    MessageBox.Show("Debes ingresar cantidad y producto valido", "ATENCION", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+                else
+                {
+                    c.NuevaCompra(txtCantidad.Text, txtProducto.Text);
+                    txtProducto.Text = "Producto";
+                    txtCantidad.Text = "Cantidad";
+                }
+            }
         }
         #endregion
+
+
     }
 }
