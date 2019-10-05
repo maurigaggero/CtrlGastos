@@ -93,7 +93,7 @@ namespace Primaton_G6.Clases
             double suma = 0;
             foreach (DataRow fila in TablaGastos.Rows)
             {
-                if (fila["Usuario"].ToString() == nombre)
+                if (fila["Usuario"].ToString() == nombre && (Convert.ToDateTime(fila["Fecha"]).Date.Month) == (DateTime.Today.Month))
                     suma += Convert.ToDouble(fila["Importe"]);
             }
             return suma;
