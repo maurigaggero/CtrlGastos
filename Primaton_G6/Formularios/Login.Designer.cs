@@ -42,9 +42,7 @@
             this.lblPass = new System.Windows.Forms.Label();
             this.lblRegistrar = new System.Windows.Forms.Label();
             this.lblEliminar = new System.Windows.Forms.Label();
-            this.lblDeseo = new System.Windows.Forms.Label();
             this.btnCompras = new System.Windows.Forms.Button();
-            this.btnGrafico = new System.Windows.Forms.Button();
             this.lblCambio = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -86,7 +84,7 @@
             this.btnAddgasto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddgasto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddgasto.ForeColor = System.Drawing.Color.White;
-            this.btnAddgasto.Location = new System.Drawing.Point(37, 233);
+            this.btnAddgasto.Location = new System.Drawing.Point(141, 228);
             this.btnAddgasto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddgasto.Name = "btnAddgasto";
             this.btnAddgasto.Size = new System.Drawing.Size(144, 86);
@@ -200,12 +198,12 @@
             this.lblRegistrar.AutoSize = true;
             this.lblRegistrar.BackColor = System.Drawing.Color.Transparent;
             this.lblRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegistrar.ForeColor = System.Drawing.Color.Red;
-            this.lblRegistrar.Location = new System.Drawing.Point(391, 325);
+            this.lblRegistrar.Location = new System.Drawing.Point(393, 329);
             this.lblRegistrar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRegistrar.Name = "lblRegistrar";
-            this.lblRegistrar.Size = new System.Drawing.Size(140, 29);
+            this.lblRegistrar.Size = new System.Drawing.Size(116, 25);
             this.lblRegistrar.TabIndex = 16;
             this.lblRegistrar.Text = "Registrate!";
             this.lblRegistrar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblRegistrar_MouseClick);
@@ -229,20 +227,6 @@
             this.lblEliminar.MouseEnter += new System.EventHandler(this.lblEliminar_MouseEnter);
             this.lblEliminar.MouseLeave += new System.EventHandler(this.lblEliminar_MouseLeave);
             // 
-            // lblDeseo
-            // 
-            this.lblDeseo.AutoSize = true;
-            this.lblDeseo.BackColor = System.Drawing.Color.Transparent;
-            this.lblDeseo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDeseo.ForeColor = System.Drawing.Color.Black;
-            this.lblDeseo.Location = new System.Drawing.Point(16, 196);
-            this.lblDeseo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDeseo.Name = "lblDeseo";
-            this.lblDeseo.Size = new System.Drawing.Size(239, 29);
-            this.lblDeseo.TabIndex = 18;
-            this.lblDeseo.Text = "Que deseas hacer?";
-            this.lblDeseo.Visible = false;
-            // 
             // btnCompras
             // 
             this.btnCompras.BackColor = System.Drawing.Color.Transparent;
@@ -255,12 +239,12 @@
             this.btnCompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompras.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCompras.ForeColor = System.Drawing.Color.White;
-            this.btnCompras.Location = new System.Drawing.Point(276, 233);
+            this.btnCompras.Location = new System.Drawing.Point(387, 233);
             this.btnCompras.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCompras.Name = "btnCompras";
             this.btnCompras.Size = new System.Drawing.Size(144, 86);
             this.btnCompras.TabIndex = 19;
-            this.btnCompras.Text = "Lista de compras";
+            this.btnCompras.Text = "Ver lista del super";
             this.btnCompras.UseVisualStyleBackColor = false;
             this.btnCompras.Visible = false;
             this.btnCompras.Click += new System.EventHandler(this.btnCompras_Click);
@@ -268,31 +252,6 @@
             this.btnCompras.MouseEnter += new System.EventHandler(this.btnCompras_MouseEnter);
             this.btnCompras.MouseLeave += new System.EventHandler(this.btnCompras_MouseLeave);
             this.btnCompras.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnCompras_MouseUp);
-            // 
-            // btnGrafico
-            // 
-            this.btnGrafico.BackColor = System.Drawing.Color.Transparent;
-            this.btnGrafico.BackgroundImage = global::Primaton_G6.Properties.Resources.botonMadera;
-            this.btnGrafico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnGrafico.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGrafico.FlatAppearance.BorderSize = 0;
-            this.btnGrafico.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnGrafico.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnGrafico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGrafico.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrafico.ForeColor = System.Drawing.Color.White;
-            this.btnGrafico.Location = new System.Drawing.Point(515, 233);
-            this.btnGrafico.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnGrafico.Name = "btnGrafico";
-            this.btnGrafico.Size = new System.Drawing.Size(144, 86);
-            this.btnGrafico.TabIndex = 20;
-            this.btnGrafico.Text = "Estadisticas de gastos";
-            this.btnGrafico.UseVisualStyleBackColor = false;
-            this.btnGrafico.Visible = false;
-            this.btnGrafico.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnGrafico_MouseDown);
-            this.btnGrafico.MouseEnter += new System.EventHandler(this.btnGrafico_MouseEnter);
-            this.btnGrafico.MouseLeave += new System.EventHandler(this.btnGrafico_MouseLeave);
-            this.btnGrafico.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnGrafico_MouseUp);
             // 
             // lblCambio
             // 
@@ -318,14 +277,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.BackgroundImage = global::Primaton_G6.Properties.Resources.Fondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(685, 364);
             this.Controls.Add(this.lblCambio);
-            this.Controls.Add(this.btnGrafico);
             this.Controls.Add(this.btnCompras);
-            this.Controls.Add(this.lblDeseo);
             this.Controls.Add(this.lblEliminar);
             this.Controls.Add(this.lblRegistrar);
             this.Controls.Add(this.txtPass);
@@ -365,9 +322,7 @@
         private System.Windows.Forms.Label lblPass;
         private System.Windows.Forms.Label lblRegistrar;
         private System.Windows.Forms.Label lblEliminar;
-        private System.Windows.Forms.Label lblDeseo;
         private System.Windows.Forms.Button btnCompras;
-        private System.Windows.Forms.Button btnGrafico;
         private System.Windows.Forms.Label lblCambio;
     }
 }

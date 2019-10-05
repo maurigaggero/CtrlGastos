@@ -45,7 +45,6 @@ namespace Primaton_G6
             lblIngresos.Text = Convert.ToString(listu.DevuelveIngresos(ug.Usuario));
 
             MuestraInfo();
-
             MuestraPorcentajes();
         }
 
@@ -70,8 +69,8 @@ namespace Primaton_G6
 
         public void MuestraPorcentajes()
         {
-            //label8.Text = Convert.ToString((g.ContadorPrioritarios(ug.Usuario) + "%"));
-            //label9.Text = Convert.ToString((g.ContadorNoPrioritarios(ug.Usuario) + "%"));
+            lblImportante.Text = Convert.ToString((g.ContadorPrioritarios(ug.Usuario) + "%"));
+            lblRedundante.Text = Convert.ToString((g.ContadorNoPrioritarios(ug.Usuario) + "%"));
         }
 
         private void TablaGastos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)

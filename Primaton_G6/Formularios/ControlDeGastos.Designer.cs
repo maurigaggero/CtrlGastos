@@ -50,6 +50,10 @@
             this.lblIngresos = new System.Windows.Forms.Label();
             this.lblGastado = new System.Windows.Forms.Label();
             this.lblDisponible = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lblImportante = new System.Windows.Forms.Label();
+            this.lblRedundante = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tablaGastos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -245,11 +249,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(145, 613);
+            this.label5.Location = new System.Drawing.Point(157, 605);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 20);
+            this.label5.Size = new System.Drawing.Size(93, 25);
             this.label5.TabIndex = 18;
             this.label5.Text = "Ingresos:";
             // 
@@ -257,11 +261,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(145, 650);
+            this.label6.Location = new System.Drawing.Point(157, 642);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(177, 20);
+            this.label6.Size = new System.Drawing.Size(208, 25);
             this.label6.TabIndex = 19;
             this.label6.Text = "Lo que llevas gastado:";
             // 
@@ -269,11 +273,11 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(145, 684);
+            this.label7.Location = new System.Drawing.Point(157, 676);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(183, 20);
+            this.label7.Size = new System.Drawing.Size(212, 25);
             this.label7.TabIndex = 20;
             this.label7.Text = "Disponible para gastar:";
             // 
@@ -281,42 +285,92 @@
             // 
             this.lblIngresos.AutoSize = true;
             this.lblIngresos.BackColor = System.Drawing.Color.Transparent;
-            this.lblIngresos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIngresos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIngresos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblIngresos.Location = new System.Drawing.Point(244, 613);
+            this.lblIngresos.Location = new System.Drawing.Point(268, 605);
             this.lblIngresos.Name = "lblIngresos";
-            this.lblIngresos.Size = new System.Drawing.Size(0, 24);
+            this.lblIngresos.Size = new System.Drawing.Size(0, 25);
             this.lblIngresos.TabIndex = 21;
             // 
             // lblGastado
             // 
             this.lblGastado.AutoSize = true;
             this.lblGastado.BackColor = System.Drawing.Color.Transparent;
-            this.lblGastado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGastado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGastado.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblGastado.Location = new System.Drawing.Point(348, 650);
+            this.lblGastado.Location = new System.Drawing.Point(389, 642);
             this.lblGastado.Name = "lblGastado";
-            this.lblGastado.Size = new System.Drawing.Size(0, 24);
+            this.lblGastado.Size = new System.Drawing.Size(0, 25);
             this.lblGastado.TabIndex = 22;
             // 
             // lblDisponible
             // 
             this.lblDisponible.AutoSize = true;
             this.lblDisponible.BackColor = System.Drawing.Color.Transparent;
-            this.lblDisponible.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDisponible.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDisponible.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblDisponible.Location = new System.Drawing.Point(348, 684);
+            this.lblDisponible.Location = new System.Drawing.Point(389, 676);
             this.lblDisponible.Name = "lblDisponible";
-            this.lblDisponible.Size = new System.Drawing.Size(0, 24);
+            this.lblDisponible.Size = new System.Drawing.Size(0, 25);
             this.lblDisponible.TabIndex = 23;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label8.Location = new System.Drawing.Point(604, 605);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(143, 25);
+            this.label8.TabIndex = 24;
+            this.label8.Text = "% Importantes:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label9.Location = new System.Drawing.Point(604, 650);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(157, 25);
+            this.label9.TabIndex = 25;
+            this.label9.Text = "% Redundantes:";
+            // 
+            // lblImportante
+            // 
+            this.lblImportante.AutoSize = true;
+            this.lblImportante.BackColor = System.Drawing.Color.Transparent;
+            this.lblImportante.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblImportante.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblImportante.Location = new System.Drawing.Point(761, 605);
+            this.lblImportante.Name = "lblImportante";
+            this.lblImportante.Size = new System.Drawing.Size(0, 25);
+            this.lblImportante.TabIndex = 26;
+            // 
+            // lblRedundante
+            // 
+            this.lblRedundante.AutoSize = true;
+            this.lblRedundante.BackColor = System.Drawing.Color.Transparent;
+            this.lblRedundante.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRedundante.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblRedundante.Location = new System.Drawing.Point(777, 650);
+            this.lblRedundante.Name = "lblRedundante";
+            this.lblRedundante.Size = new System.Drawing.Size(0, 25);
+            this.lblRedundante.TabIndex = 27;
             // 
             // ControlDeGastos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1262, 758);
+            this.Controls.Add(this.lblRedundante);
+            this.Controls.Add(this.lblImportante);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.lblDisponible);
             this.Controls.Add(this.lblGastado);
             this.Controls.Add(this.lblIngresos);
@@ -371,5 +425,9 @@
         private System.Windows.Forms.Label lblIngresos;
         private System.Windows.Forms.Label lblGastado;
         private System.Windows.Forms.Label lblDisponible;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblImportante;
+        private System.Windows.Forms.Label lblRedundante;
     }
 }

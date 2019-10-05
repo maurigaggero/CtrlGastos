@@ -12,7 +12,6 @@ namespace Primaton_G6.Formularios
 {
     public partial class SignUp : Form
     {
-
         Clases.Usuario usuario = new Clases.Usuario();
 
         Clases.Persistencia_Usuarios listu = new Clases.Persistencia_Usuarios();

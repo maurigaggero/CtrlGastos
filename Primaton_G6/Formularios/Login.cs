@@ -56,9 +56,7 @@ namespace Primaton_G6.Formularios
                     lblMensaje.Visible = true;
                     lblMensaje.Text = "Hola " + txtNombre.Text + ", " + "\r\n" + "tus ingresos mensuales registrados son: $" + listu.DevuelveIngresos(txtNombre.Text);
 
-                    lblDeseo.Visible = true;
                     //-------------limpio campos, desaparezco el boton ingresar, aparece "otro usuario"----------------------
-                    btnGrafico.Visible = true;
                     btnCompras.Visible = true;
                     txtNombre.Visible = false;
                     txtPass.Visible = false;
@@ -147,7 +145,6 @@ namespace Primaton_G6.Formularios
 
                 lblMensaje.Text = "";
 
-                btnGrafico.Visible = false;
                 btnCompras.Visible = false;
                 txtNombre.Visible = true;
                 txtPass.Visible = true;
@@ -160,7 +157,6 @@ namespace Primaton_G6.Formularios
                 lblFoto.Visible = false;
                 lblMensaje.Visible = false;
                 btnAddgasto.Visible = false;
-                lblDeseo.Visible = false;
                 lblEliminar.Visible = false;
                 txtNombre.Text = "";
                 txtPass.Text = "";
@@ -189,28 +185,6 @@ namespace Primaton_G6.Formularios
         private void btnCompras_MouseLeave(object sender, EventArgs e)
         {
             btnCompras.ForeColor = Color.White;
-        }
-
-        private void btnGrafico_MouseEnter(object sender, EventArgs e)
-        {
-            btnGrafico.ForeColor = Color.Black;
-        }
-
-        private void btnGrafico_MouseLeave(object sender, EventArgs e)
-        {
-            btnGrafico.ForeColor = Color.White;
-        }
-
-        private void btnGrafico_MouseDown(object sender, MouseEventArgs e)
-        {
-            btnGrafico.BackgroundImage = (Primaton_G6.Properties.Resources.botonMaderaApretado);
-            btnGrafico.ForeColor = Color.Red;
-        }
-
-        private void btnGrafico_MouseUp(object sender, MouseEventArgs e)
-        {
-            btnGrafico.BackgroundImage = (Primaton_G6.Properties.Resources.botonMadera);
-
         }
 
         private void btnCompras_MouseDown(object sender, MouseEventArgs e)
@@ -293,9 +267,7 @@ namespace Primaton_G6.Formularios
                         lblMensaje.Visible = true;
                         lblMensaje.Text = "Hola " + txtNombre.Text + ", " + "\r\n" + "tus ingresos mensuales registrados son: $" + listu.DevuelveIngresos(txtNombre.Text);
 
-                        lblDeseo.Visible = true;
                         //-------------limpio campos, desaparezco el boton ingresar, aparece "otro usuario"----------------------
-                        btnGrafico.Visible = true;
                         btnCompras.Visible = true;
                         txtNombre.Visible = false;
                         txtPass.Visible = false;
@@ -330,7 +302,6 @@ namespace Primaton_G6.Formularios
 
         private void lblCambio_MouseClick(object sender, MouseEventArgs e)
         {
-            btnGrafico.Visible = false;
             btnCompras.Visible = false;
             txtNombre.Visible = true;
             txtPass.Visible = true;
@@ -343,22 +314,18 @@ namespace Primaton_G6.Formularios
             lblFoto.Visible = false;
             lblMensaje.Visible = false;
             btnAddgasto.Visible = false;
-            lblDeseo.Visible = false;
             lblEliminar.Visible = false;
             txtNombre.Text = "";
             txtPass.Text = "";
         }
-
 
         private void btnCompras_Click(object sender, EventArgs e)
         {
             compras compra = new compras();
             compra.Show();
         }
-
     }
 }
-
 
 
 //public void ComboTabla()
