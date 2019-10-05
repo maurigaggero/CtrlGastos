@@ -220,9 +220,9 @@
             this.lblEliminar.Location = new System.Drawing.Point(517, 332);
             this.lblEliminar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEliminar.Name = "lblEliminar";
-            this.lblEliminar.Size = new System.Drawing.Size(133, 18);
+            this.lblEliminar.Size = new System.Drawing.Size(147, 18);
             this.lblEliminar.TabIndex = 17;
-            this.lblEliminar.Text = "Eliminar cuenta?";
+            this.lblEliminar.Text = "Eliminar mi cuenta";
             this.lblEliminar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblEliminar_MouseClick);
             this.lblEliminar.MouseEnter += new System.EventHandler(this.lblEliminar_MouseEnter);
             this.lblEliminar.MouseLeave += new System.EventHandler(this.lblEliminar_MouseLeave);
@@ -263,9 +263,9 @@
             this.lblCambio.Location = new System.Drawing.Point(3, 316);
             this.lblCambio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCambio.Name = "lblCambio";
-            this.lblCambio.Size = new System.Drawing.Size(215, 36);
+            this.lblCambio.Size = new System.Drawing.Size(219, 36);
             this.lblCambio.TabIndex = 21;
-            this.lblCambio.Text = "No eres tu? \r\nQuieres combiar la cuenta?";
+            this.lblCambio.Text = "No eres tu? \r\nQuieres cambiar de cuenta?";
             this.lblCambio.Visible = false;
             this.lblCambio.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblCambio_MouseClick);
             this.lblCambio.MouseEnter += new System.EventHandler(this.lblCambio_MouseEnter);
