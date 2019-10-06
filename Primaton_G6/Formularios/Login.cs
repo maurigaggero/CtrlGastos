@@ -163,8 +163,6 @@ namespace Primaton_G6.Formularios
 
                 MessageBox.Show("Usuario eliminado!", "Aviso");
             }
-            //borra por indice
-            //listu.EliminaUsuario(comboUsuarios.SelectedIndex);
         }
 
         private void btnAddgasto_MouseEnter(object sender, EventArgs e)
