@@ -83,10 +83,10 @@ namespace Primaton_G6
             {
                 if (this.tablaGastos.Rows[e.RowIndex].Cells["Prioridad"].Value.ToString() == "A")
                 {
-                    tablaGastos.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.LightYellow;
-                    tablaGastos.Rows[e.RowIndex].DefaultCellStyle.ForeColor = Color.Orange;
+                    tablaGastos.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.LightGreen;
+                    tablaGastos.Rows[e.RowIndex].DefaultCellStyle.ForeColor = Color.DarkGreen;
                     e.CellStyle.SelectionForeColor = Color.Yellow;
-                    e.CellStyle.SelectionBackColor = Color.Orange;
+                    e.CellStyle.SelectionBackColor = Color.Green;
                 }
                 else
                 {
