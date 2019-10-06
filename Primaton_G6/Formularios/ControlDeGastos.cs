@@ -57,13 +57,14 @@ namespace Primaton_G6
 
             if ((Convert.ToDouble(lblIngresos.Text) - Convert.ToDouble(lblGastado.Text)) <= 1000)
             {
-                lblDisponible.ForeColor = Color.Red;
-                lblDisponible.BackColor = Color.Yellow;
+                lblDisponible.ForeColor = Color.White;
+                lblDisponible.BackColor = Color.Red;
                 lblDisponible.Text = "SUPERASTE EL LÍMITE DE GASTOS";
             }
             else
             {
                 lblDisponible.ForeColor = Color.White;
+                lblDisponible.BackColor = Color.Transparent;
                 lblDisponible.Text = "";
                 lblDisponible.Text = Convert.ToString(Convert.ToDouble(lblIngresos.Text) - Convert.ToDouble(lblGastado.Text));
             }

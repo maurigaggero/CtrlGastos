@@ -41,9 +41,10 @@
             // 
             this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCantidad.ForeColor = System.Drawing.Color.Silver;
-            this.txtCantidad.Location = new System.Drawing.Point(43, 57);
+            this.txtCantidad.Location = new System.Drawing.Point(70, 36);
+            this.txtCantidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(126, 38);
+            this.txtCantidad.Size = new System.Drawing.Size(167, 46);
             this.txtCantidad.TabIndex = 1;
             this.txtCantidad.Text = "Cantidad";
             this.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -55,9 +56,10 @@
             // 
             this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(474, 55);
+            this.btnAgregar.Location = new System.Drawing.Point(645, 34);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(44, 42);
+            this.btnAgregar.Size = new System.Drawing.Size(59, 52);
             this.btnAgregar.TabIndex = 0;
             this.btnAgregar.Text = "+";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -70,13 +72,14 @@
             this.grilla.AllowUserToResizeColumns = false;
             this.grilla.AllowUserToResizeRows = false;
             this.grilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grilla.Location = new System.Drawing.Point(43, 103);
+            this.grilla.Location = new System.Drawing.Point(70, 93);
+            this.grilla.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grilla.Name = "grilla";
             this.grilla.ReadOnly = true;
             this.grilla.RowHeadersVisible = false;
             this.grilla.RowHeadersWidth = 51;
             this.grilla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grilla.Size = new System.Drawing.Size(475, 362);
+            this.grilla.Size = new System.Drawing.Size(633, 446);
             this.grilla.TabIndex = 3;
             this.grilla.TabStop = false;
             // 
@@ -84,9 +87,10 @@
             // 
             this.txtProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProducto.ForeColor = System.Drawing.Color.Silver;
-            this.txtProducto.Location = new System.Drawing.Point(183, 57);
+            this.txtProducto.Location = new System.Drawing.Point(257, 36);
+            this.txtProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtProducto.Name = "txtProducto";
-            this.txtProducto.Size = new System.Drawing.Size(277, 38);
+            this.txtProducto.Size = new System.Drawing.Size(368, 46);
             this.txtProducto.TabIndex = 2;
             this.txtProducto.Text = "Producto";
             this.txtProducto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -106,9 +110,10 @@
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBorrar.ForeColor = System.Drawing.Color.White;
-            this.btnBorrar.Location = new System.Drawing.Point(401, 470);
+            this.btnBorrar.Location = new System.Drawing.Point(548, 544);
+            this.btnBorrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(117, 45);
+            this.btnBorrar.Size = new System.Drawing.Size(156, 70);
             this.btnBorrar.TabIndex = 4;
             this.btnBorrar.Text = "Borrar Elemento";
             this.btnBorrar.UseVisualStyleBackColor = false;
@@ -120,18 +125,19 @@
             // 
             // compras
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(564, 525);
+            this.ClientSize = new System.Drawing.Size(769, 627);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.grilla);
             this.Controls.Add(this.txtProducto);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "compras";
