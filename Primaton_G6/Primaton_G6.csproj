@@ -81,6 +81,9 @@
     <EmbeddedResource Include="Formularios\ControlDeGastos.resx">
       <DependentUpon>ControlDeGastos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Login.es-AR.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
