@@ -174,29 +174,6 @@ namespace Primaton_G6.Formularios
 
         #endregion
 
-        #region BOTON COMPRAR
-
-        private void BtnCompra_MouseEnter(object sender, EventArgs e)
-        {
-            btnCompra.ForeColor = Color.Black;
-        }
-
-
-        private void BtnCompra_MouseDown(object sender, MouseEventArgs e)
-        {
-            btnCompra.BackgroundImage = (Primaton_G6.Properties.Resources.botonMaderaApretado);
-        }
-
-        private void BtnCompra_MouseUp(object sender, MouseEventArgs e)
-        {
-            btnCompra.BackgroundImage = (Primaton_G6.Properties.Resources.botonMadera);
-
-        }
         
-        private void BtnCompra_MouseLeave(object sender, EventArgs e)
-        {
-            btnCompra.ForeColor = Color.White;
-        }
-        #endregion
     }
 }

@@ -34,7 +34,7 @@
             this.grilla = new System.Windows.Forms.DataGridView();
             this.txtProducto = new System.Windows.Forms.TextBox();
             this.btnBorrar = new System.Windows.Forms.Button();
-            this.btnCompra = new System.Windows.Forms.Button();
+            this.btnImprimir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grilla)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,28 +119,24 @@
             this.btnBorrar.MouseLeave += new System.EventHandler(this.btnBorrar_MouseLeave);
             this.btnBorrar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBorrar_MouseUp);
             // 
-            // btnCompra
+            // btnImprimir
             // 
-            this.btnCompra.BackColor = System.Drawing.Color.Transparent;
-            this.btnCompra.BackgroundImage = global::Primaton_G6.Properties.Resources.botonMadera;
-            this.btnCompra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCompra.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCompra.FlatAppearance.BorderSize = 0;
-            this.btnCompra.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnCompra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCompra.ForeColor = System.Drawing.Color.White;
-            this.btnCompra.Location = new System.Drawing.Point(52, 442);
-            this.btnCompra.Name = "btnCompra";
-            this.btnCompra.Size = new System.Drawing.Size(117, 57);
-            this.btnCompra.TabIndex = 5;
-            this.btnCompra.Text = "Comprar ";
-            this.btnCompra.UseVisualStyleBackColor = false;
-            this.btnCompra.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BtnCompra_MouseDown);
-            this.btnCompra.MouseEnter += new System.EventHandler(this.BtnCompra_MouseEnter);
-            this.btnCompra.MouseLeave += new System.EventHandler(this.BtnCompra_MouseLeave);
-            this.btnCompra.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BtnCompra_MouseUp);
+            this.btnImprimir.BackColor = System.Drawing.Color.Transparent;
+            this.btnImprimir.BackgroundImage = global::Primaton_G6.Properties.Resources.botonMadera;
+            this.btnImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnImprimir.FlatAppearance.BorderSize = 0;
+            this.btnImprimir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnImprimir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImprimir.ForeColor = System.Drawing.Color.White;
+            this.btnImprimir.Location = new System.Drawing.Point(61, 444);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(117, 57);
+            this.btnImprimir.TabIndex = 6;
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.UseVisualStyleBackColor = false;
             // 
             // compras
             // 
@@ -149,7 +145,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(577, 509);
-            this.Controls.Add(this.btnCompra);
+            this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.btnAgregar);
@@ -176,6 +172,6 @@
         private System.Windows.Forms.DataGridView grilla;
         private System.Windows.Forms.TextBox txtProducto;
         private System.Windows.Forms.Button btnBorrar;
-        private System.Windows.Forms.Button btnCompra;
+        private System.Windows.Forms.Button btnImprimir;
     }
 }
