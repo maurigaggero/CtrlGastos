@@ -55,6 +55,7 @@
             this.lblImportante = new System.Windows.Forms.Label();
             this.lblRedundante = new System.Windows.Forms.Label();
             this.GrupoIngresos = new System.Windows.Forms.GroupBox();
+            this.lblAviso = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tablaGastos)).BeginInit();
             this.GrupoIngresos.SuspendLayout();
             this.SuspendLayout();
@@ -425,6 +426,19 @@
             this.GrupoIngresos.TabStop = false;
             this.GrupoIngresos.Text = "Ingresos";
             // 
+            // lblAviso
+            // 
+            this.lblAviso.AutoSize = true;
+            this.lblAviso.BackColor = System.Drawing.Color.Transparent;
+            this.lblAviso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAviso.ForeColor = System.Drawing.Color.Red;
+            this.lblAviso.Location = new System.Drawing.Point(164, 92);
+            this.lblAviso.Name = "lblAviso";
+            this.lblAviso.Size = new System.Drawing.Size(404, 20);
+            this.lblAviso.TabIndex = 29;
+            this.lblAviso.Text = "No se pueden cargar datos si hay campos vacios.";
+            this.lblAviso.Visible = false;
+            // 
             // ControlDeGastos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -432,6 +446,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(888, 605);
+            this.Controls.Add(this.lblAviso);
             this.Controls.Add(this.GrupoIngresos);
             this.Controls.Add(this.lblIngresos);
             this.Controls.Add(this.lblNombre);
@@ -488,5 +503,6 @@
         private System.Windows.Forms.Label lblImportante;
         private System.Windows.Forms.Label lblRedundante;
         private System.Windows.Forms.GroupBox GrupoIngresos;
+        private System.Windows.Forms.Label lblAviso;
     }
 }

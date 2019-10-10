@@ -121,7 +121,7 @@ namespace Primaton_G6
 
             if (txtRubro.Text == "" || txtDescripcion.Text == "" || txtImporte.Text == "")
             {
-                    MessageBox.Show("Hay campos vacíos, por favor revise");
+                lblAviso.Visible = true;
             }
             else
             {
