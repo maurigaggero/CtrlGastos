@@ -12,6 +12,7 @@ namespace Primaton_G6.Formularios
 {
     public partial class SignUp : Form
     {
+       
         Clases.Usuario usuario = new Clases.Usuario();
 
         Clases.Persistencia_Usuarios listu = new Clases.Persistencia_Usuarios();
@@ -37,25 +38,17 @@ namespace Primaton_G6.Formularios
 
         private void BtnRegistrarme_Click(object sender, EventArgs e)
         {
-            if (txtNombre.Text == "Nombre de usuario" || txtIngresos.Text == "Ingresos mensuales en $" ||
-                txtDNI.Text == "Numero de documento" || txtPass.Text == "Password")
+            if (listu.TablaUsuarios.Columns.Count == 5)
             {
-                MessageBox.Show("Debes ingresar tus datos!");
+                listu.AltaUsuarios(txtDNI.Text, txtNombre.Text, txtPass.Text, Convert.ToInt32(txtIngresos.Text), img);
             }
             else
             {
-                if (listu.TablaUsuarios.Columns.Count == 5)
-                {
-                    listu.AltaUsuarios(txtDNI.Text, txtNombre.Text, txtPass.Text, Convert.ToInt32(txtIngresos.Text), img);
-                }
-                else
-                {
-                    listu.ConfigInicial();
-                    listu.AltaUsuarios(txtDNI.Text, txtNombre.Text, txtPass.Text, Convert.ToInt32(txtIngresos.Text), img);
-                }
-                this.Close();
-
+                listu.ConfigInicial();
+                listu.AltaUsuarios(txtDNI.Text, txtNombre.Text, txtPass.Text, Convert.ToInt32(txtIngresos.Text), img);
             }
+            this.Close();
+
             //LimpiarCampos();
         }
 
@@ -138,6 +131,7 @@ namespace Primaton_G6.Formularios
         }
         #endregion
 
+        #region Efectos botones
 
         private void btnRegistrarme_MouseEnter(object sender, EventArgs e)
         {
@@ -178,52 +172,74 @@ namespace Primaton_G6.Formularios
         {
             btnBack.BackgroundImage = (Primaton_G6.Properties.Resources.botonMadera);
         }
-        //-----------------------validacion de que sea solo numero el DNI------------------------
+        #endregion
+
+        #region VALIDACION DE DNI E INGRESOS
+
         private void txtDNI_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsDigit(e.KeyChar))
-            {
-                e.Handled = false;
+                if (Char.IsDigit(e.KeyChar))
+                {
+                    e.Handled = false;
+                    lblDni.Visible = false;
+                    panelDni.BackColor = Color.Transparent;
 
-            }
-            else if (Char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsSeparator(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                e.Handled = true;
-                MessageBox.Show("Debes ingresar números");
-            }
+                }
+                else if (Char.IsControl(e.KeyChar))
+                {
+                    e.Handled = false;
+                    lblDni.Visible = false;
+                    panelDni.BackColor = Color.Transparent;
+                }
+                else if (Char.IsSeparator(e.KeyChar))
+                {
+
+                    e.Handled = false;
+                    lblDni.Visible = false;
+                    panelDni.BackColor = Color.Transparent;
+                }
+                else
+                {
+                    e.Handled = true;
+                    lblDni.Visible = true;
+                    panelDni.BackColor = Color.Red;
+                }
         }
 
-        //------------------------valido que sea solo numero---------------------------
         private void txtIngresos_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (Char.IsDigit(e.KeyChar))
             {
                 e.Handled = false;
+                LblIngresos.Visible = false;
+                panelIngresos.BackColor = Color.Transparent;
 
             }
             else if (Char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
+                LblIngresos.Visible = false;
+                panelIngresos.BackColor = Color.Transparent;
             }
             else if (Char.IsSeparator(e.KeyChar))
             {
+
                 e.Handled = false;
+                LblIngresos.Visible = false;
+                panelIngresos.BackColor = Color.Transparent;
             }
             else
             {
                 e.Handled = true;
-                MessageBox.Show("Debes ingresar números");
+                LblIngresos.Visible = true;
+                panelIngresos.BackColor = Color.Red;
             }
-        }
 
+        }
+        #endregion
+
+
+        #region EFECTOS DE TEXTBOX (ENTER Y LEAVE)
         private void txtDNI_Enter(object sender, EventArgs e)
         {
             if (txtDNI.Text == "Numero de documento")
@@ -261,44 +277,6 @@ namespace Primaton_G6.Formularios
                 txtIngresos.Text = "";
             }
         }
-        //------------------valido txtbox que sea solo letra minuscula----------------------
-        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (Char.IsLetter(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsSeparator(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsPunctuation(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsSymbol(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsSurrogate(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsHighSurrogate(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-
-            else
-            {
-                e.Handled = true;
-                MessageBox.Show("Debes ingresar solo letras");
-            }
-        }
 
         private void txtNombre_Leave(object sender, EventArgs e)
         {
@@ -308,6 +286,7 @@ namespace Primaton_G6.Formularios
                 txtNombre.Text = "Nombre de usuario";
                 txtNombre.ForeColor = Color.Silver;
             }
+         
         }
 
         private void txtPass_Leave(object sender, EventArgs e)
@@ -318,6 +297,7 @@ namespace Primaton_G6.Formularios
                 txtPass.Text = "Password";
                 txtPass.ForeColor = Color.Silver;
             }
+        
         }
 
         private void txtDNI_Leave(object sender, EventArgs e)
@@ -327,6 +307,7 @@ namespace Primaton_G6.Formularios
                 txtDNI.Text = "Numero de documento";
                 txtDNI.ForeColor = Color.Silver;
             }
+           
         }
 
         private void txtIngresos_Leave(object sender, EventArgs e)
@@ -336,44 +317,70 @@ namespace Primaton_G6.Formularios
                 txtIngresos.Text = "Ingresos mensuales en $";
                 txtIngresos.ForeColor = Color.Silver;
             }
-
+           
         }
+        #endregion
 
+        #region Habilitacion del boton registrar
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
-            if (txtNombre.Text == "" || txtNombre.Text == "Nombre de usuario")
+            if (txtNombre.Text == "" || txtNombre.Text == "Nombre de usuario"|| txtPass.Text == "" 
+                || txtPass.Text == "Password" || txtDNI.Text == "" || txtDNI.Text == "Numero de documento"
+                || txtIngresos.Text == "" || txtIngresos.Text == "Ingresos mensuales en $"||panelDni.BackColor==Color.Red||panelIngresos.BackColor==Color.Red)
             {
                 btnRegistrarme.Enabled = false;
+            }
+            else          
+            {
+                btnRegistrarme.Enabled = true;
             }
         }
 
         private void txtPass_TextChanged(object sender, EventArgs e)
         {
-            if (txtPass.Text == "" || txtPass.Text == "Password")
-            {
-                btnRegistrarme.Enabled = false;
-            }
-        }
-
-        private void txtDNI_TextChanged(object sender, EventArgs e)
-        {
-            if (txtDNI.Text == "" || txtDNI.Text == "Numero de documento")
-            {
-                btnRegistrarme.Enabled = false;
-            }
-        }
-
-        private void txtIngresos_TextChanged(object sender, EventArgs e)
-        {
-            if (txtIngresos.Text == "" || txtIngresos.Text == "Ingresos mensuales en $")
+            if (txtNombre.Text == "" || txtNombre.Text == "Nombre de usuario" || txtPass.Text == ""
+                || txtPass.Text == "Password" || txtDNI.Text == "" || txtDNI.Text == "Numero de documento"
+                || txtIngresos.Text == "" || txtIngresos.Text == "Ingresos mensuales en $" || panelDni.BackColor == Color.Red || panelIngresos.BackColor == Color.Red)
             {
                 btnRegistrarme.Enabled = false;
             }
             else
             {
                 btnRegistrarme.Enabled = true;
-                btnRegistrarme.Cursor = Cursors.Hand;
             }
         }
+
+        private void txtDNI_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNombre.Text == "" || txtNombre.Text == "Nombre de usuario" || txtPass.Text == ""
+                || txtPass.Text == "Password" || txtDNI.Text == "" || txtDNI.Text == "Numero de documento"
+                || txtIngresos.Text == "" || txtIngresos.Text == "Ingresos mensuales en $" || panelDni.BackColor == Color.Red || panelIngresos.BackColor == Color.Red)
+            {
+                btnRegistrarme.Enabled = false;
+            }
+            else
+            {
+                btnRegistrarme.Enabled = true;
+            }
+        }
+
+        private void txtIngresos_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNombre.Text == "" || txtNombre.Text == "Nombre de usuario" || txtPass.Text == ""
+                || txtPass.Text == "Password" || txtDNI.Text == "" || txtDNI.Text == "Numero de documento"
+                || txtIngresos.Text == "" || txtIngresos.Text == "Ingresos mensuales en $" || panelDni.BackColor == Color.Red || panelIngresos.BackColor == Color.Red)
+            {
+                btnRegistrarme.Enabled = false;
+            }
+            else
+            {
+                btnRegistrarme.Enabled = true;
+            }
+        }
+        #endregion
+
+       
     }
+
 }
+
