@@ -456,7 +456,6 @@
             this.Name = "ControlDeGastos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestor gastos";
-            this.Load += new System.EventHandler(this.ControlDeGastos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tablaGastos)).EndInit();
             this.GrupoIngresos.ResumeLayout(false);
             this.GrupoIngresos.PerformLayout();

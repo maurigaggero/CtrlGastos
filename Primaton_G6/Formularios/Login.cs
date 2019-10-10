@@ -20,12 +20,6 @@ namespace Primaton_G6.Formularios
         Clases.Persistencia_Gastos pgasto = new Clases.Persistencia_Gastos();
 
         Clases.Gastos g = new Clases.Gastos();
-
-        public int idioma = 1;
-        
-
-   
-             
       
         public Login()
         {
@@ -48,10 +42,6 @@ namespace Primaton_G6.Formularios
 
             string existe = listu.DevuelveNombre(txtNombre.Text);
            
-            #region ESPAÑOL
-
-            if (idioma == 1)
-            {
                 if (txtNombre.Text == existe)
                 {
                     if (contraseña == txtPass.Text)
@@ -70,9 +60,7 @@ namespace Primaton_G6.Formularios
 
                         lblMensaje.Text = "Hola " + txtNombre.Text + ", " + "\r\n" + "tus ingresos mensuales registrados son: $" + listu.DevuelveIngresos(txtNombre.Text);
 
-
-
-                        //-------------limpio campos, desaparezco el boton ingresar, aparece "otro usuario"----------------------
+//-------------limpio campos, desaparezco el boton ingresar, aparece "otro usuario"----------------------
                         btnCompras.Visible = true;
                         txtNombre.Visible = false;
                         txtPass.Visible = false;
@@ -82,85 +70,26 @@ namespace Primaton_G6.Formularios
                         lblNoEstas.Visible = false;
                         lblRegistrar.Visible = false;
                         lblCambio.Visible = true;
-                        panel1.Visible = false;
-                    }
+                        lblPassInco.Visible = false;
+                        lblAvisoUsuario.Visible = false;
+                }
                     else
                     {
-                        MessageBox.Show("Contraseña incorrecta.");
+                         lblPassInco.Visible = true;
+                         lblAvisoUsuario.Visible = false;
+                         txtPass.Text = "";
                     }
-
                 }
                 else
                 {
-
-                    MessageBox.Show("El usuario no existe");
-
+                    lblAvisoUsuario.Visible = true;
+                    lblPassInco.Visible = false;
                     lblMensaje.Text = "";
-
                     lblFoto.Visible = false;
-
                     btnAddgasto.Visible = false;
-
                     lblEliminar.Visible = false;
+                    txtNombre.Text = "";
                 }
-            }
-            #endregion
-
-            #region INGLES
-
-            if (idioma == 2)
-            {
-                if (txtNombre.Text == existe)
-                {
-                    if (contraseña == txtPass.Text)
-                    {
-                        g.Usuario = txtNombre.Text;
-
-                        lblFoto.Visible = true;
-
-                        btnAddgasto.Visible = true;
-
-                        lblEliminar.Visible = true;
-
-                        lblFoto.ImageIndex = Convert.ToInt32(listu.DevuelveFoto(txtNombre.Text));
-
-                        lblMensaje.Visible = true;
-
-                        lblMensaje.Text = "Hello " + txtNombre.Text + ", " + "\r\n" + "Your registered monthly income is: u$s" + listu.DevuelveIngresos(txtNombre.Text);
-
-                        btnCompras.Visible = true;
-                        txtNombre.Visible = false;
-                        txtPass.Visible = false;
-                        btnIngresar.Visible = false;
-                        lblUsuario.Visible = false;
-                        lblPass.Visible = false;
-                        lblNoEstas.Visible = false;
-                        lblRegistrar.Visible = false;
-                        lblCambio.Visible = true;
-                        panel1.Visible = false;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Wrong password.");
-                    }
-
-                }
-                else
-                {
-
-                    MessageBox.Show("Username does not exist");
-
-                    lblMensaje.Text = "";
-
-                    lblFoto.Visible = false;
-
-                    btnAddgasto.Visible = false;
-
-                    lblEliminar.Visible = false;
-                }
-            }
-            #endregion
-
         }
 
         private void txtPass_KeyPress(object sender, KeyPressEventArgs e)
@@ -173,10 +102,7 @@ namespace Primaton_G6.Formularios
                 string contraseña = listu.DevuelvePass(txtNombre.Text);
 
                 string existe = listu.DevuelveNombre(txtNombre.Text);
-
-                #region ESPAÑOL
-                if (idioma == 1)
-                {
+               
                     if (txtNombre.Text == existe)
                     {
                         if (contraseña == txtPass.Text)
@@ -194,10 +120,8 @@ namespace Primaton_G6.Formularios
                             lblMensaje.Visible = true;
 
                             lblMensaje.Text = "Hola " + txtNombre.Text + ", " + "\r\n" + "tus ingresos mensuales registrados son: $" + listu.DevuelveIngresos(txtNombre.Text);
-
-
-
-                            //-------------limpio campos, desaparezco el boton ingresar, aparece "otro usuario"----------------------
+                         
+                        //-------------limpio campos, desaparezco el boton ingresar, aparece "otro usuario"----------------------
                             btnCompras.Visible = true;
                             txtNombre.Visible = false;
                             txtPass.Visible = false;
@@ -207,18 +131,22 @@ namespace Primaton_G6.Formularios
                             lblNoEstas.Visible = false;
                             lblRegistrar.Visible = false;
                             lblCambio.Visible = true;
-                            panel1.Visible = false;
-                        }
+                            lblPassInco.Visible = false;
+                            lblAvisoUsuario.Visible = false;
+                    }
                         else
                         {
-                            MessageBox.Show("Contraseña incorrecta.");
-                        }
+                        lblPassInco.Visible = true;
+                        lblAvisoUsuario.Visible = false;
+                        txtPass.Text = "";
 
+                    }
+                   
                     }
                     else
                     {
-
-                        MessageBox.Show("El usuario no existe");
+                        lblAvisoUsuario.Visible = true;
+                        lblPassInco.Visible = false;
 
                         lblMensaje.Text = "";
 
@@ -227,66 +155,10 @@ namespace Primaton_G6.Formularios
                         btnAddgasto.Visible = false;
 
                         lblEliminar.Visible = false;
+
+                        txtNombre.Text = "";
                     }
                 }
-                #endregion
-
-                #region INGLES
-
-                if (idioma == 2)
-                {
-                    if (txtNombre.Text == existe)
-                    {
-                        if (contraseña == txtPass.Text)
-                        {
-                            g.Usuario = txtNombre.Text;
-
-                            lblFoto.Visible = true;
-
-                            btnAddgasto.Visible = true;
-
-                            lblEliminar.Visible = true;
-
-                            lblFoto.ImageIndex = Convert.ToInt32(listu.DevuelveFoto(txtNombre.Text));
-
-                            lblMensaje.Visible = true;
-
-                            lblMensaje.Text = "Hello " + txtNombre.Text + ", " + "\r\n" + "Your registered monthly income is: u$s" + listu.DevuelveIngresos(txtNombre.Text);
-
-                            btnCompras.Visible = true;
-                            txtNombre.Visible = false;
-                            txtPass.Visible = false;
-                            btnIngresar.Visible = false;
-                            lblUsuario.Visible = false;
-                            lblPass.Visible = false;
-                            lblNoEstas.Visible = false;
-                            lblRegistrar.Visible = false;
-                            lblCambio.Visible = true;
-                            panel1.Visible = false;
-                        }
-                        else
-                        {
-                            MessageBox.Show("Wrong password.");
-                        }
-
-                    }
-                    else
-                    {
-
-                        MessageBox.Show("Username does not exist");
-
-                        lblMensaje.Text = "";
-
-                        lblFoto.Visible = false;
-
-                        btnAddgasto.Visible = false;
-
-                        lblEliminar.Visible = false;
-                    }
-                }
-                #endregion
-
-            }
         }
 
         private void lblCambio_MouseClick(object sender, MouseEventArgs e)
@@ -306,7 +178,6 @@ namespace Primaton_G6.Formularios
             lblEliminar.Visible = false;
             txtNombre.Text = "";
             txtPass.Text = "";
-            panel1.Visible = true;
         }
 
         private void btnCompras_Click(object sender, EventArgs e)
@@ -317,9 +188,6 @@ namespace Primaton_G6.Formularios
 
         private void lblEliminar_MouseClick(object sender, MouseEventArgs e)
         {
-
-            if (idioma == 1)
-            {
                 DialogResult pregunta;
                 pregunta = MessageBox.Show("¿Seguro desea eliminar su usuario?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -361,58 +229,13 @@ namespace Primaton_G6.Formularios
 
                     MessageBox.Show("Usuario eliminado!", "Aviso");
                 }
-            }
-            if (idioma == 2)
-            {
-                DialogResult pregunta;
-                pregunta = MessageBox.Show("Are you sure you want to delete about the user ? ", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (pregunta == DialogResult.Yes)
-                {
-                    listu.LeeUsuarios();
-
-                    pgasto.LeeGastos();
-
-                    listu.EliminaUsuario(txtNombre.Text);
-
-                    pgasto.EliminaGastosUsuario(txtNombre.Text);
-
-                    lblFoto.Visible = false;
-
-                    btnAddgasto.Visible = false;
-
-                    lblEliminar.Visible = false;
-
-                    lblFoto.ImageIndex = 0;
-
-                    lblMensaje.Text = "";
-
-                    btnCompras.Visible = false;
-                    txtNombre.Visible = true;
-                    txtPass.Visible = true;
-                    btnIngresar.Visible = true;
-                    lblUsuario.Visible = true;
-                    lblPass.Visible = true;
-                    lblNoEstas.Visible = true;
-                    lblRegistrar.Visible = true;
-                    lblCambio.Visible = false;
-                    lblFoto.Visible = false;
-                    lblMensaje.Visible = false;
-                    btnAddgasto.Visible = false;
-                    lblEliminar.Visible = false;
-                    txtNombre.Text = "";
-                    txtPass.Text = "";
-
-                    MessageBox.Show("User Deleted!", "Warning");
-                }
-            }
         }
 
         #region CUESTIONES GRAFICAS
 
         private void BtnAddgasto_Click(object sender, EventArgs e)
         {
-            ControlDeGastos tdi = new ControlDeGastos(g.Usuario, idioma);
+            ControlDeGastos tdi = new ControlDeGastos(g.Usuario);
             tdi.ShowDialog();
         }
 
@@ -520,39 +343,6 @@ namespace Primaton_G6.Formularios
         }
 
 
-        #endregion
-
-        #region CHECKBOX DE IDIOMAS
-        private void rdbIngles_CheckedChanged(object sender, EventArgs e)
-        {
-            
-            idioma = 2;
-            lblUsuario.Text = "Username";
-            lblPass.Text = "Password";
-            btnIngresar.Text = "Enter";
-            btnAddgasto.Text = "Add Expenses";
-            btnCompras.Text = " Market list";
-            lblCambio.Text = "<= Go back. Do you want to change account?";
-            lblNoEstas.Text = "Not registered?";
-            lblRegistrar.Text = "Sign up!";
-            lblEliminar.Text = "[X] Delete my account";
-        }
-
-       
-
-        private void rdbEspañol_CheckedChanged(object sender, EventArgs e)
-        {
-            idioma = 1;
-            lblUsuario.Text = "Usuario";
-            lblPass.Text = "Contraseña";
-            btnIngresar.Text = "Ingresar";
-            btnAddgasto.Text = "Agregar gastos";
-            btnCompras.Text = "Lista del super";
-            lblCambio.Text = "<= Volver atrás. Quieres cambiar de cuenta?";
-            lblNoEstas.Text = "¿No estás registrado?";
-            lblRegistrar.Text = "Registrate!";
-            lblEliminar.Text = " [X] Eliminar mi cuenta";
-        }
         #endregion
     }
 }

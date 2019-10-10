@@ -22,14 +22,12 @@ namespace Primaton_G6
         Formularios.Login lo = new Formularios.Login();
 
         public string prioridad = "";
-        
-        
 
         #region FUNCIONALIDAD
 
      
 
-        public ControlDeGastos(string nombre, int idioma)
+        public ControlDeGastos(string nombre)
         {
             InitializeComponent();
 
@@ -48,7 +46,7 @@ namespace Primaton_G6
 
             ug.Usuario = nombre;
 
-            lo.idioma = idioma;
+           
 
 
             g.TablaGastos.DefaultView.RowFilter = $"Usuario LIKE '{ug.Usuario}%'";
@@ -70,14 +68,7 @@ namespace Primaton_G6
             {
                 lblDisponible.ForeColor = Color.White;
                 lblDisponible.BackColor = Color.Red;
-                if (lo.idioma == 1)
-                {
-                    lblDisponible.Text = "SUPERASTE EL LÍMITE DE GASTOS";
-                }
-                if (lo.idioma == 2)
-                {
-                    lblDisponible.Text = "YOU EXCEED THE EXPENSE LIMIT";
-                }
+                lblDisponible.Text = "SUPERASTE EL LÍMITE DE GASTOS";
             }
             else
             {
@@ -130,14 +121,7 @@ namespace Primaton_G6
 
             if (txtRubro.Text == "" || txtDescripcion.Text == "" || txtImporte.Text == "")
             {
-                if (lo.idioma == 1)
-                {
                     MessageBox.Show("Hay campos vacíos, por favor revise");
-                }
-                else
-                {
-                        MessageBox.Show("There are empty fields, please check");
-                }
             }
             else
             {
@@ -153,7 +137,6 @@ namespace Primaton_G6
             MuestraPorcentajes();
         }
         #endregion
-
         
         #region BOTONES Y VISUALES
 
@@ -189,14 +172,7 @@ namespace Primaton_G6
             else if ((e.KeyChar) == '.')
             {
                 e.Handled = true;
-                if (lo.idioma == 1)
-                {
-                    MessageBox.Show("Utilize la coma para céntimos");
-                }
-                else
-                {
-                    MessageBox.Show("Use the comma for cents");
-                }
+                MessageBox.Show("Utilize la coma para céntimos");
             }
             else if (Char.IsControl(e.KeyChar))
             {
@@ -209,14 +185,7 @@ namespace Primaton_G6
             else
             {
                 e.Handled = true;
-                if (lo.idioma == 1)
-                {
-                    MessageBox.Show("Debe ingresar números");
-                }
-                else
-                {
-                    MessageBox.Show("You must enter numbers");
-                }
+                MessageBox.Show("Debe ingresar números");
             }
         }
 
@@ -250,48 +219,5 @@ namespace Primaton_G6
             btnBorrar.BackgroundImage = (Primaton_G6.Properties.Resources.botonMadera);
         }
         #endregion
-
-        #region INGLES/ESPAÑOL
-        public void cambioIdioma()
-        {
-            if (lo.idioma == 2)
-            {
-                lblRubro.Text = "Item";
-                lblFecha.Text = "Date";
-                lblDescripcion.Text = "Description";
-                lblImporte.Text = "Amount";
-                chk_prioritario.Text = "Priority";
-                btnAgregar.Text = "Add";
-                btnBorrar.Text = "Delete";
-                GrupoIngresos.Text = "Income";
-                label6.Text = "What you have spent:";
-                label7.Text = "Available to spend:";
-                label9.Text = "% Redundant:";
-                label8.Text = "% Important:";
-                btnVolver.Text = "Go back";
-            }
-            else
-            {
-                lblRubro.Text = "Rubro";
-                lblFecha.Text = "Fecha";
-                lblDescripcion.Text = "Descripcion";
-                lblImporte.Text = "Importe";
-                chk_prioritario.Text = "Prioritario";
-                btnAgregar.Text = "Agregar";
-                btnBorrar.Text = "Borrar";
-                GrupoIngresos.Text = "Ingresos";
-                label6.Text = "Lo que llevas gastado:";
-                label7.Text = "Disponible para gastar";
-                label9.Text = "% Redundantes:";
-                label8.Text = "% Importantes:";
-                btnVolver.Text = "Volver atrás";
-            }
-        }
-        #endregion
-
-        private void ControlDeGastos_Load(object sender, EventArgs e)
-        {
-            cambioIdioma();
-        }
     }
 }

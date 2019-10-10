@@ -44,10 +44,8 @@
             this.lblEliminar = new System.Windows.Forms.Label();
             this.btnCompras = new System.Windows.Forms.Button();
             this.lblCambio = new System.Windows.Forms.Label();
-            this.rdbIngles = new System.Windows.Forms.RadioButton();
-            this.rdbEspañol = new System.Windows.Forms.RadioButton();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
+            this.lblAvisoUsuario = new System.Windows.Forms.Label();
+            this.lblPassInco = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblUsuario
@@ -198,34 +196,19 @@
             this.lblCambio.MouseEnter += new System.EventHandler(this.lblCambio_MouseEnter);
             this.lblCambio.MouseLeave += new System.EventHandler(this.lblCambio_MouseLeave);
             // 
-            // rdbIngles
+            // lblAvisoUsuario
             // 
-            resources.ApplyResources(this.rdbIngles, "rdbIngles");
-            this.rdbIngles.BackColor = System.Drawing.Color.Transparent;
-            this.rdbIngles.ForeColor = System.Drawing.Color.White;
-            this.rdbIngles.Name = "rdbIngles";
-            this.rdbIngles.TabStop = true;
-            this.rdbIngles.UseVisualStyleBackColor = false;
-            this.rdbIngles.CheckedChanged += new System.EventHandler(this.rdbIngles_CheckedChanged);
+            resources.ApplyResources(this.lblAvisoUsuario, "lblAvisoUsuario");
+            this.lblAvisoUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.lblAvisoUsuario.ForeColor = System.Drawing.Color.Red;
+            this.lblAvisoUsuario.Name = "lblAvisoUsuario";
             // 
-            // rdbEspañol
+            // lblPassInco
             // 
-            resources.ApplyResources(this.rdbEspañol, "rdbEspañol");
-            this.rdbEspañol.BackColor = System.Drawing.Color.Transparent;
-            this.rdbEspañol.Checked = true;
-            this.rdbEspañol.ForeColor = System.Drawing.Color.White;
-            this.rdbEspañol.Name = "rdbEspañol";
-            this.rdbEspañol.TabStop = true;
-            this.rdbEspañol.UseVisualStyleBackColor = false;
-            this.rdbEspañol.CheckedChanged += new System.EventHandler(this.rdbEspañol_CheckedChanged);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.rdbEspañol);
-            this.panel1.Controls.Add(this.rdbIngles);
-            resources.ApplyResources(this.panel1, "panel1");
-            this.panel1.Name = "panel1";
+            resources.ApplyResources(this.lblPassInco, "lblPassInco");
+            this.lblPassInco.BackColor = System.Drawing.Color.Transparent;
+            this.lblPassInco.ForeColor = System.Drawing.Color.Red;
+            this.lblPassInco.Name = "lblPassInco";
             // 
             // Login
             // 
@@ -233,7 +216,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.lblPassInco);
+            this.Controls.Add(this.lblAvisoUsuario);
             this.Controls.Add(this.lblCambio);
             this.Controls.Add(this.btnCompras);
             this.Controls.Add(this.lblEliminar);
@@ -252,8 +236,6 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Login";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -275,9 +257,8 @@
         private System.Windows.Forms.Label lblEliminar;
         private System.Windows.Forms.Button btnCompras;
         private System.Windows.Forms.Label lblCambio;
-        private System.Windows.Forms.RadioButton rdbIngles;
-        private System.Windows.Forms.RadioButton rdbEspañol;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblAvisoUsuario;
+        private System.Windows.Forms.Label lblPassInco;
     }
 }
 
