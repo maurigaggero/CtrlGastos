@@ -172,8 +172,13 @@ namespace Primaton_G6.Formularios
         }
 
 
+
         #endregion
 
-        
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            PrintDialog pdlb = new PrintDialog();
+            pdlb.ShowDialog();
+        }
     }
 }
