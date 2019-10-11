@@ -59,8 +59,6 @@ namespace Primaton_G6.Clases
                 TablaCompras.Rows[TablaCompras.Rows.Count - 1]["Producto"] = c.Producto;
 
                 TablaCompras.WriteXml(NombreArchivo);
-
-                MessageBox.Show("Producto agregado a la lista");
             }
         }
 

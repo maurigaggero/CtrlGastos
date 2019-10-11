@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Primaton_G6.Clases;
+using System.Drawing.Printing;
 
 namespace Primaton_G6.Formularios
 {
@@ -22,6 +23,7 @@ namespace Primaton_G6.Formularios
             c.LeeCompras();
 
         }
+
         DataTable tabla;
 
         private void compras_Load(object sender, EventArgs e)
@@ -41,11 +43,12 @@ namespace Primaton_G6.Formularios
 
             if (txtCantidad.Text == "" || txtCantidad.Text == "Cantidad" || txtProducto.Text == "" || txtProducto.Text == "Producto")
             {
-                MessageBox.Show("Debes ingresar cantidad y producto valido", "ATENCION", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                lblAviso.Visible = true;
                 return;
             }
             else
             {
+                lblAviso.Visible = false;
                 c.NuevaCompra(txtCantidad.Text, txtProducto.Text);
                 txtProducto.Text = "Producto";
                 txtCantidad.Text = "Cantidad";
@@ -116,11 +119,12 @@ namespace Primaton_G6.Formularios
             {
                 if (txtCantidad.Text == "" || txtCantidad.Text == "Cantidad" || txtProducto.Text == "" || txtProducto.Text == "Producto")
                 {
-                    MessageBox.Show("Debes ingresar cantidad y producto valido", "ATENCION", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    lblAviso.Visible = true;
                     return;
                 }
                 else
                 {
+                    lblAviso.Visible = false;
                     c.NuevaCompra(txtCantidad.Text, txtProducto.Text);
                     txtProducto.Text = "Producto";
                     txtCantidad.Text = "Cantidad";
@@ -173,12 +177,24 @@ namespace Primaton_G6.Formularios
 
 
 
+
         #endregion
+
+        #region IMPRESION
+        private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Bitmap objBmp = new Bitmap(this.grilla.Width, this.grilla.Height);
+            grilla.DrawToBitmap(objBmp, new Rectangle(0, 0, this.grilla.Width, this.grilla.Height));
+
+            e.Graphics.DrawImage(objBmp, 160, 100);
+            
+        }
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-            PrintDialog pdlb = new PrintDialog();
-            pdlb.ShowDialog();
+            printPreviewDialog1.Document = printDocument1;
+            printPreviewDialog1.ShowDialog();
         }
+        #endregion
     }
 }
