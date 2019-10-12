@@ -95,14 +95,14 @@ namespace Primaton_G6
                     tablaGastos.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.DarkRed;
                     tablaGastos.Rows[e.RowIndex].DefaultCellStyle.ForeColor = Color.White;
                     e.CellStyle.SelectionForeColor = Color.Yellow;
-                    e.CellStyle.SelectionBackColor = Color.DarkRed;
+                    e.CellStyle.SelectionBackColor = Color.DarkOrange;
                 }
                 else
                 {
                     tablaGastos.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.SaddleBrown;
                     tablaGastos.Rows[e.RowIndex].DefaultCellStyle.ForeColor = Color.White;
                     e.CellStyle.SelectionForeColor = Color.Yellow;
-                    e.CellStyle.SelectionBackColor = Color.SaddleBrown;
+                    e.CellStyle.SelectionBackColor = Color.DarkOrange;
                 }
             }
         }
