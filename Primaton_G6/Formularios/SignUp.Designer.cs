@@ -94,6 +94,7 @@
             // 
             // btnRegistrarme
             // 
+            this.btnRegistrarme.BackColor = System.Drawing.Color.Transparent;
             this.btnRegistrarme.BackgroundImage = global::Primaton_G6.Properties.Resources.botonMadera;
             this.btnRegistrarme.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRegistrarme.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -110,7 +111,7 @@
             this.btnRegistrarme.Size = new System.Drawing.Size(149, 62);
             this.btnRegistrarme.TabIndex = 4;
             this.btnRegistrarme.Text = "Registrarme";
-            this.btnRegistrarme.UseVisualStyleBackColor = true;
+            this.btnRegistrarme.UseVisualStyleBackColor = false;
             this.btnRegistrarme.Click += new System.EventHandler(this.BtnRegistrarme_Click);
             this.btnRegistrarme.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnRegistrarme_MouseDown);
             this.btnRegistrarme.MouseEnter += new System.EventHandler(this.btnRegistrarme_MouseEnter);
@@ -136,6 +137,7 @@
             // 
             // btnBack
             // 
+            this.btnBack.BackColor = System.Drawing.Color.Transparent;
             this.btnBack.BackgroundImage = global::Primaton_G6.Properties.Resources.botonMadera;
             this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -151,7 +153,7 @@
             this.btnBack.Size = new System.Drawing.Size(149, 62);
             this.btnBack.TabIndex = 5;
             this.btnBack.Text = "Volver atrás";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.BtnBack_Click);
             this.btnBack.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBack_MouseDown);
             this.btnBack.MouseEnter += new System.EventHandler(this.btnBack_MouseEnter);
@@ -160,6 +162,7 @@
             // 
             // lblFoto2
             // 
+            this.lblFoto2.BackColor = System.Drawing.Color.Transparent;
             this.lblFoto2.ImageIndex = 0;
             this.lblFoto2.ImageList = this.imageList;
             this.lblFoto2.Location = new System.Drawing.Point(213, 613);
@@ -170,6 +173,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.imgArdilla);
             this.panel1.Controls.Add(this.imgBlanco);
             this.panel1.Controls.Add(this.imgLeon);
@@ -347,6 +351,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(12, 263);
@@ -358,6 +363,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(172, 748);
@@ -421,7 +427,8 @@
             // 
             // panel
             // 
-            this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.panel.BackColor = System.Drawing.Color.Transparent;
+            this.panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel.Controls.Add(this.panelIngresos);
             this.panel.Controls.Add(this.panelDni);
             this.panel.Controls.Add(this.LblIngresos);
@@ -442,18 +449,20 @@
             // 
             // panelIngresos
             // 
+            this.panelIngresos.BackColor = System.Drawing.Color.Transparent;
             this.panelIngresos.Controls.Add(this.txtIngresos);
             this.panelIngresos.Location = new System.Drawing.Point(49, 199);
-            this.panelIngresos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelIngresos.Margin = new System.Windows.Forms.Padding(4);
             this.panelIngresos.Name = "panelIngresos";
             this.panelIngresos.Size = new System.Drawing.Size(512, 36);
             this.panelIngresos.TabIndex = 22;
             // 
             // panelDni
             // 
+            this.panelDni.BackColor = System.Drawing.Color.Transparent;
             this.panelDni.Controls.Add(this.txtDNI);
             this.panelDni.Location = new System.Drawing.Point(49, 130);
-            this.panelDni.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelDni.Margin = new System.Windows.Forms.Padding(4);
             this.panelDni.Name = "panelDni";
             this.panelDni.Size = new System.Drawing.Size(513, 38);
             this.panelDni.TabIndex = 21;
@@ -461,8 +470,9 @@
             // LblIngresos
             // 
             this.LblIngresos.AutoSize = true;
+            this.LblIngresos.BackColor = System.Drawing.Color.Red;
             this.LblIngresos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblIngresos.ForeColor = System.Drawing.Color.IndianRed;
+            this.LblIngresos.ForeColor = System.Drawing.Color.White;
             this.LblIngresos.Location = new System.Drawing.Point(121, 235);
             this.LblIngresos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblIngresos.Name = "LblIngresos";
@@ -474,8 +484,9 @@
             // lblDni
             // 
             this.lblDni.AutoSize = true;
+            this.lblDni.BackColor = System.Drawing.Color.Red;
             this.lblDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDni.ForeColor = System.Drawing.Color.IndianRed;
+            this.lblDni.ForeColor = System.Drawing.Color.White;
             this.lblDni.Location = new System.Drawing.Point(121, 172);
             this.lblDni.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDni.Name = "lblDni";
@@ -489,6 +500,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(648, 850);
             this.Controls.Add(this.panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
