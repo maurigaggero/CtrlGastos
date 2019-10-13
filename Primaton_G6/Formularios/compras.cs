@@ -192,5 +192,10 @@ namespace Primaton_G6.Formularios
             printPreviewDialog1.ShowDialog();
         }
         #endregion
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

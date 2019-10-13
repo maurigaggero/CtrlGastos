@@ -40,6 +40,7 @@
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.lblAviso = new System.Windows.Forms.Label();
+            this.btnVolver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grilla)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,10 +48,9 @@
             // 
             this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCantidad.ForeColor = System.Drawing.Color.Silver;
-            this.txtCantidad.Location = new System.Drawing.Point(69, 55);
-            this.txtCantidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCantidad.Location = new System.Drawing.Point(52, 45);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(167, 46);
+            this.txtCantidad.Size = new System.Drawing.Size(126, 38);
             this.txtCantidad.TabIndex = 1;
             this.txtCantidad.Text = "Cantidad";
             this.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -62,10 +62,9 @@
             // 
             this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(645, 54);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregar.Location = new System.Drawing.Point(484, 44);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(59, 52);
+            this.btnAgregar.Size = new System.Drawing.Size(44, 42);
             this.btnAgregar.TabIndex = 0;
             this.btnAgregar.Text = "+";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -93,8 +92,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Moccasin;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grilla.DefaultCellStyle = dataGridViewCellStyle2;
-            this.grilla.Location = new System.Drawing.Point(69, 113);
-            this.grilla.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grilla.Location = new System.Drawing.Point(52, 92);
             this.grilla.Name = "grilla";
             this.grilla.ReadOnly = true;
             this.grilla.RowHeadersWidth = 55;
@@ -104,7 +102,7 @@
             this.grilla.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.White;
             this.grilla.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.grilla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.grilla.Size = new System.Drawing.Size(633, 446);
+            this.grilla.Size = new System.Drawing.Size(475, 362);
             this.grilla.TabIndex = 3;
             this.grilla.TabStop = false;
             // 
@@ -112,10 +110,9 @@
             // 
             this.txtProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProducto.ForeColor = System.Drawing.Color.Silver;
-            this.txtProducto.Location = new System.Drawing.Point(257, 55);
-            this.txtProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtProducto.Location = new System.Drawing.Point(193, 45);
             this.txtProducto.Name = "txtProducto";
-            this.txtProducto.Size = new System.Drawing.Size(368, 46);
+            this.txtProducto.Size = new System.Drawing.Size(277, 38);
             this.txtProducto.TabIndex = 2;
             this.txtProducto.Text = "Producto";
             this.txtProducto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -135,10 +132,9 @@
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBorrar.ForeColor = System.Drawing.Color.White;
-            this.btnBorrar.Location = new System.Drawing.Point(548, 566);
-            this.btnBorrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBorrar.Location = new System.Drawing.Point(231, 460);
             this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(156, 70);
+            this.btnBorrar.Size = new System.Drawing.Size(117, 57);
             this.btnBorrar.TabIndex = 4;
             this.btnBorrar.Text = "Borrar Elemento";
             this.btnBorrar.UseVisualStyleBackColor = false;
@@ -160,10 +156,9 @@
             this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimir.ForeColor = System.Drawing.Color.White;
-            this.btnImprimir.Location = new System.Drawing.Point(81, 566);
-            this.btnImprimir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnImprimir.Location = new System.Drawing.Point(61, 460);
             this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(156, 70);
+            this.btnImprimir.Size = new System.Drawing.Size(117, 57);
             this.btnImprimir.TabIndex = 6;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.UseVisualStyleBackColor = false;
@@ -189,22 +184,42 @@
             this.lblAviso.BackColor = System.Drawing.Color.Red;
             this.lblAviso.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAviso.ForeColor = System.Drawing.Color.White;
-            this.lblAviso.Location = new System.Drawing.Point(117, 12);
-            this.lblAviso.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAviso.Location = new System.Drawing.Point(88, 10);
             this.lblAviso.Name = "lblAviso";
-            this.lblAviso.Size = new System.Drawing.Size(504, 29);
+            this.lblAviso.Size = new System.Drawing.Size(403, 24);
             this.lblAviso.TabIndex = 7;
             this.lblAviso.Text = "Debes ingresar cantidad y producto valido";
             this.lblAviso.Visible = false;
             // 
+            // btnVolver
+            // 
+            this.btnVolver.BackColor = System.Drawing.Color.Transparent;
+            this.btnVolver.BackgroundImage = global::Primaton_G6.Properties.Resources.botonMadera;
+            this.btnVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVolver.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVolver.FlatAppearance.BorderSize = 0;
+            this.btnVolver.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnVolver.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.ForeColor = System.Drawing.Color.White;
+            this.btnVolver.Location = new System.Drawing.Point(410, 460);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(117, 57);
+            this.btnVolver.TabIndex = 8;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
             // compras
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(779, 671);
+            this.ClientSize = new System.Drawing.Size(584, 545);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.lblAviso);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnBorrar);
@@ -214,7 +229,6 @@
             this.Controls.Add(this.txtProducto);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "compras";
@@ -238,5 +252,6 @@
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.Label lblAviso;
+        private System.Windows.Forms.Button btnVolver;
     }
 }

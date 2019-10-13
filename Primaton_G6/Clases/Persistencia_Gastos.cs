@@ -87,8 +87,7 @@ namespace Primaton_G6.Clases
                 TablaGastos.Rows[TablaGastos.Rows.Count - 1]["Importe"] = g.Importe;
 
                 TablaGastos.WriteXml(NombreArchivo, XmlWriteMode.WriteSchema);
-
-                MessageBox.Show("Gasto cargado con éxito!");
+                           
             }
         }
 

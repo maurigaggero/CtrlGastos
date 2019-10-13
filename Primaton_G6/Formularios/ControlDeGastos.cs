@@ -104,7 +104,6 @@ namespace Primaton_G6
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-
             if (chk_prioritario.Checked)
             {
                 prioridad = "A";
@@ -114,20 +113,23 @@ namespace Primaton_G6
                 prioridad = "";
             }
 
+
             if (txtRubro.Text == "" || txtDescripcion.Text == "" || txtImporte.Text == "")
             {
+                lblAviso.Text = "No se pueden cargar datos si hay campos vacios.";
                 lblAviso.Visible = true;
             }
             else
             {
                 g.NuevoGasto(ug.Usuario, txtRubro.Text, prioridad, txtFecha.Value, txtDescripcion.Text, Convert.ToDouble(txtImporte.Text));
+                lblAviso.Text = "Datos cargados con exito!";
+                lblAviso.Visible = true;
             }
 
             txtRubro.Text = "";
             txtFecha.Text = "";
             txtDescripcion.Text = "";
             txtImporte.Text = "";
-
             MuestraInfo();
             MuestraPorcentajes();
         }
@@ -167,7 +169,6 @@ namespace Primaton_G6
             else if ((e.KeyChar) == '.')
             {
                 e.Handled = true;
-                MessageBox.Show("Utilize la coma para céntimos");
             }
             else if (Char.IsControl(e.KeyChar))
             {
@@ -180,7 +181,8 @@ namespace Primaton_G6
             else
             {
                 e.Handled = true;
-                MessageBox.Show("Debe ingresar números");
+                lblAviso.Text="Debe ingresar números";
+                lblAviso.Visible = true;
             }
         }
 
@@ -214,5 +216,6 @@ namespace Primaton_G6
             btnBorrar.BackgroundImage = (Primaton_G6.Properties.Resources.botonMadera);
         }
         #endregion
+
     }
 }
