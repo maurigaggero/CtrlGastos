@@ -181,7 +181,7 @@ namespace Primaton_G6
             else
             {
                 e.Handled = true;
-                lblAviso.Text="Debe ingresar números";
+                lblAviso.Text="Debe ingresar números en el campo 'Importe'";
                 lblAviso.Visible = true;
             }
         }
