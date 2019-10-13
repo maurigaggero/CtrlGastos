@@ -19,13 +19,10 @@ namespace Primaton_G6
 
         Clases.Gastos ug = new Clases.Gastos();
 
-        Formularios.Login lo = new Formularios.Login();
-
         public string prioridad = "";
 
-        #region FUNCIONALIDAD
 
-     
+        #region FUNCIONALIDAD
 
         public ControlDeGastos(string nombre)
         {
@@ -45,8 +42,6 @@ namespace Primaton_G6
             tablaGastos.DataSource = g.TablaGastos;
 
             ug.Usuario = nombre;
-
-           
 
 
             g.TablaGastos.DefaultView.RowFilter = $"Usuario LIKE '{ug.Usuario}%'";
