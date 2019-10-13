@@ -20,7 +20,7 @@ namespace Primaton_G6.Formularios
         Clases.Persistencia_Gastos pgasto = new Clases.Persistencia_Gastos();
 
         Clases.Gastos g = new Clases.Gastos();
-      
+
         public Login()
         {
             InitializeComponent();
@@ -41,7 +41,68 @@ namespace Primaton_G6.Formularios
             string contraseña = listu.DevuelvePass(txtNombre.Text);
 
             string existe = listu.DevuelveNombre(txtNombre.Text);
-           
+
+            if (txtNombre.Text == existe)
+            {
+                if (contraseña == txtPass.Text)
+                {
+                    g.Usuario = txtNombre.Text;
+
+                    lblFoto.Visible = true;
+
+                    btnAddgasto.Visible = true;
+
+                    lblEliminar.Visible = true;
+
+                    lblFoto.ImageIndex = Convert.ToInt32(listu.DevuelveFoto(txtNombre.Text));
+
+                    lblMensaje.Visible = true;
+
+                    lblMensaje.Text = "Hola " + txtNombre.Text + ", " + "\r\n" + "tus ingresos mensuales registrados son: $" + listu.DevuelveIngresos(txtNombre.Text);
+
+                    //-------------limpio campos, desaparezco el boton ingresar, aparece "otro usuario"----------------------
+                    btnCompras.Visible = true;
+                    txtNombre.Visible = false;
+                    txtPass.Visible = false;
+                    btnIngresar.Visible = false;
+                    lblUsuario.Visible = false;
+                    lblPass.Visible = false;
+                    lblNoEstas.Visible = false;
+                    lblRegistrar.Visible = false;
+                    lblCambio.Visible = true;
+                    lblPassInco.Visible = false;
+                    lblAvisoUsuario.Visible = false;
+                }
+                else
+                {
+                    lblPassInco.Visible = true;
+                    lblAvisoUsuario.Visible = false;
+                    txtPass.Text = "";
+                }
+            }
+            else
+            {
+                lblAvisoUsuario.Visible = true;
+                lblPassInco.Visible = false;
+                lblMensaje.Text = "";
+                lblFoto.Visible = false;
+                btnAddgasto.Visible = false;
+                lblEliminar.Visible = false;
+                txtNombre.Text = "";
+            }
+        }
+
+        private void txtPass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // igual metodo que btn_ingresar pero con la tecla enter para un acceso más rápido
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                listu.LeeUsuarios();
+
+                string contraseña = listu.DevuelvePass(txtNombre.Text);
+
+                string existe = listu.DevuelveNombre(txtNombre.Text);
+
                 if (txtNombre.Text == existe)
                 {
                     if (contraseña == txtPass.Text)
@@ -60,7 +121,7 @@ namespace Primaton_G6.Formularios
 
                         lblMensaje.Text = "Hola " + txtNombre.Text + ", " + "\r\n" + "tus ingresos mensuales registrados son: $" + listu.DevuelveIngresos(txtNombre.Text);
 
-//-------------limpio campos, desaparezco el boton ingresar, aparece "otro usuario"----------------------
+                        //-------------limpio campos, desaparezco el boton ingresar, aparece "otro usuario"----------------------
                         btnCompras.Visible = true;
                         txtNombre.Visible = false;
                         txtPass.Visible = false;
@@ -72,93 +133,32 @@ namespace Primaton_G6.Formularios
                         lblCambio.Visible = true;
                         lblPassInco.Visible = false;
                         lblAvisoUsuario.Visible = false;
-                }
+                    }
                     else
                     {
-                         lblPassInco.Visible = true;
-                         lblAvisoUsuario.Visible = false;
-                         txtPass.Text = "";
-                    }
-                }
-                else
-                {
-                    lblAvisoUsuario.Visible = true;
-                    lblPassInco.Visible = false;
-                    lblMensaje.Text = "";
-                    lblFoto.Visible = false;
-                    btnAddgasto.Visible = false;
-                    lblEliminar.Visible = false;
-                    txtNombre.Text = "";
-                }
-        }
-
-        private void txtPass_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // igual metodo que btn_ingresar pero con la tecla enter para un acceso más rápido
-            if (e.KeyChar == Convert.ToChar(Keys.Enter))
-            {
-                listu.LeeUsuarios();
-
-                string contraseña = listu.DevuelvePass(txtNombre.Text);
-
-                string existe = listu.DevuelveNombre(txtNombre.Text);
-               
-                    if (txtNombre.Text == existe)
-                    {
-                        if (contraseña == txtPass.Text)
-                        {
-                            g.Usuario = txtNombre.Text;
-
-                            lblFoto.Visible = true;
-
-                            btnAddgasto.Visible = true;
-
-                            lblEliminar.Visible = true;
-
-                            lblFoto.ImageIndex = Convert.ToInt32(listu.DevuelveFoto(txtNombre.Text));
-
-                            lblMensaje.Visible = true;
-
-                            lblMensaje.Text = "Hola " + txtNombre.Text + ", " + "\r\n" + "tus ingresos mensuales registrados son: $" + listu.DevuelveIngresos(txtNombre.Text);
-                         
-                        //-------------limpio campos, desaparezco el boton ingresar, aparece "otro usuario"----------------------
-                            btnCompras.Visible = true;
-                            txtNombre.Visible = false;
-                            txtPass.Visible = false;
-                            btnIngresar.Visible = false;
-                            lblUsuario.Visible = false;
-                            lblPass.Visible = false;
-                            lblNoEstas.Visible = false;
-                            lblRegistrar.Visible = false;
-                            lblCambio.Visible = true;
-                            lblPassInco.Visible = false;
-                            lblAvisoUsuario.Visible = false;
-                    }
-                        else
-                        {
                         lblPassInco.Visible = true;
                         lblAvisoUsuario.Visible = false;
                         txtPass.Text = "";
 
                     }
-                   
-                    }
-                    else
-                    {
-                        lblAvisoUsuario.Visible = true;
-                        lblPassInco.Visible = false;
 
-                        lblMensaje.Text = "";
-
-                        lblFoto.Visible = false;
-
-                        btnAddgasto.Visible = false;
-
-                        lblEliminar.Visible = false;
-
-                        txtNombre.Text = "";
-                    }
                 }
+                else
+                {
+                    lblAvisoUsuario.Visible = true;
+                    lblPassInco.Visible = false;
+
+                    lblMensaje.Text = "";
+
+                    lblFoto.Visible = false;
+
+                    btnAddgasto.Visible = false;
+
+                    lblEliminar.Visible = false;
+
+                    txtNombre.Text = "";
+                }
+            }
         }
 
         private void lblCambio_MouseClick(object sender, MouseEventArgs e)
@@ -183,52 +183,52 @@ namespace Primaton_G6.Formularios
         private void btnCompras_Click(object sender, EventArgs e)
         {
             compras compra = new compras();
-            compra.Show();
+            compra.ShowDialog();
         }
 
         private void lblEliminar_MouseClick(object sender, MouseEventArgs e)
         {
-                DialogResult pregunta;
-                pregunta = MessageBox.Show("¿Seguro desea eliminar su usuario?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult pregunta;
+            pregunta = MessageBox.Show("¿Seguro desea eliminar su usuario?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                if (pregunta == DialogResult.Yes)
-                {
-                    listu.LeeUsuarios();
+            if (pregunta == DialogResult.Yes)
+            {
+                listu.LeeUsuarios();
 
-                    pgasto.LeeGastos();
+                pgasto.LeeGastos();
 
-                    listu.EliminaUsuario(txtNombre.Text);
+                listu.EliminaUsuario(txtNombre.Text);
 
-                    pgasto.EliminaGastosUsuario(txtNombre.Text);
+                pgasto.EliminaGastosUsuario(txtNombre.Text);
 
-                    lblFoto.Visible = false;
+                lblFoto.Visible = false;
 
-                    btnAddgasto.Visible = false;
+                btnAddgasto.Visible = false;
 
-                    lblEliminar.Visible = false;
+                lblEliminar.Visible = false;
 
-                    lblFoto.ImageIndex = 0;
+                lblFoto.ImageIndex = 0;
 
-                    lblMensaje.Text = "";
+                lblMensaje.Text = "";
 
-                    btnCompras.Visible = false;
-                    txtNombre.Visible = true;
-                    txtPass.Visible = true;
-                    btnIngresar.Visible = true;
-                    lblUsuario.Visible = true;
-                    lblPass.Visible = true;
-                    lblNoEstas.Visible = true;
-                    lblRegistrar.Visible = true;
-                    lblCambio.Visible = false;
-                    lblFoto.Visible = false;
-                    lblMensaje.Visible = false;
-                    btnAddgasto.Visible = false;
-                    lblEliminar.Visible = false;
-                    txtNombre.Text = "";
-                    txtPass.Text = "";
+                btnCompras.Visible = false;
+                txtNombre.Visible = true;
+                txtPass.Visible = true;
+                btnIngresar.Visible = true;
+                lblUsuario.Visible = true;
+                lblPass.Visible = true;
+                lblNoEstas.Visible = true;
+                lblRegistrar.Visible = true;
+                lblCambio.Visible = false;
+                lblFoto.Visible = false;
+                lblMensaje.Visible = false;
+                btnAddgasto.Visible = false;
+                lblEliminar.Visible = false;
+                txtNombre.Text = "";
+                txtPass.Text = "";
 
-                    MessageBox.Show("Usuario eliminado!", "Aviso");
-                }
+                MessageBox.Show("Usuario eliminado!", "Aviso");
+            }
         }
 
         #region CUESTIONES GRAFICAS
@@ -266,7 +266,7 @@ namespace Primaton_G6.Formularios
             lblEliminar.ForeColor = Color.Aquamarine;
         }
 
-       
+
 
         private void btnAddgasto_MouseEnter(object sender, EventArgs e)
         {
