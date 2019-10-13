@@ -58,7 +58,7 @@ namespace Primaton_G6.Formularios
 
                     lblMensaje.Visible = true;
 
-                    lblMensaje.Text = "Hola " + txtNombre.Text + ", " + "\r\n" + "tus ingresos mensuales registrados son: $" + listu.DevuelveIngresos(txtNombre.Text);
+                    lblMensaje.Text = "Hola " + txtNombre.Text + ", " + "\r\n" + "tu sueldo mensual es de: $" + listu.DevuelveIngresos(txtNombre.Text);
 
                     //-------------limpio campos, desaparezco el boton ingresar, aparece "otro usuario"----------------------
                     btnCompras.Visible = true;
@@ -119,7 +119,7 @@ namespace Primaton_G6.Formularios
 
                         lblMensaje.Visible = true;
 
-                        lblMensaje.Text = "Hola " + txtNombre.Text + ", " + "\r\n" + "tus ingresos mensuales registrados son: $" + listu.DevuelveIngresos(txtNombre.Text);
+                        lblMensaje.Text = "Hola " + txtNombre.Text + ", " + "\r\n" + "tu sueldo mensual es de: $" + listu.DevuelveIngresos(txtNombre.Text);
 
                         //-------------limpio campos, desaparezco el boton ingresar, aparece "otro usuario"----------------------
                         btnCompras.Visible = true;
