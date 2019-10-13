@@ -130,11 +130,13 @@
             // 
             // txtNombre
             // 
+            this.txtNombre.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNombre, "txtNombre");
             this.txtNombre.Name = "txtNombre";
             // 
             // txtPass
             // 
+            this.txtPass.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtPass, "txtPass");
             this.txtPass.Name = "txtPass";
             this.txtPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPass_KeyPress);
@@ -199,15 +201,15 @@
             // lblAvisoUsuario
             // 
             resources.ApplyResources(this.lblAvisoUsuario, "lblAvisoUsuario");
-            this.lblAvisoUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.lblAvisoUsuario.ForeColor = System.Drawing.Color.Red;
+            this.lblAvisoUsuario.BackColor = System.Drawing.Color.Red;
+            this.lblAvisoUsuario.ForeColor = System.Drawing.Color.White;
             this.lblAvisoUsuario.Name = "lblAvisoUsuario";
             // 
             // lblPassInco
             // 
             resources.ApplyResources(this.lblPassInco, "lblPassInco");
-            this.lblPassInco.BackColor = System.Drawing.Color.Transparent;
-            this.lblPassInco.ForeColor = System.Drawing.Color.Red;
+            this.lblPassInco.BackColor = System.Drawing.Color.Red;
+            this.lblPassInco.ForeColor = System.Drawing.Color.White;
             this.lblPassInco.Name = "lblPassInco";
             // 
             // Login

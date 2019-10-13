@@ -21,7 +21,6 @@ namespace Primaton_G6.Formularios
             c.ConfigInicial();
             grilla.DataSource = c.TablaCompras;
             c.LeeCompras();
-
         }
 
         DataTable tabla;
@@ -32,9 +31,9 @@ namespace Primaton_G6.Formularios
             tabla.Columns.Add("Cantidad");
             tabla.Columns.Add("Producto");
 
-
-            grilla.Columns[0].Width = 70;
-            grilla.Columns[1].Width = 402;
+            grilla.RowHeadersWidth = 25;
+            grilla.Columns[0].Width = 75;
+            grilla.Columns[1].Width = 372;
         }
 
         #region BOTON AGREGAR
@@ -155,14 +154,13 @@ namespace Primaton_G6.Formularios
         }
         private void btnBorrar_Click(object sender, EventArgs e)
         {
-            
 
             if (grilla.CurrentRow != null)
-                {
-                    grilla.Rows.RemoveAt(grilla.CurrentRow.Index);
-                    string NombreArchivo = @"compras.xml";
-                    c.TablaCompras.WriteXml(NombreArchivo, XmlWriteMode.WriteSchema);
-                }
+            {
+                grilla.Rows.RemoveAt(grilla.CurrentRow.Index);
+                string NombreArchivo = @"compras.xml";
+                c.TablaCompras.WriteXml(NombreArchivo, XmlWriteMode.WriteSchema);
+            }
         }
 
         private void btnBorrar_MouseDown(object sender, MouseEventArgs e)
@@ -176,8 +174,6 @@ namespace Primaton_G6.Formularios
         }
 
 
-
-
         #endregion
 
         #region IMPRESION
@@ -187,7 +183,7 @@ namespace Primaton_G6.Formularios
             grilla.DrawToBitmap(objBmp, new Rectangle(0, 0, this.grilla.Width, this.grilla.Height));
 
             e.Graphics.DrawImage(objBmp, 160, 100);
-            
+
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)
