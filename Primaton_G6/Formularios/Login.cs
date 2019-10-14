@@ -217,6 +217,7 @@ namespace Primaton_G6.Formularios
                 lblMensaje.Text = "";
 
                 btnCompras.Visible = false;
+                btnEstadisticas.Visible = false;
                 txtNombre.Visible = true;
                 txtPass.Visible = true;
                 btnIngresar.Visible = true;
