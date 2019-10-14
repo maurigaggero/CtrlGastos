@@ -9,6 +9,8 @@ using System.IO;
 
 namespace Primaton_G6.Clases
 {
+    
+
     public class Gastos
     {
         public string Id { get; set; }
@@ -27,6 +29,7 @@ namespace Primaton_G6.Clases
         /// Path y nombre del archivo
         /// </summary>
         private const string NombreArchivo = @"gastos.xml";
+
 
         Gastos g = new Gastos();
 
@@ -87,7 +90,7 @@ namespace Primaton_G6.Clases
                 TablaGastos.Rows[TablaGastos.Rows.Count - 1]["Importe"] = g.Importe;
 
                 TablaGastos.WriteXml(NombreArchivo, XmlWriteMode.WriteSchema);
-                           
+
             }
         }
 
@@ -108,7 +111,7 @@ namespace Primaton_G6.Clases
             {
                 DataRow fila = TablaGastos.Rows[i];
                 if (fila["Usuario"].ToString() == nombre)
-                return Convert.ToInt32(fila["Id"]);
+                    return Convert.ToInt32(fila["Id"]);
             }
             return 0;
         }
@@ -155,6 +158,140 @@ namespace Primaton_G6.Clases
                 }
                 TablaGastos.WriteXml(NombreArchivo, XmlWriteMode.WriteSchema);
             }
+        }
+
+
+        decimal[] rubro = new decimal[14];
+        string[] titulo = new string[14];
+        public void Porcentaje(string nombre)
+        {
+            rubro[0] = 0;
+            rubro[1] = 0;
+            rubro[2] = 0;
+            rubro[3] = 0;
+            rubro[4] = 0;
+            rubro[5] = 0;
+            rubro[6] = 0;
+            rubro[7] = 0;
+            rubro[8] = 0;
+            rubro[9] = 0;
+            rubro[10] = 0;
+            rubro[11] = 0;
+            rubro[12] = 0;
+            rubro[13] = 0;
+
+
+            titulo[0] = "Salud";
+            titulo[1] = "Servicios";
+            titulo[2] = "Impuestos";
+            titulo[3] = "Alquiler";
+            titulo[4] = "Hipoteca";
+            titulo[5] = "Educacion";
+            titulo[6] = "Supermercado";
+            titulo[7] = "Mantenimiento casa";
+            titulo[8] = "Mantenimiento auto";
+            titulo[9] = "Transporte";
+            titulo[10] = "Viajes";
+            titulo[11] = "Salidas/Esparcimiento";
+            titulo[12] = "Tarjeta de credito";
+            titulo[13] = "Otro";
+
+
+            for (int i = TablaGastos.Rows.Count - 1; i >= 0; i--)
+            {
+                DataRow fila = TablaGastos.Rows[i];
+
+                if (nombre == fila["Usuario"].ToString() && (Convert.ToDateTime(fila["Fecha"]).Date.Month) == (DateTime.Today.Month))
+                {
+                    if (fila["Rubro"].ToString() == "Salud")
+                    {
+                        rubro[0] += Convert.ToDecimal(Convert.ToString(fila["Importe"]));
+                    }
+
+                    if (fila["Rubro"].ToString() == "Servicios")
+                    {
+                        rubro[1] += Convert.ToDecimal(Convert.ToString(fila["Importe"]));
+                    }
+
+                    if (fila["Rubro"].ToString() == "Impuestos")
+                    {
+                        rubro[2] += Convert.ToDecimal(Convert.ToString(fila["Importe"]));
+                    }
+
+                    if (fila["Rubro"].ToString() == "Alquiler")
+                    {
+                        rubro[3] += Convert.ToDecimal(Convert.ToString(fila["Importe"]));
+                    }
+
+                    if (fila["Rubro"].ToString() == "Hipoteca")
+                    {
+                        rubro[4] += Convert.ToDecimal(Convert.ToString(fila["Importe"]));
+                    }
+
+                    if (fila["Rubro"].ToString() == "Educacion")
+                    {
+                        rubro[5] += Convert.ToDecimal(Convert.ToString(fila["Importe"]));
+                    }
+
+                    if (fila["Rubro"].ToString() == "Supermercado")
+                    {
+                        rubro[6] += Convert.ToDecimal(Convert.ToString(fila["Importe"]));
+                    }
+
+                    if (fila["Rubro"].ToString() == "Mantenimiento casa")
+                    {
+                        rubro[7] += Convert.ToDecimal(Convert.ToString(fila["Importe"]));
+                    }
+
+                    if (fila["Rubro"].ToString() == "Mantenimiento auto")
+                    {
+                        rubro[8] += Convert.ToDecimal(Convert.ToString(fila["Importe"]));
+                    }
+
+                    if (fila["Rubro"].ToString() == "Transporte")
+                    {
+                        rubro[9] += Convert.ToDecimal(Convert.ToString(fila["Importe"]));
+                    }
+
+                    if (fila["Rubro"].ToString() == "Viajes")
+                    {
+                        rubro[10] += Convert.ToDecimal(Convert.ToString(fila["Importe"]));
+                    }
+
+                    if (fila["Rubro"].ToString() == "Salidas/Esparcimiento")
+                    {
+                        rubro[11] += Convert.ToDecimal(Convert.ToString(fila["Importe"]));
+                    }
+
+                    if (fila["Rubro"].ToString() == "Tarjeta de crédito")
+                    {
+                        rubro[12] += Convert.ToDecimal(Convert.ToString(fila["Importe"]));
+                    }
+
+                    if (fila["Rubro"].ToString() == "Otro")
+                    {
+                        rubro[13] += Convert.ToDecimal(Convert.ToString(fila["Importe"]));
+                    }
+                }
+            }
+        }
+
+        public string CalculaPorcentajes(decimal ingresos)
+        {
+            string impr = "";
+            decimal memoria = 0;
+            for (int i = 0; i < rubro.Length; i++)
+            {
+                {
+                    memoria = rubro[i] / ingresos * 100;
+
+                    if (rubro[i] > 0)
+                    {
+                        impr += titulo[i] + " = " + Convert.ToString(Convert.ToString(Math.Round(memoria))) + "%" + "\r\n";
+                    }
+                }
+            }
+            return impr;
         }
 
         /// <summary>

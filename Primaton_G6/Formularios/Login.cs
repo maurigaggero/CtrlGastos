@@ -344,6 +344,12 @@ namespace Primaton_G6.Formularios
 
 
         #endregion
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Estadisticas graf = new Estadisticas(g.Usuario, Convert.ToInt32(listu.DevuelveIngresos(g.Usuario)));
+            graf.ShowDialog();
+        }
     }
 }
 

@@ -61,6 +61,12 @@
     <Compile Include="Formularios\ControlDeGastos.Designer.cs">
       <DependentUpon>ControlDeGastos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Estadisticas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas.Designer.cs">
+      <DependentUpon>Estadisticas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\ControlDeGastos.resx">
       <DependentUpon>ControlDeGastos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Estadisticas.resx">
+      <DependentUpon>Estadisticas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Login.es-AR.resx">
       <DependentUpon>Login.cs</DependentUpon>

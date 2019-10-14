@@ -46,6 +46,7 @@
             this.lblCambio = new System.Windows.Forms.Label();
             this.lblAvisoUsuario = new System.Windows.Forms.Label();
             this.lblPassInco = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblUsuario
@@ -212,12 +213,20 @@
             this.lblPassInco.ForeColor = System.Drawing.Color.White;
             this.lblPassInco.Name = "lblPassInco";
             // 
+            // button1
+            // 
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Login
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblPassInco);
             this.Controls.Add(this.lblAvisoUsuario);
             this.Controls.Add(this.lblCambio);
@@ -261,6 +270,7 @@
         private System.Windows.Forms.Label lblCambio;
         private System.Windows.Forms.Label lblAvisoUsuario;
         private System.Windows.Forms.Label lblPassInco;
+        private System.Windows.Forms.Button button1;
     }
 }
 
