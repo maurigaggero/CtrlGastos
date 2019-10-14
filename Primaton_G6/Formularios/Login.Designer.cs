@@ -46,7 +46,7 @@
             this.lblCambio = new System.Windows.Forms.Label();
             this.lblAvisoUsuario = new System.Windows.Forms.Label();
             this.lblPassInco = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnEstadisticas = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblUsuario
@@ -213,12 +213,18 @@
             this.lblPassInco.ForeColor = System.Drawing.Color.White;
             this.lblPassInco.Name = "lblPassInco";
             // 
-            // button1
+            // btnEstadisticas
             // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnEstadisticas.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btnEstadisticas, "btnEstadisticas");
+            this.btnEstadisticas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEstadisticas.FlatAppearance.BorderSize = 0;
+            this.btnEstadisticas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnEstadisticas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEstadisticas.ForeColor = System.Drawing.Color.White;
+            this.btnEstadisticas.Name = "btnEstadisticas";
+            this.btnEstadisticas.UseVisualStyleBackColor = false;
+            this.btnEstadisticas.Click += new System.EventHandler(this.button2_Click);
             // 
             // Login
             // 
@@ -226,7 +232,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnEstadisticas);
             this.Controls.Add(this.lblPassInco);
             this.Controls.Add(this.lblAvisoUsuario);
             this.Controls.Add(this.lblCambio);
@@ -270,7 +276,7 @@
         private System.Windows.Forms.Label lblCambio;
         private System.Windows.Forms.Label lblAvisoUsuario;
         private System.Windows.Forms.Label lblPassInco;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnEstadisticas;
     }
 }
 

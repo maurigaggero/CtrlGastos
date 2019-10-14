@@ -28,9 +28,8 @@ namespace Primaton_G6.Clases
         /// <summary>
         /// Path y nombre del archivo
         /// </summary>
+
         private const string NombreArchivo = @"gastos.xml";
-
-
         Gastos g = new Gastos();
 
         /// <summary>
@@ -39,6 +38,7 @@ namespace Primaton_G6.Clases
         public DataTable TablaGastos = new DataTable("TablaGastos");
 
         Clases.Persistencia_Usuarios user = new Clases.Persistencia_Usuarios();
+
         #endregion
 
         #region METODOS
@@ -160,9 +160,9 @@ namespace Primaton_G6.Clases
             }
         }
 
+        public decimal[] rubro = new decimal[14];
+        public string[] titulo = new string[14];
 
-        decimal[] rubro = new decimal[14];
-        string[] titulo = new string[14];
         public void Porcentaje(string nombre)
         {
             rubro[0] = 0;
@@ -276,10 +276,11 @@ namespace Primaton_G6.Clases
             }
         }
 
+        public string impr = "";
+        public decimal memoria = 0;
+
         public string CalculaPorcentajes(decimal ingresos)
         {
-            string impr = "";
-            decimal memoria = 0;
             for (int i = 0; i < rubro.Length; i++)
             {
                 {
@@ -287,11 +288,11 @@ namespace Primaton_G6.Clases
 
                     if (rubro[i] > 0)
                     {
-                        impr += titulo[i] + " = " + Convert.ToString(Convert.ToString(Math.Round(memoria))) + "%" + "\r\n";
+                        impr += titulo[i]; // " = " + Convert.ToString(Convert.ToString(Math.Round(memoria))) + "%" + "\r\n";
                     }
                 }
             }
-            return impr;
+           return impr;
         }
 
         /// <summary>

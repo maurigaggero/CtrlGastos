@@ -62,6 +62,7 @@ namespace Primaton_G6.Formularios
 
                     //-------------limpio campos, desaparezco el boton ingresar, aparece "otro usuario"----------------------
                     btnCompras.Visible = true;
+                    btnEstadisticas.Visible = true;
                     txtNombre.Visible = false;
                     txtPass.Visible = false;
                     btnIngresar.Visible = false;
@@ -87,6 +88,7 @@ namespace Primaton_G6.Formularios
                 lblMensaje.Text = "";
                 lblFoto.Visible = false;
                 btnAddgasto.Visible = false;
+                btnEstadisticas.Visible = false;
                 lblEliminar.Visible = false;
                 txtNombre.Text = "";
             }
@@ -123,6 +125,7 @@ namespace Primaton_G6.Formularios
 
                         //-------------limpio campos, desaparezco el boton ingresar, aparece "otro usuario"----------------------
                         btnCompras.Visible = true;
+                        btnEstadisticas.Visible = true;
                         txtNombre.Visible = false;
                         txtPass.Visible = false;
                         btnIngresar.Visible = false;
@@ -153,6 +156,7 @@ namespace Primaton_G6.Formularios
                     lblFoto.Visible = false;
 
                     btnAddgasto.Visible = false;
+                    btnEstadisticas.Visible = false;
 
                     lblEliminar.Visible = false;
 
@@ -164,6 +168,7 @@ namespace Primaton_G6.Formularios
         private void lblCambio_MouseClick(object sender, MouseEventArgs e)
         {
             btnCompras.Visible = false;
+            btnEstadisticas.Visible = false;
             txtNombre.Visible = true;
             txtPass.Visible = true;
             btnIngresar.Visible = true;
@@ -345,7 +350,8 @@ namespace Primaton_G6.Formularios
 
         #endregion
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void button2_Click(object sender, EventArgs e)
         {
             Estadisticas graf = new Estadisticas(g.Usuario, Convert.ToInt32(listu.DevuelveIngresos(g.Usuario)));
             graf.ShowDialog();

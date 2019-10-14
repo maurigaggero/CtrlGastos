@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Primaton_G6.Formularios
 {
@@ -21,8 +22,18 @@ namespace Primaton_G6.Formularios
             pgasto.LeeGastos();
 
             pgasto.Porcentaje(nombre);
+            
+        }
 
-            lblPorcentajes.Text = pgasto.CalculaPorcentajes(ingresos);
+        private void Estadisticas_Load(object sender, EventArgs e)
+        {
+            for (int i = 0; i < pgasto.rubro.Length; i++)
+            {
+                Series serie = grafico.Series.Add(pgasto.titulo[i]);
+                serie.Points.Add(Convert.ToDouble(pgasto.rubro[i]));
+            }
+
+          
         }
     }
 }

@@ -28,43 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Estadisticas));
-            this.lblPorcentajes = new System.Windows.Forms.Label();
+            this.grafico = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            ((System.ComponentModel.ISupportInitialize)(this.grafico)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblPorcentajes
+            // grafico
             // 
-            this.lblPorcentajes.AutoSize = true;
-            this.lblPorcentajes.BackColor = System.Drawing.Color.Transparent;
-            this.lblPorcentajes.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPorcentajes.ForeColor = System.Drawing.Color.White;
-            this.lblPorcentajes.Location = new System.Drawing.Point(164, 75);
-            this.lblPorcentajes.Name = "lblPorcentajes";
-            this.lblPorcentajes.Size = new System.Drawing.Size(85, 29);
-            this.lblPorcentajes.TabIndex = 0;
-            this.lblPorcentajes.Text = "label1";
+            chartArea1.Name = "ChartArea1";
+            this.grafico.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.grafico.Legends.Add(legend1);
+            this.grafico.Location = new System.Drawing.Point(12, 12);
+            this.grafico.Name = "grafico";
+            this.grafico.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
+            this.grafico.Size = new System.Drawing.Size(1046, 621);
+            this.grafico.TabIndex = 1;
+            this.grafico.Text = "chart1";
             // 
             // Estadisticas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(831, 488);
-            this.Controls.Add(this.lblPorcentajes);
+            this.ClientSize = new System.Drawing.Size(1061, 645);
+            this.Controls.Add(this.grafico);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Estadisticas";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Estadisticas";
+            this.Load += new System.EventHandler(this.Estadisticas_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.grafico)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblPorcentajes;
+        private System.Windows.Forms.DataVisualization.Charting.Chart grafico;
     }
 }
