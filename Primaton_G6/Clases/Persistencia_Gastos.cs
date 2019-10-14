@@ -9,7 +9,7 @@ using System.IO;
 
 namespace Primaton_G6.Clases
 {
-    
+
 
     public class Gastos
     {
@@ -281,18 +281,25 @@ namespace Primaton_G6.Clases
 
         public string CalculaPorcentajes(decimal ingresos)
         {
+            string impr = "Porcentajes gastos por rubro:" + "\r\n" + "\r\n";
+            decimal memoria = 0;
+            decimal sumador = 0;
+
             for (int i = 0; i < rubro.Length; i++)
             {
-                {
-                    memoria = rubro[i] / ingresos * 100;
+                memoria = rubro[i] / ingresos * 100;
 
-                    if (rubro[i] > 0)
-                    {
-                        impr += titulo[i]; // " = " + Convert.ToString(Convert.ToString(Math.Round(memoria))) + "%" + "\r\n";
-                    }
+                if (rubro[i] > 0)
+                {
+                    sumador = sumador + (Math.Round(rubro[i]) / ingresos * 100);
+                    impr += Convert.ToString(Convert.ToString(Math.Round(memoria))) + "%" + " = " + titulo[i] + "\r\n";
                 }
             }
-           return impr;
+            if ((((ingresos / ingresos) * 100) - sumador) > 0)
+            {
+                impr += " \r\n" + Math.Round(((ingresos / ingresos) * 100) - sumador) + "%" + " = " + "Sin gastar";
+            }
+            return impr;
         }
 
         /// <summary>

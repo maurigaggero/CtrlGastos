@@ -22,7 +22,10 @@ namespace Primaton_G6.Formularios
             pgasto.LeeGastos();
 
             pgasto.Porcentaje(nombre);
-            
+
+            lblPorcentajes.Text = pgasto.CalculaPorcentajes(ingresos);
+
+            lblUsuario.Text = "Usuario: " + nombre + "\r\n" + "Ingresos: $" + ingresos;
         }
 
         private void Estadisticas_Load(object sender, EventArgs e)
@@ -32,8 +35,6 @@ namespace Primaton_G6.Formularios
                 Series serie = grafico.Series.Add(pgasto.titulo[i]);
                 serie.Points.Add(Convert.ToDouble(pgasto.rubro[i]));
             }
-
-          
         }
     }
 }
