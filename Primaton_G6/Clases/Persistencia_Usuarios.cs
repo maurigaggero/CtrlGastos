@@ -189,7 +189,7 @@ namespace Primaton_G6.Clases
 
         public void ModificaIngreso(string name)
         {
-
+            /////
         }
         #endregion
     }
